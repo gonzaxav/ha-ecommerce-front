@@ -1,11 +1,23 @@
+:root body {
+  font-family: 'Montserrat', sans-serif;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --black: #1c191a;
+  --orange: #ff4500;
+  --cream: #e6e1d8;
+}
 
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+section.dark{
+  background-color: var(--black);
+  color: var(--cream);
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+section.light{
+  background-color: var(--cream);
+  color: var(--black);
+}
+
+h2{
+  font-weight: bold;
 }

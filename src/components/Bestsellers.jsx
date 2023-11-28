@@ -15,12 +15,12 @@ function Bestsellers() {
 
   return (
     products && (
-      <section>
+      <section className="light py-5">
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2>Destacados</h2>
-              <p>
+              <h2 className="text-center">Destacados</h2>
+              <p className="text-center">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
                 obcaecati!
               </p>

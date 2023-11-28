@@ -7,10 +7,11 @@ function PhotoCarousel() {
 
   useEffect(() => {
     let imgArr = [
-      { link: "img/2.jpg", active: false },
-      { link: "img/3.jpg", active: false },
-      { link: "img/4.jpg", active: false },
-      { link: "img/5.jpg", active: false },
+      { link: "img/homeCarousel/1.jpg", active: false },
+      { link: "img/homeCarousel/2.jpg", active: false },
+      { link: "img/homeCarousel/3.jpg", active: false },
+      { link: "img/homeCarousel/4.jpg", active: false },
+      { link: "img/homeCarousel/5.jpg", active: false },
     ];
     imgArr[currentImg].active = true;
     setImages(imgArr);
@@ -22,7 +23,7 @@ function PhotoCarousel() {
         currentImg + 1 === images.length
           ? setCurrentImg(0)
           : setCurrentImg(currentImg + 1);
-      }, 5000);
+      }, 7000);
 
       return () => clearInterval(intervalId);
     }

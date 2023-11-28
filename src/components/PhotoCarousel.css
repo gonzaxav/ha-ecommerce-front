@@ -1,13 +1,13 @@
 .photoCarousel{
-    transform: scale(1.35);
-    transition: transform 5s;
+    transform: scale(1.25);
+    transition: transform 7s;
     transition-timing-function: linear;
     opacity: 0;
     width: 0px;
 }
 
 .photoCarouselActive {
-    transform: scale(1);
+    transform: scale(1.1);
     opacity: 1;
     width: 100%;
 }
