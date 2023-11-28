@@ -25,16 +25,17 @@ function MyNavbar() {
             <Nav.Link as={NavLink} to="/carrito">Carrito</Nav.Link>
             <Nav.Link as={NavLink} to="/producto">Producto</Nav.Link>
 
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
+            <NavDropdown title="Categoría" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/categoria">Café</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Bazar</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Máquinas</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.4">
-                Separated link
+                Merchandising
               </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.5">Gift</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.5">Talleres</NavDropdown.Item>
+              
+              
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
