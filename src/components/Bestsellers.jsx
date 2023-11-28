@@ -25,8 +25,8 @@ function Bestsellers() {
                 obcaecati!
               </p>
               <div className="row">
-                {products.map((product) => (
-                  <div className="col-4">
+                {products.map((product, index) => (
+                  <div key={index} className="col-4">
                     <h3>{product.name}</h3>
                     <img src={apiUrl + "img/" + product.photo[0]}></img>
                   </div>
