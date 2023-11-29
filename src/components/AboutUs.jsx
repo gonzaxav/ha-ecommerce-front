@@ -4,7 +4,7 @@ import React from "react";
 function AboutUs() {
   return (
     <>
-      <section className="light py-section">
+      <section className="cream py-section">
         <img src="" className="position-absolute"></img>
         <img src="" className="position-absolute"></img>
 
