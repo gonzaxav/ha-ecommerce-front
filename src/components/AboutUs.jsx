@@ -1,9 +1,10 @@
+import "./AboutUs.css";
 import React from "react";
 
 function AboutUs() {
   return (
     <>
-      <section className="light py-5">
+      <section className="light py-section">
         <img src="" className="position-absolute"></img>
         <img src="" className="position-absolute"></img>
 
@@ -13,14 +14,17 @@ function AboutUs() {
               <img src="img/aboutUs_merged.png"></img>
             </div>
             <div className="col-6 d-flex flex-column justify-content-center">
-              <div className="col-8">
-              <h2>Veni a conocernos</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequuntur tempora ad atque saepe voluptatem iure adipisci
-                temporibus veniam unde assumenda.
-              </p>
+              <div className="speech-bubble-body">
+                <div className="col-12 speech-bubble">
+                  <h2>Veni a conocernos</h2>
+                  <p className="m-0">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consequuntur tempora ad atque saepe voluptatem iure adipisci
+                    temporibus veniam unde assumenda.
+                  </p>
+                </div>
               </div>
+              <img style={{width: 224, height: 96, marginTop: 50}} src="img/gatito.png"></img>
             </div>
           </div>
         </div>

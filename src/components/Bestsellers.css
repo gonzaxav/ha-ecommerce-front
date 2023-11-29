@@ -1,0 +1,13 @@
+.best-seller-img{
+    height: 22rem;
+    width: 15rem;
+    margin: 0px auto;
+}
+.b-seller-img{
+    height: 20rem;
+    width: 15rem; 
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+    color: var(--black);
+}

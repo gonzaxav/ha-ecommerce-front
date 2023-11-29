@@ -2,7 +2,7 @@ import "./OurProducts.css";
 
 function OurProducts() {
   return (
-    <section className="light py-5">
+    <section className="cream py-section">
       <div className="container">
         <div className="row">
           <div className="col">
