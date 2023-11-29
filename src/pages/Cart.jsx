@@ -9,6 +9,11 @@ function Cart() {
       <MyNavbar />
       <section>
         <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <h1>Carrito</h1>
+            </div>
+          </div>
           <div className="row tabla-carrito">
             <div className="col-9">
               <table className="table">
