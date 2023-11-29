@@ -1,5 +1,6 @@
 import React from "react";
 import MyNavbar from "../components/MyNavbar";
+import Footer from "../components/Footer"
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
@@ -7,7 +8,7 @@ function Cart() {
   return (
     <>
       <MyNavbar />
-      <section>
+      <section className="vh-100">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -167,6 +168,7 @@ function Cart() {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }

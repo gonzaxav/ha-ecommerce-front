@@ -31,7 +31,7 @@ function Footer() {
               Montevideo
             </p>
             <p>
-              <i className="bi bi-instagram"></i>
+              <i className="bi bi-instagram"> @casa_de_abajo</i>
             </p>
           </div>
         </div>
