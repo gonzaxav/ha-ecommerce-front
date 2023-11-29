@@ -1,4 +1,18 @@
-.add-cart-btn{
-    background-color: var(--orange);
-    color: white;
+.add-cart-btn {
+  background-color: var(--orange);
+  color: white;
+}
+.plus-item {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 25%;
+  background-color: #d3d4d5;
+}
+.plus-item:hover {
+  background-color: var(--orange);
+  color: white;
+}
+.productpage-img {
+  width: 450px;
+  height: 480px;
 }
