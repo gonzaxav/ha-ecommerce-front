@@ -2,6 +2,11 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+@font-face {
+  font-family: 'Dymo';
+  src: local('Dymo'), url('./fonts/Dymo.ttf') format('truetype');
+}
+
 :root {
   --black: #1c191a;
   --orange: #ff4500;
@@ -19,6 +24,11 @@ section.light{
   color: var(--black);
 }
 
-h2{
+section.orange{
+  background-color: var(--black);
+  color: var(--orange);
+}
+
+h1, h2, h3, h4, h5, h6{
   font-weight: bold;
 }

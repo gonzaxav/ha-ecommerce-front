@@ -24,11 +24,11 @@ function Bestsellers() {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
                 obcaecati!
               </p>
-              <div className="row">
+              <div className="row justify-content-center">
                 {products.map((product, index) => (
-                  <div key={index} className="col-4">
-                    <h3>{product.name}</h3>
-                    <img src={apiUrl + "img/" + product.photo[0]}></img>
+                  <div key={index} className="col-4 best-seller-img m-2">
+                    <p className="fw-semibold fs-5">{product.name}</p>
+                    <img className="b-seller-img" src={apiUrl + "img/" + product.photo[0]}></img>
                   </div>
                 ))}
               </div>

@@ -1,29 +1,28 @@
-import React from "react";
+import "./CulturalEvent.css";
 
 function CulturalEvent() {
   return (
     <>
-      <section className="bg-dark text-white">
+      <section className="dark py-5 bg-img-event d-flex flex-row align-items-center">
         <div className="container">
-          <div className="row">
-            <div className="col">
-              <h2>Tienes un evento?</h2>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Officiis possimus debitis fuga, officia incidunt voluptatum?
-              </p>
-              <button>Quiero saber mas</button>
-            </div>
+          <div className="col-3">
+            <h2>Tienes un evento?</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
+              possimus debitis fuga, officia incidunt voluptatum?
+            </p>
+            <button className="btn btn-light">Quiero saber mas</button>
           </div>
         </div>
       </section>
-      <section>
+
+      <section className="light py-5">
         <div className="container">
           <div className="row">
             <div className="col-6">
               <img src="img/cafe.png"></img>
             </div>
-            <div className="col-6">
+            <div className="col-6 d-flex flex-column justify-content-center">
               <h2>nosotros somos</h2>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
@@ -32,7 +31,9 @@ function CulturalEvent() {
                 nostrum sequi in necessitatibus.
               </p>
             </div>
-            <div className="col-6">
+          </div>
+          <div className="row mt-5">
+            <div className="col-6 d-flex flex-column justify-content-center">
               <h2>Lorem, ipsum dolor.</h2>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
