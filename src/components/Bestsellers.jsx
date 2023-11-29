@@ -1,7 +1,7 @@
 import "./Bestsellers.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -33,7 +33,7 @@ function Bestsellers() {
               </div>
               <div className="row justify-content-center">
                 <Swiper
-                  modules={[Navigation, Pagination, Scrollbar, A11y]}
+                  modules={[Navigation, A11y]}
                   spaceBetween={0}
                   slidesPerView={3}
                   navigation
@@ -42,13 +42,19 @@ function Bestsellers() {
                   {products.map((product, index) => (
                     <SwiperSlide>
                       <div key={index} className="col-4 best-seller-img">
-                        <p className="text-center fw-semibold fs-5">
-                          {product.name}
-                        </p>
                         <img
                           className="b-seller-img"
                           src={apiUrl + "img/" + product.photo[0]}
                         ></img>
+                        <h4 className="text-center mt-3">
+                          {product.name}
+                        </h4>
+                        <p className="text-center mt-3">
+                          {product.description}
+                        </p>
+                        <h6 className="text-center mt-3">
+                          ${product.price}
+                        </h6>
                       </div>
                     </SwiperSlide>
                   ))}
