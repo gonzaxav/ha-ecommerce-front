@@ -5,8 +5,8 @@ function Footer() {
     <section className="bg-dark text-white">
       <div id="footer-container" className="container">
         <div className="row">
-          <div className="col-3">
-            <img className="foto-footer" src="img/logo.png" alt="" />
+          <div className="col-3 d-flex align-items-center">
+            <img className="foto-footer" src="img/logo_footer.png" alt="" />
           </div>
           <div className="col-3">
             <p >Cocina y café de especialidad</p>
