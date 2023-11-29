@@ -16,7 +16,7 @@ function CulturalEvent() {
         </div>
       </section>
 
-      <section className="light py-section">
+      <section className="cream py-section">
         <div className="container">
           <div className="row">
             <div className="col-6">
