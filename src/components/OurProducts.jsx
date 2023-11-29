@@ -1,15 +1,46 @@
-import React from "react";
+import "./OurProducts.css";
 
 function OurProducts() {
   return (
-    <section>
+    <section className="light py-5">
       <div className="container">
         <div className="row">
           <div className="col">
-            <h2>Nuestros productos</h2>
-            <img src="img/cafe.png"></img>
-            <img src="img/cafe.png"></img>
-            <img src="img/cafe.png"></img>
+            <h2 className="text-center mb-5">Nuestros productos</h2>
+            <div className="row">
+              <div className="col-4 my-4">
+                <div className="overflow-hidden">
+                  <img
+                    className="w-100 ourProductsImg"
+                    src="img/cafe.png"
+                  ></img>
+                </div>
+              </div>
+              <div className="col-4 my-4">
+                <div className="overflow-hidden">
+                  <img
+                    className="w-100 ourProductsImg"
+                    src="img/cafe.png"
+                  ></img>
+                </div>
+              </div>
+              <div className="col-4 my-4">
+                <div className="overflow-hidden">
+                  <img
+                    className="w-100 ourProductsImg"
+                    src="img/cafe.png"
+                  ></img>
+                </div>
+              </div>
+              <div className="col-4 my-4">
+                <div className="overflow-hidden">
+                  <img
+                    className="w-100 ourProductsImg"
+                    src="img/cafe.png"
+                  ></img>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
