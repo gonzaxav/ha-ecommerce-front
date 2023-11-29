@@ -3,7 +3,7 @@ import "./CulturalEvent.css";
 function CulturalEvent() {
   return (
     <>
-      <section className="dark py-5 bg-img-event d-flex flex-row align-items-center">
+      <section className="dark py-section bg-img-event d-flex flex-row align-items-center">
         <div className="container">
           <div className="col-3">
             <h2>Tienes un evento?</h2>
@@ -16,14 +16,14 @@ function CulturalEvent() {
         </div>
       </section>
 
-      <section className="light py-5">
+      <section className="light py-section">
         <div className="container">
           <div className="row">
             <div className="col-6">
               <img src="img/cafe.png"></img>
             </div>
             <div className="col-6 d-flex flex-column justify-content-center">
-              <h2>nosotros somos</h2>
+              <h2>Nosotros somos</h2>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
                 adipisci neque inventore itaque iusto laborum, sint porro

@@ -11,7 +11,7 @@
   --black: #1c191a;
   --orange: #ff4500;
   --cream: #e6e1d8;
-  --gris:  rgb(245, 245, 245)176, 175, 175;
+  --gris:  #f5f5f5;
 }
 
 section.dark{
@@ -20,6 +20,11 @@ section.dark{
 }
 
 section.light{
+  background-color: var(--gris);
+  color: var(--black);
+}
+
+section.cream{
   background-color: var(--cream);
   color: var(--black);
 }
@@ -31,4 +36,9 @@ section.orange{
 
 h1, h2, h3, h4, h5, h6{
   font-weight: bold;
+}
+
+.py-section{
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
 }
