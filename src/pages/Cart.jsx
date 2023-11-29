@@ -148,7 +148,7 @@ function Cart() {
               </table>
             </div>
             <div className="col-3">
-              <Card>
+              <Card className="card-resumen">
                 <Card.Body>
                   <Card.Title>
                     <h2 className="h2-carrito">Resumen</h2>
