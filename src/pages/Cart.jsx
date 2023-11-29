@@ -29,14 +29,20 @@ function Cart() {
                 <tbody>
                   <tr>
                     <td>
-                      <img
-                        className="img-carrito"
-                        src="/img/cafetera-2.jpg"
-                        alt="cafetera italiana"
-                      />
+                      <span>
+                        <img
+                          className="img-carrito"
+                          src="/img/cafetera-2.jpg"
+                          alt="cafetera italiana"
+                        />
+                      </span>
                     </td>
-                    <td>Cafetera Prensa Francesa</td>
-                    <td>U$U 2500</td>
+                    <td>
+                      <span>Cafetera Prensa Francesa</span>
+                    </td>
+                    <td>
+                      <span>U$U 2500</span>
+                    </td>
                     <td className="cantidad">
                       <div className="select-container">
                         <select
@@ -51,7 +57,11 @@ function Cart() {
                         </select>
                       </div>
                       <div className="button-container">
-                        <button type="button" className="btn btn-secondary">
+                        <button
+                          id="btn-borrar-2"
+                          type="button"
+                          className="btn btn-secondary"
+                        >
                           Borrar
                         </button>
                       </div>
@@ -59,14 +69,16 @@ function Cart() {
                   </tr>
                   <tr>
                     <td>
+                      <span>
                       <img
                         className="img-carrito"
                         src="/img/filtros.jpg"
                         alt=""
                       />
+                      </span>
                     </td>
-                    <td>Filtros Chemex Pack x 100</td>
-                    <td>U$U 400</td>
+                    <td><span>Filtros Chemex Pack x 100</span></td>
+                    <td><span>U$U 400</span></td>
                     <td className="cantidad">
                       <div className="select-container">
                         <select
@@ -81,7 +93,11 @@ function Cart() {
                         </select>
                       </div>
                       <div>
-                        <button type="button" className="btn btn-secondary">
+                        <button
+                          id="btn-borrar-1"
+                          type="button"
+                          className="btn btn-secondary"
+                        >
                           Borrar
                         </button>
                       </div>
@@ -89,14 +105,16 @@ function Cart() {
                   </tr>
                   <tr>
                     <td>
+                      <span>
                       <img
                         className="img-carrito"
                         src="/img/balanza-2.jpg"
                         alt=""
                       />
+                      </span>
                     </td>
-                    <td>Balanza de precision USB touch</td>
-                    <td>U$U 1900</td>
+                    <td><span>Balanza de precision USB touch</span></td>
+                    <td><span>U$U 1900</span></td>
                     <td className="cantidad">
                       <div className="select-container">
                         <select
@@ -111,7 +129,11 @@ function Cart() {
                         </select>
                       </div>
                       <div>
-                        <button type="button" className="btn btn-secondary">
+                        <button
+                          id="btn-borrar"
+                          type="button"
+                          className="btn btn-secondary"
+                        >
                           Borrar
                         </button>
                       </div>
@@ -131,7 +153,9 @@ function Cart() {
                     <h3 className="h3-carrito">U$U 4800</h3>
                     <hr />
                   </Card.Text>
-                  <Button variant="secondary">Continuar</Button>
+                  <Button id="btn-continuar" variant="secondary">
+                    Continuar
+                  </Button>
                 </Card.Body>
               </Card>
             </div>
