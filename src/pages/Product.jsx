@@ -24,8 +24,8 @@ function Product() {
   return (
     <>
       <MyNavbar />
-      <section className="h-100 pt-4 pb-5 light ">
-        <div className="container ">
+      <section className="h-100 pt-5 pb-5 light ">
+        <div className="container pt-3">
           <div className="row">
             <div className="col-6 overflow-hidden d-flex justify-content-center">
               <img
@@ -72,7 +72,7 @@ function Product() {
         <div className="container">
           <div className="row">
             <div className="col-12 mt-5">
-              <h3 className="text-center mb-5">Otros productos relacionados</h3>
+              <h3 className="text-center mb-5 fw-semibold">Otros productos relacionados</h3>
               <div className="row justify-content-center w-75">
                 <Swiper
                   modules={[Navigation, A11y]}
