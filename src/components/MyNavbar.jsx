@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "./MyNavbar.css";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -5,8 +6,26 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { NavLink } from "react-router-dom";
 
 function MyNavbar() {
+  const [isTop, setIsTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 10;
+      if (scrolled !== isTop) {
+        setIsTop(scrolled);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isTop]);
+
+
   return (
-    <Navbar expand="lg" className="mynavbar bg-body-tertiary">
+    <Navbar expand="lg" className={`mynavbar ${isTop ? 'bg-body-tertiary' : 'navbar-transparent'}`}>
       <div className="container justify-content-end">
         <Navbar.Brand as={NavLink} to="/" className="mynavbarlogo p-0 m-0">
           <img

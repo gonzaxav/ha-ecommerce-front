@@ -5,6 +5,7 @@
   left: 0px;
   right: 0px;
   z-index: 99999999999999;
+  transition: background-color 0.3s ease;
 }
 
 .mynavbarlogo {
@@ -29,4 +30,8 @@
 
 .navbar-nav .dropdown-menu {
   position: absolute;
+}
+
+.navbar-transparent{
+    background-color: transparent !important;
 }
