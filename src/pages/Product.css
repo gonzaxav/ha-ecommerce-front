@@ -16,3 +16,23 @@
   width: 450px;
   height: 480px;
 }
+.cat-product{
+  position: absolute;
+  right: 6px;
+  bottom: -5px;
+  scale: 0.9;
+  opacity: 95%;
+}
+.product-footer-cat{
+  position: absolute;
+  left: -2px;
+  bottom: -36px;
+  scale: 0.9
+}
+/* section.product .swiper-button-prev {
+
+}
+
+section.product .swiper-button-next{
+
+} */
