@@ -29,13 +29,21 @@ section.cream{
   color: var(--black);
 }
 
-section.orange{
+section.darkorange{
   background-color: var(--black);
   color: var(--orange);
 }
 
-h1, h2, h3, h4, h5, h6{
-  font-weight: bold;
+section.orange{
+  background-color: var(--orange);
+  color: var(--black);
+}
+
+h2, .h2{
+  font-weight: 400;
+  font-family: Dymo;
+  font-size: 90px;
+  transform: rotateY(-1.3deg);
 }
 
 .py-section{

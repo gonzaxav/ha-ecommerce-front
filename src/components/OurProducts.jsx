@@ -6,7 +6,7 @@ function OurProducts() {
       <div className="container">
         <div className="row">
           <div className="col">
-            <h2 className="text-center mb-5">Nuestros productos</h2>
+            <h2 className="text-center mb-5"><span className="black h2">&nbsp;</span>Nuestros<span className="black h2">&nbsp;</span>productos<span className="black h2">&nbsp;</span></h2>
             <div className="row">
               <div className="col-4 my-4">
                 <div className="overflow-hidden">

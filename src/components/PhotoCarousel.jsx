@@ -34,13 +34,13 @@ function PhotoCarousel() {
       <section>
         <div className="w-100 vh-100 overflow-hidden">
           {images.map((img, index) => (
-            <img
+            <div
               key={index}
-              src={img.link}
+              style={{backgroundImage: `url(${img.link})`}}
               className={`photoCarousel ${
                 img.active ? "photoCarouselActive" : ""
               }`}
-            ></img>
+            ></div>
           ))}
         </div>
       </section>
