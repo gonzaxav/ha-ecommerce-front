@@ -5,8 +5,6 @@ import { Navigation, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
 function Bestsellers() {
   const apiUrl = import.meta.env.VITE_BASE_URL_API;
@@ -40,8 +38,8 @@ function Bestsellers() {
                   loop
                 >
                   {products.map((product, index) => (
-                    <SwiperSlide>
-                      <div key={index} className="col-4 best-seller-img">
+                    <SwiperSlide key={index}>
+                      <div className="col-4 best-seller-img">
                         <img
                           className="b-seller-img"
                           src={apiUrl + "img/" + product.photo[0]}

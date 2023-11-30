@@ -4,7 +4,7 @@ import React from "react";
 function AboutUs() {
   return (
     <>
-      <section className="cream py-section">
+      <section className="dark py-section">
         <img src="" className="position-absolute"></img>
         <img src="" className="position-absolute"></img>
 
@@ -16,7 +16,7 @@ function AboutUs() {
             <div className="col-6 d-flex flex-column justify-content-center">
               <div className="speech-bubble-body">
                 <div className="col-12 speech-bubble">
-                  <h2>Veni a conocernos</h2>
+                  <h3>Veni a conocernos</h3>
                   <p className="m-0">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Consequuntur tempora ad atque saepe voluptatem iure adipisci
@@ -29,7 +29,7 @@ function AboutUs() {
           </div>
         </div>
       </section>
-      <section className="dark py-4">
+      <section className="orange py-4">
         <h5 className="text-center m-0">Encina 1663, Palermo, Montevideo</h5>
       </section>
     </>

@@ -1,0 +1,32 @@
+.mynavbar {
+  min-height: 62px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 99999999999999;
+}
+
+.mynavbarlogo {
+  position: absolute;
+  left: 10%;
+  top: 6px;
+}
+
+.hamburgerBtn {
+  height: 46px;
+  width: 60px;
+  border: none;
+}
+
+.hamburgerBtn span {
+  font-size: 20px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-nav .dropdown-menu {
+  position: absolute;
+}
