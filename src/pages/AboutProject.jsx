@@ -1,5 +1,6 @@
 import React from "react";
 import MyNavbar from "../components/MyNavbar";
+import Footer from "../components/Footer";
 
 function AboutProject() {
   return (
@@ -21,6 +22,7 @@ function AboutProject() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

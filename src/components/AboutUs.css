@@ -1,7 +1,3 @@
-.speech-bubble-body {
-
-}
-
 .speech-bubble {
   position: relative;
   margin: 0.5em auto;
@@ -11,7 +7,7 @@
   transform: rotate(-4deg) rotateY(15deg);
   background: var(--orange);
   text-align: center;
-  color: var(--gris);
+  color: var(--black);
 }
 .speech-bubble:before,
 .speech-bubble:after {
@@ -25,14 +21,14 @@
   bottom: 0;
   left: 0;
   border-radius: inherit;
-  transform: rotate(-1deg) translate(-.5em, .5em) scale(1.02);
-  background: var(--black);
+  transform: rotate(-1deg) translate(-0.5em, 0.5em) scale(1.02);
+  background: var(--cream);
 }
 .speech-bubble:after {
   border: solid 0 transparent;
-  border-right: solid 3.5em var(--black);
-  border-bottom: solid 0.25em var(--black);
-  bottom: -.5em;
+  border-right: solid 3.5em var(--cream);
+  border-bottom: solid 0.25em var(--cream);
+  bottom: -0.5em;
   left: 1.25em;
   width: 0;
   height: 1em;

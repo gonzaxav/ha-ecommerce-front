@@ -10,7 +10,7 @@ function MyNavbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrolled = window.scrollY > 10;
+      const scrolled = window.scrollY > 1;
       if (scrolled !== isTop) {
         setIsTop(scrolled);
       }
@@ -25,7 +25,7 @@ function MyNavbar() {
 
 
   return (
-    <Navbar expand="lg" className={`mynavbar ${isTop ? 'bg-body-tertiary' : 'navbar-transparent'}`}>
+    <Navbar expand="lg" className={`mynavbar ${isTop ? 'my-navbar-bg' : 'my-navbar-bg'}`}>
       <div className="container justify-content-end">
         <Navbar.Brand as={NavLink} to="/" className="mynavbarlogo p-0 m-0">
           <img

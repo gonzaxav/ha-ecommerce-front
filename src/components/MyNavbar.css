@@ -32,6 +32,60 @@
   position: absolute;
 }
 
-.navbar-transparent{
-    background-color: transparent !important;
+.navbar-transparent {
+  background-color: transparent !important;
+}
+
+.my-navbar-bg {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgb(30, 30, 30) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+nav .nav-link {
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+nav .nav-link:focus,
+nav .nav-link:hover,
+nav .navbar-nav .nav-link.active,
+nav .navbar-nav .nav-link.show {
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+nav .nav-link:hover,
+nav .nav-link:focus {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--white);
+}
+
+nav .dropdown-menu {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.7) 10%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  border-radius: 5px;
+  border: none;
+  color: var(--white);
+}
+
+nav .dropdown-menu .dropdown-item {
+  background-color: transparent;
+  border: none;
+  color: var(--white);
+}
+
+nav .dropdown-menu .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  color: var(--black);
 }

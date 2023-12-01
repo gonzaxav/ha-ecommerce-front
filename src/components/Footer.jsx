@@ -1,9 +1,9 @@
-import React from "react";
+import "./Footer.css";
 
 function Footer() {
   return (
    
-    <section className="bg-dark text-white">
+    <footer className="bg-dark text-white">
       <div id="footer-container" className="container">
         <div className="row">
           <div className="col-md-6 col-lg-3 ">
@@ -37,7 +37,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
 

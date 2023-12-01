@@ -1,52 +1,65 @@
 :root body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 @font-face {
-  font-family: 'Dymo';
-  src: local('Dymo'), url('./fonts/Dymo.ttf') format('truetype');
+  font-family: "Dymo";
+  src: local("Dymo"), url("./fonts/Dymo.ttf") format("truetype");
 }
 
 :root {
   --black: #1c191a;
   --orange: #ff4500;
-  --cream: #e6e1d8;
-  --gris:  #f5f5f5;
+  --darkcream: hsl(39, 22%, 62%);
+  --cream: hsl(39, 22%, 87%);
+  --lightcream: hsl(39, 12%, 92%);
+  --white: hsl(0, 0%, 96%);
 }
 
-section.dark{
+section.dark {
   background-color: var(--black);
   color: var(--cream);
 }
 
-section.light{
-  background-color: var(--gris);
+section.light {
+  background-color: var(--white);
   color: var(--black);
 }
 
-section.cream{
+section.cream {
   background-color: var(--cream);
   color: var(--black);
 }
 
-section.darkorange{
+section.darkorange {
   background-color: var(--black);
   color: var(--orange);
 }
 
-section.orange{
+section.orange {
   background-color: var(--orange);
   color: var(--black);
 }
 
-h2, .h2{
+h2,
+.h2 {
   font-weight: 400;
   font-family: Dymo;
   font-size: 90px;
   transform: rotateY(-1.3deg);
 }
 
-.py-section{
+.py-section {
   padding-top: 6rem !important;
   padding-bottom: 6rem !important;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+footer {
+  margin-top: auto;
 }

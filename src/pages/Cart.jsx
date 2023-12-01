@@ -1,9 +1,9 @@
+import "./Cart.css";
 import React from "react";
 import MyNavbar from "../components/MyNavbar";
-import Footer from "../components/Footer"
+import Footer from "../components/Footer";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import "/src/Cart.css";
 
 function Cart() {
   return (
@@ -18,7 +18,7 @@ function Cart() {
           </div>
           <div className="row tabla-carrito">
             <div className="col-lg-9">
-              <table className="table">
+              <table className="table table-hover">
                 <thead>
                   <tr>
                     <th scope="col">
@@ -43,14 +43,15 @@ function Cart() {
                           alt="cafetera francesa"
                         />
                       </span>
-                      <span id="descripcion-1" className="span-carrito">Cafetera Prensa Francesa</span>
+                      <span id="descripcion-1" className="span-carrito">
+                        Cafetera Prensa Francesa
+                      </span>
                     </td>
 
                     <td>
                       <span className="span-carrito">U$U 2500</span>
                     </td>
                     <td className="cantidad">
-                      
                       <div className="select-container">
                         <select
                           className="form-select"
@@ -72,7 +73,6 @@ function Cart() {
                           Borrar
                         </button>
                       </div>
-                      
                     </td>
                   </tr>
                   <tr>
@@ -84,7 +84,9 @@ function Cart() {
                           alt=""
                         />
                       </span>
-                      <span id="descripcion-2" className="span-carrito">Filtros Chemex Pack x 100</span>
+                      <span id="descripcion-2" className="span-carrito">
+                        Filtros Chemex Pack x 100
+                      </span>
                     </td>
 
                     <td>
@@ -123,11 +125,13 @@ function Cart() {
                           alt=""
                         />
                       </span>
-                      <span id="descripcion-3" className="span-carrito">Balanza de precision USB touch</span>
+                      <span id="descripcion-3" className="span-carrito">
+                        Balanza de precision USB touch
+                      </span>
                     </td>
 
                     <td>
-                      <span className="span-carrito" >U$U 1900</span>
+                      <span className="span-carrito">U$U 1900</span>
                     </td>
                     <td className="cantidad">
                       <div className="select-container">
@@ -177,7 +181,6 @@ function Cart() {
         </div>
       </section>
       <Footer />
-      
     </>
   );
 }
