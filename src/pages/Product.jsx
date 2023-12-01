@@ -27,13 +27,13 @@ function Product() {
       <section className="h-100 pt-5 pb-5 light ">
         <div className="container pt-3">
           <div className="row">
-            <div className="col-6 overflow-hidden d-flex justify-content-center">
+            <div className="col-12 col-md-6 overflow-hidden d-flex justify-content-center">
               <img
                 className="productpage-img"
                 src={apiUrl + "img/vialetti.png"}
               ></img>
             </div>
-            <div className="col-6 p-3 d-flex flex-column justify-content-between">
+            <div className="col-12 col-md-6 p-3 d-flex flex-column justify-content-between">
               <div>
                 <h1 className="fw-semibold mb-5">Cafetera Italiana</h1>
                 <h6 className="mb-4 pe-5 fw-medium">
@@ -44,7 +44,7 @@ function Product() {
               </div>
               <div className="mb-2">
                 <h4 className="mb-4 pb-3">$500</h4>
-                <div className="mb-5">
+                <div className="mb-3">
                   <div className="mb-3">
                     <button onClick={minusItem} className="border-0 plus-item">
                       -
@@ -73,7 +73,7 @@ function Product() {
           <div className="row">
             <div className="col-12 mt-5">
               <h3 className="text-center mb-5 fw-semibold">Otros productos relacionados</h3>
-              <div className="row justify-content-center w-75">
+              <div className="row justify-content-center">
                 <Swiper
                   modules={[Navigation, A11y]}
                   spaceBetween={0}

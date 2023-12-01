@@ -18,16 +18,16 @@
 }
 .cat-product{
   position: absolute;
-  right: 6px;
-  bottom: -5px;
-  scale: 0.9;
+  right: -50px;
+  bottom: -43px;
+  scale: 0.6;
   opacity: 95%;
 }
 .product-footer-cat{
   position: absolute;
-  left: -2px;
-  bottom: -36px;
-  scale: 0.9
+  left: -85px;
+  bottom: -119px;
+  scale: 0.45
 }
 /* section.product .swiper-button-prev {
 
