@@ -3,6 +3,7 @@ import MyNavbar from "../components/MyNavbar";
 import Footer from "../components/Footer"
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import "/src/Cart.css";
 
 function Cart() {
   return (
@@ -12,7 +13,7 @@ function Cart() {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h1>Carrito</h1>
+              <h1 className="h1-carrito">Carrito</h1>
             </div>
           </div>
           <div className="row tabla-carrito">
