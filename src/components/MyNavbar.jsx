@@ -25,7 +25,7 @@ function MyNavbar() {
 
 
   return (
-    <Navbar expand="lg" className={`mynavbar ${isTop ? 'my-navbar-bg' : 'my-navbar-bg'}`}>
+    <Navbar data-bs-theme="dark" expand="lg" className={`mynavbar ${isTop ? 'my-navbar-bg' : 'my-navbar-bg'}`}>
       <div className="container justify-content-end">
         <Navbar.Brand as={NavLink} to="/" className="mynavbarlogo p-0 m-0">
           <img
