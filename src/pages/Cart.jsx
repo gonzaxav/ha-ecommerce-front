@@ -10,7 +10,7 @@ function Cart() {
     <>
       <MyNavbar />
       <section className="vh-100">
-        <div className="container">
+        <div id="container-carrito" className="container">
           <div className="row">
             <div className="col-12">
               <h1 className="h1-carrito">Carrito</h1>

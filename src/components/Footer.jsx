@@ -2,6 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
+   
     <section className="bg-dark text-white">
       <div id="footer-container" className="container">
         <div className="row">
