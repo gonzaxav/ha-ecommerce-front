@@ -3,10 +3,10 @@ import "./Footer.css";
 function Footer() {
   return (
    
-    <footer className="bg-dark text-white">
+    <footer className="bg-dark text-white pt-3">
       <div id="footer-container" className="container">
         <div className="row">
-          <div className="col-md-6 col-lg-3 ">
+          <div className="col-md-6 col-lg-3 mt-2">
             <img className="foto-footer" src="img/logo_footer.png" alt="" />
           </div>
           <div className="col-md-6 col-lg-3">
