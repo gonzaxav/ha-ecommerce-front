@@ -16,40 +16,40 @@ function Cart() {
             </div>
           </div>
           <div className="row tabla-carrito">
-            <div className="col-9">
+            <div className="col-lg-9">
               <table className="table">
                 <thead>
                   <tr>
                     <th scope="col">
                       <h2 className="h2-carrito">Artículos (3)</h2>
                     </th>
-                    <th scope="col"></th>
+
                     <th scope="col">
                       <h2 className="h2-carrito">Precio</h2>
                     </th>
                     <th scope="col">
-                      <h2 className="h2-carrito">Cantidad</h2>
+                      <h2 className="h2-carrito ">Cantidad</h2>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>
-                      <span>
+                      <span className="span-carrito">
                         <img
-                          className="img-carrito"
+                          className="img-carrito d-none d-lg-table-cell"
                           src="/img/cafetera-2.jpg"
-                          alt="cafetera italiana"
+                          alt="cafetera francesa"
                         />
                       </span>
+                      <span id="descripcion-1" className="span-carrito">Cafetera Prensa Francesa</span>
                     </td>
+
                     <td>
-                      <span>Cafetera Prensa Francesa</span>
-                    </td>
-                    <td>
-                      <span>U$U 2500</span>
+                      <span className="span-carrito">U$U 2500</span>
                     </td>
                     <td className="cantidad">
+                      
                       <div className="select-container">
                         <select
                           className="form-select"
@@ -62,7 +62,7 @@ function Cart() {
                           <option value="3">5</option>
                         </select>
                       </div>
-                      <div className="button-container">
+                      <div className="button-container ">
                         <button
                           id="btn-borrar-2"
                           type="button"
@@ -71,20 +71,24 @@ function Cart() {
                           Borrar
                         </button>
                       </div>
+                      
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <span>
-                      <img
-                        className="img-carrito"
-                        src="/img/filtros.jpg"
-                        alt=""
-                      />
+                      <span className="span-carrito">
+                        <img
+                          className="img-carrito d-none d-lg-table-cell"
+                          src="/img/filtros.jpg"
+                          alt=""
+                        />
                       </span>
+                      <span id="descripcion-2" className="span-carrito">Filtros Chemex Pack x 100</span>
                     </td>
-                    <td><span>Filtros Chemex Pack x 100</span></td>
-                    <td><span>U$U 400</span></td>
+
+                    <td>
+                      <span className="span-carrito">U$U 400</span>
+                    </td>
                     <td className="cantidad">
                       <div className="select-container">
                         <select
@@ -111,16 +115,19 @@ function Cart() {
                   </tr>
                   <tr>
                     <td>
-                      <span>
-                      <img
-                        className="img-carrito"
-                        src="/img/balanza-2.jpg"
-                        alt=""
-                      />
+                      <span className="span-carrito">
+                        <img
+                          className="img-carrito d-none d-lg-table-cell"
+                          src="/img/balanza-2.jpg"
+                          alt=""
+                        />
                       </span>
+                      <span id="descripcion-3" className="span-carrito">Balanza de precision USB touch</span>
                     </td>
-                    <td><span>Balanza de precision USB touch</span></td>
-                    <td><span>U$U 1900</span></td>
+
+                    <td>
+                      <span className="span-carrito" >U$U 1900</span>
+                    </td>
                     <td className="cantidad">
                       <div className="select-container">
                         <select
@@ -148,14 +155,14 @@ function Cart() {
                 </tbody>
               </table>
             </div>
-            <div className="col-3">
+            <div className="col-lg-3">
               <Card className="card-resumen">
                 <Card.Body>
                   <Card.Title>
                     <h2 className="h2-carrito">Resumen</h2>
                   </Card.Title>
                   <Card.Text>
-                    <p>Subtotal: 3 productos</p>
+                    <p className="p-carrito">Subtotal: 3 productos</p>
                     <h3 className="h3-carrito">U$U 4800</h3>
                     <hr />
                   </Card.Text>
@@ -168,7 +175,8 @@ function Cart() {
           </div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
+      
     </>
   );
 }

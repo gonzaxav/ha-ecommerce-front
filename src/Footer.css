@@ -6,4 +6,15 @@
   padding-top: 20px;
 }
 
+.bg-dark.text-white {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+@media(max-width: 767px){
+  .col-md-6 {
+    padding-top: 20px;
+  }
+}
 
