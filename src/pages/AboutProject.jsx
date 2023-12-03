@@ -34,8 +34,8 @@ function AboutProject() {
               proporciona un control total a los administradores. Implementamos
               pruebas de llamadas a las API con Insomnia.</p> 
               <p>Frontend Público:
-              Utilizamos la modalidad Mobile para garantizar un rendimiento
-              excepcional tanto en ordenadores como en dispositivos móviles.
+              Utilizamos la modalidad Mobile para garantizar un buen rendimiento
+               tanto en ordenadores como en dispositivos móviles.
               Inspirados en diversos e-commerce, construimos una interfaz que
               busca ofrecer una experiencia agradable y adaptada al perfil de la
               empresa.</p>
