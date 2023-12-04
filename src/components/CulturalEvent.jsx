@@ -27,7 +27,7 @@ function CulturalEvent() {
       <section className="cream py-section">
         <div className="container">
           <div className="row">
-            <div className="col-6 img" style={{backgroundImage: "url(img/cafe.png)"}}>
+            <div className="col-6 img" style={{backgroundImage: "url(/img/cafe.png)"}}>
             </div>
             <div className="col-6 py-5 d-flex flex-column justify-content-center">
               <h2>Nosotros somos</h2>
@@ -49,7 +49,7 @@ function CulturalEvent() {
                 nostrum sequi in necessitatibus.
               </p>
             </div>
-            <div className="col-6 img" style={{backgroundImage: "url(img/cafe.png)"}}>
+            <div className="col-6 img" style={{backgroundImage: "url(/img/cafe.png)"}}>
             </div>
           </div>
         </div>

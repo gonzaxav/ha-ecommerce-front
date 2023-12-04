@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+import logo from "../img/logo_2.png"
 
 function MyNavbar() {
   const [isTop, setIsTop] = useState(true);
@@ -39,7 +40,7 @@ function MyNavbar() {
       <div className="container justify-content-end">
         <Navbar.Brand as={NavLink} to="/" className="mynavbarlogo p-0 m-0">
           <img
-            src="img/logo_2.png"
+            src={logo}
             height="50"
             className="d-inline-block align-top"
             alt="La casa de abajo logo"

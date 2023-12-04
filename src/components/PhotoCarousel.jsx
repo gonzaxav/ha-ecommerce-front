@@ -7,11 +7,11 @@ function PhotoCarousel() {
 
   useEffect(() => {
     let imgArr = [
-      { link: "img/homeCarousel/1.jpg", active: false },
-      { link: "img/homeCarousel/2.jpg", active: false },
-      { link: "img/homeCarousel/3.jpg", active: false },
-      { link: "img/homeCarousel/4.jpg", active: false },
-      { link: "img/homeCarousel/5.jpg", active: false },
+      { link: "/img/homeCarousel/1.jpg", active: false },
+      { link: "/img/homeCarousel/2.jpg", active: false },
+      { link: "/img/homeCarousel/3.jpg", active: false },
+      { link: "/img/homeCarousel/4.jpg", active: false },
+      { link: "/img/homeCarousel/5.jpg", active: false },
     ];
     imgArr[currentImg].active = true;
     setImages(imgArr);

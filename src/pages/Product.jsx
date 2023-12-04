@@ -35,16 +35,16 @@ function Product() {
             </div>
             <div className="col-12 col-md-6 p-3 d-flex flex-column justify-content-between">
               <div>
-                <h1 className="fw-semibold mb-5">Cafetera Italiana</h1>
+                <h1 className="fw-semibold mb-5 mt-3">Cafetera Italiana</h1>
                 <h6 className="mb-4 pe-5 fw-medium">
                   Product description is here. Lorem ipsum dolor sit amet
                   consectetur adipisicing elit. Omnis harum aut ut minima eum
                   molestias doloremque voluptatum beatae consequatur. Deleniti.
                 </h6>
               </div>
-              <p>stock: </p>
               <div className="mb-2">
-                <h4 className="mb-4 pb-3">$500</h4>
+                <h4 className="mb-3 pb-3">$500</h4>
+                <p className="mb-4">stock: </p>
                 <div className="mb-3">
                   <div className="mb-3">
                     <button onClick={minusItem} className="border-0 plus-item">
@@ -66,14 +66,20 @@ function Product() {
           </div>
         </div>
       </section>
-      <div className="position-relative" >
-        <img className="cat-product" src="/img/gatito product.png" alt="gatito" />
+      <div className="position-relative">
+        <img
+          className="cat-product"
+          src="/img/gatito product.png"
+          alt="gatito"
+        />
       </div>
       <section className="cream pt-2 pb-5 product">
         <div className="container">
           <div className="row">
             <div className="col-12 mt-5">
-              <h3 className="text-center mb-5 fw-semibold">Otros productos relacionados</h3>
+              <h3 className="text-center mb-5 fw-semibold">
+                Otros productos relacionados
+              </h3>
               <div className="row justify-content-center">
                 <Swiper
                   modules={[Navigation, A11y]}
@@ -106,9 +112,13 @@ function Product() {
         </div>
       </section>
       <div className="position-relative">
-        <img className="product-footer-cat" src="/img/gatito3.png" alt="gatito footer" />
+        <img
+          className="product-footer-cat"
+          src="/img/gatito3.png"
+          alt="gatito footer"
+        />
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

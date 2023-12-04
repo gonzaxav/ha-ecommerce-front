@@ -1,5 +1,8 @@
 import "./AboutUs.css";
 import React from "react";
+import aboutUs1 from "../img/aboutUs_merged.png";
+import gatito5 from "../img/gatito5.png"
+
 
 function AboutUs() {
   return (
@@ -11,7 +14,7 @@ function AboutUs() {
         <div className="container">
           <div className="row d-flex flex-column-reverse flex-xl-row">
             <div className="col-12 col-xl-6 d-flex justify-content-center justify-content-xl-end">
-              <img src="img/aboutUs_merged.png"></img>
+              <img src={aboutUs1}></img>
             </div>
             <div className="col-12 col-xl-6 d-flex flex-column justify-content-center align-items-center">
               <div>
@@ -35,7 +38,7 @@ function AboutUs() {
                 </div>
                 <img
                   style={{ width: 600 * 0.6, height: 233 * 0.6, marginTop: 50 }}
-                  src="img/gatito5.png"
+                  src={gatito5}
                 ></img>
               </div>
             </div>

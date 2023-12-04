@@ -12,7 +12,7 @@ function Cart() {
       <section className="vh-100">
         <div id="container-carrito" className="container">
           <div className="row">
-            <div className="col-12">
+            <div className="col-12 pt-3">
               <h1 className="h1-carrito">Carrito</h1>
             </div>
           </div>
@@ -39,8 +39,8 @@ function Cart() {
                       <span className="span-carrito">
                         <img
                           className="img-carrito d-none d-lg-table-cell"
-                          src="/img/cafetera-2.jpg"
-                          alt="cafetera francesa"
+                          src="../img/cafetera-2.jpg"
+                          alt=""
                         />
                       </span>
                       <span id="descripcion-1" className="span-carrito">
@@ -80,7 +80,7 @@ function Cart() {
                       <span className="span-carrito">
                         <img
                           className="img-carrito d-none d-lg-table-cell"
-                          src="/img/filtros.jpg"
+                          src="../img/filtros.jpg"
                           alt=""
                         />
                       </span>
@@ -121,7 +121,7 @@ function Cart() {
                       <span className="span-carrito">
                         <img
                           className="img-carrito d-none d-lg-table-cell"
-                          src="/img/balanza-2.jpg"
+                          src="../img/balanza-2.jpg"
                           alt=""
                         />
                       </span>
@@ -166,11 +166,11 @@ function Cart() {
                   <Card.Title>
                     <h2 className="h2-carrito">Resumen</h2>
                   </Card.Title>
-                  <Card.Text>
+                  <div>
                     <p className="p-carrito">Subtotal: 3 productos</p>
                     <h3 className="h3-carrito">U$U 4800</h3>
                     <hr />
-                  </Card.Text>
+                  </div>
                   <Button id="btn-continuar" variant="secondary">
                     Continuar
                   </Button>

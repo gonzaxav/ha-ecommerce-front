@@ -26,7 +26,7 @@ function Category() {
           <div className="row">
             {products &&
               products.map((product) => (
-                <div className="col-4">
+                <div key={product._id} className="col-4">
                   <img src={apiUrl +"img/" + product.photo}></img>
                   <h6>{product.shortDescription}</h6>
                   <h4>${product.price}</h4>

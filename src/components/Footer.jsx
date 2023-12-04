@@ -1,4 +1,5 @@
 import "./Footer.css";
+import logoFooter from "../img/logo_footer.png"
 
 function Footer() {
   return (
@@ -7,7 +8,7 @@ function Footer() {
       <div id="footer-container" className="container">
         <div className="row">
           <div className="col-md-6 col-lg-3 mt-2">
-            <img className="foto-footer" src="img/logo_footer.png" alt="" />
+            <img className="foto-footer" src={logoFooter} alt="Logo footer" />
           </div>
           <div className="col-md-6 col-lg-3">
             <p>Cocina y café de especialidad</p>
