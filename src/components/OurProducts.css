@@ -1,6 +1,7 @@
 .ourProductsImg{
     transform: scale(1);
     transition: transform .5s ease-out;
+   
 }
 
 .ourProductsImg:hover{

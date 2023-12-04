@@ -27,12 +27,19 @@
 
 
 @media(max-width: 767px){
-  .col-md-6 {
+  .col-footer  {
     padding-top: 20px;
+
   }
   .gatito-footer{
     display: none;
     
+  }
+}
+
+@media(max-width: 991px){
+  .logo-footer{
+    margin-bottom: 2rem;
   }
 }
 
