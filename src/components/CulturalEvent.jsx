@@ -5,8 +5,16 @@ function CulturalEvent() {
     <>
       <section className="dark py-section bg-img-event d-flex flex-row align-items-center">
         <div className="container">
-          <div className="col-3">
-            <h2>Tienes un evento?</h2>
+          <div className="col-12">
+            <h2 className="mb-0">
+              <span className="black h2">&nbsp;</span>Tienes
+              <span className="black h2">&nbsp;</span>un
+            </h2>
+            <h2>
+              evento?<span className="black h2">&nbsp;</span>
+            </h2>
+          </div>
+          <div className="col-6 col-sm-6 col-md-5">
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
               possimus debitis fuga, officia incidunt voluptatum?
@@ -19,10 +27,9 @@ function CulturalEvent() {
       <section className="cream py-section">
         <div className="container">
           <div className="row">
-            <div className="col-6">
-              <img src="img/cafe.png"></img>
+            <div className="col-6 img" style={{backgroundImage: "url(img/cafe.png)"}}>
             </div>
-            <div className="col-6 d-flex flex-column justify-content-center">
+            <div className="col-6 py-5 d-flex flex-column justify-content-center">
               <h2>Nosotros somos</h2>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
@@ -32,8 +39,8 @@ function CulturalEvent() {
               </p>
             </div>
           </div>
-          <div className="row mt-5">
-            <div className="col-6 d-flex flex-column justify-content-center">
+          <div className="row">
+            <div className="col-6 py-5 d-flex flex-column justify-content-center">
               <h2>Lorem, ipsum dolor.</h2>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
@@ -42,8 +49,7 @@ function CulturalEvent() {
                 nostrum sequi in necessitatibus.
               </p>
             </div>
-            <div className="col-6">
-              <img src="img/cafe.png"></img>
+            <div className="col-6 img" style={{backgroundImage: "url(img/cafe.png)"}}>
             </div>
           </div>
         </div>

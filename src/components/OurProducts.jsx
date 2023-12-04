@@ -29,7 +29,7 @@ function OurProducts() {
               </h2>
             </div>
             <div className="d-block d-md-none">
-              <h2 className="text-center mb-1">
+              <h2 className="text-center mb-0">
                 <span className="black h2">&nbsp;</span>Nuestros
                 <span className="black h2">&nbsp;</span>
               </h2>
@@ -40,7 +40,7 @@ function OurProducts() {
             </div>
             <div className="row">
               {categories && categories.map((category)=>
-                <div key={category._id} onClick={()=> handleOnclick(category.slug)} className="col-4 my-4">
+                <div key={category._id} onClick={()=> handleOnclick(category.slug)} className="col-6 col-md-4 col-xl-3 my-4">
                 <div className="overflow-hidden">
                   <img
                     className="w-100 ourProductsImg"
