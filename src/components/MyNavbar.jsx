@@ -4,9 +4,19 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
 
 function MyNavbar() {
   const [isTop, setIsTop] = useState(true);
+  const [categories, setCategories] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3000/categories`)
+      .then((response) => {
+        setCategories(response.data.categories);
+      });
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,22 +63,12 @@ function MyNavbar() {
                 Carrito
               </Nav.Link>
             </div>
-            <div className="d-flex justify-content-end">
-              <Nav.Link as={NavLink} to="/producto">
-                Producto
-              </Nav.Link>
-            </div>
 
             <div className="d-flex justify-content-end">
               <NavDropdown title="Categoría" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/categoria">Café</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Bazar</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Máquinas</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">
-                  Merchandising
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.5">Gift</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.5">Talleres</NavDropdown.Item>
+                {categories && categories.map((category)=>
+                <NavDropdown.Item key={category._id} as={NavLink} to={`/categoria/${category.slug}`}>{category.name}</NavDropdown.Item>
+                )}
               </NavDropdown>
             </div>
             

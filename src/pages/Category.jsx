@@ -2,6 +2,7 @@ import MyNavbar from "../components/MyNavbar";
 import { useEffect, useState } from "react";
 import {useParams} from "react-router-dom";
 import axios from "axios";
+import Footer from "../components/Footer";
 
 function Category() {
   const apiUrl = import.meta.env.VITE_BASE_URL_API;
@@ -13,7 +14,7 @@ function Category() {
       .then((response) => {
         setProducts(response.data.products);
       });
-  }, []);
+  }, [slug]);
   return (
     <>
       <MyNavbar />
@@ -34,6 +35,7 @@ function Category() {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }
