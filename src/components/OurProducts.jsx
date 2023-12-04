@@ -1,6 +1,21 @@
 import "./OurProducts.css";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 
 function OurProducts() {
+  const apiUrl = import.meta.env.VITE_BASE_URL_API;
+  const navigate = useNavigate();
+  const [categories, setCategories] = useState(null);
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3000/categories`)
+      .then((response) => {
+        setCategories(response.data.categories);
+      });
+  }, []);
+  const handleOnclick = (categoryName)=>navigate(`/categoria/${categoryName}`)
   return (
     <section className="cream py-section">
       <div className="container">
@@ -24,38 +39,17 @@ function OurProducts() {
               </h2>
             </div>
             <div className="row">
-              <div className="col-4 my-4">
+              {categories && categories.map((category)=>
+                <div key={category._id} onClick={()=> handleOnclick(category.slug)} className="col-4 my-4">
                 <div className="overflow-hidden">
                   <img
                     className="w-100 ourProductsImg"
-                    src="img/cafe.png"
+                    src={`${apiUrl}img/${category.photo}`}
                   ></img>
                 </div>
+                <h5 className="text-center">{category.name}</h5>
               </div>
-              <div className="col-4 my-4">
-                <div className="overflow-hidden">
-                  <img
-                    className="w-100 ourProductsImg"
-                    src="img/cafe.png"
-                  ></img>
-                </div>
-              </div>
-              <div className="col-4 my-4">
-                <div className="overflow-hidden">
-                  <img
-                    className="w-100 ourProductsImg"
-                    src="img/cafe.png"
-                  ></img>
-                </div>
-              </div>
-              <div className="col-4 my-4">
-                <div className="overflow-hidden">
-                  <img
-                    className="w-100 ourProductsImg"
-                    src="img/cafe.png"
-                  ></img>
-                </div>
-              </div>
+              )}
             </div>
           </div>
         </div>

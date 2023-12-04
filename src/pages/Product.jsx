@@ -42,6 +42,7 @@ function Product() {
                   molestias doloremque voluptatum beatae consequatur. Deleniti.
                 </h6>
               </div>
+              <p>stock: </p>
               <div className="mb-2">
                 <h4 className="mb-4 pb-3">$500</h4>
                 <div className="mb-3">
