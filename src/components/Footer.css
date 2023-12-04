@@ -2,9 +2,26 @@
   width: 150px;
 }
 
+.gatito-footer{
+  width: 200px;
+  
+}
+
 #footer-container {
   padding-top: 20px;
-  
+}
+
+.ubicacion{
+  color: white;
+}
+
+.instagram{
+  color: white;
+}
+
+.tel{
+  text-decoration: none;
+  color: white;
 }
 
 
@@ -12,6 +29,10 @@
 @media(max-width: 767px){
   .col-md-6 {
     padding-top: 20px;
+  }
+  .gatito-footer{
+    display: none;
+    
   }
 }
 
