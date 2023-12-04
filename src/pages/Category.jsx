@@ -11,14 +11,22 @@ function Category() {
   const [products, setProducts] = useState(null);
   const [category, setCategory] = useState(null);
   useEffect(() => {
-    console.log(slug)
     axios
       .get(`http://localhost:3000/products?slug=${slug}`)
       .then((response) => {
         setProducts(response.data.products);
+        window.scrollTo(0, 0);
+      });
+  }, [slug]);
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3000/category/${slug}`)
+      .then((response) => {
         setCategory(response.data.category);
       });
   }, [slug]);
+
   return (
     <>
       <MyNavbar />
