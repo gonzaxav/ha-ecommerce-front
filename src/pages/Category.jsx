@@ -11,8 +11,9 @@ function Category() {
   const [products, setProducts] = useState(null);
   const [category, setCategory] = useState(null);
   useEffect(() => {
+    console.log(slug)
     axios
-      .get(`http://localhost:3000/products/category/${slug}`)
+      .get(`http://localhost:3000/products?slug=${slug}`)
       .then((response) => {
         setProducts(response.data.products);
         setCategory(response.data.category);

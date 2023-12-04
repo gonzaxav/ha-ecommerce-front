@@ -13,7 +13,7 @@ function MyNavbar() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/categories`)
+      .get(`http://localhost:3000/category`)
       .then((response) => {
         setCategories(response.data.categories);
       });

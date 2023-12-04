@@ -11,18 +11,20 @@ function Bestsellers() {
   const apiUrl = import.meta.env.VITE_BASE_URL_API;
   const navigate = useNavigate();
 
-  const [productsAmount, setProductsAmount] = useState(window.innerWidth < 768 ? 1 : 3);
+  const [productsAmount, setProductsAmount] = useState(
+    window.innerWidth < 768 ? 1 : 3
+  );
   const [products, setProducts] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/featured`).then((response) => {
+    axios.get(`http://localhost:3000/products?featured=true`).then((response) => {
       setProducts(response.data.products);
     });
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -35,9 +37,7 @@ function Bestsellers() {
     navigate(`${page}/${route}`);
   };
 
-  const handleAddProduct = () => {
-    
-  };
+  const handleAddProduct = () => {};
 
   return (
     products && (
@@ -68,11 +68,13 @@ function Bestsellers() {
                         <img
                           className="b-seller-img cursor-pointer"
                           src={apiUrl + "img/" + product.photo[0]}
-                          onClick={() => handleRedirect("producto", product.slug)}
+                          onClick={() =>
+                            handleRedirect("producto", product.slug)
+                          }
                         ></img>
                         <h4 className="text-center mt-3">{product.name}</h4>
                         <p className="text-center mt-3">
-                          {product.description}
+                          {product.shortDescription}
                         </p>
                         <h5 className="text-center mt-3">$U {product.price}</h5>
                         <button
