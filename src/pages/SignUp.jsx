@@ -14,18 +14,25 @@ function SignUp() {
   const [newPassword, setNewPassword] = useState("");
   const navigate = useNavigate();
 
-  const createClient = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const newFormData = new FormData(e.target);
-    await axios({
-      method: "POST",
-      url: "http://localhost:3000/clients",
-      data: newFormData,
-      headers: {
-        "content-type": " multipart/form-data",
-      },
-    });
-    navigate("/login");
+
+    const createClient = async () => {
+      await axios({
+        method: "POST",
+        url: "http://localhost:3000/client",
+        data: {
+          firstname: newName,
+          lastname: newLastName,
+          email: newEmail,
+          password: newPassword,
+          address: newAddress,
+          phone: newPhone,
+        },
+      });
+      navigate("/");
+    };
+    createClient();
   };
 
   return (
@@ -37,7 +44,7 @@ function SignUp() {
             <div className="col-12 ">
               <h1 className="signup-title">Crear una cuenta</h1>
               <div className="div-form ">
-                <form onSubmit={createClient}>
+                <form onSubmit={handleSubmit}>
                   <div className="mb-3">
                     <label
                       hidden
@@ -124,19 +131,17 @@ function SignUp() {
                       name="password"
                     />
                   </div>
-                  <div className=" div-btn d-grid col-6  mb-3  d-flex">
+                  <div className=" div-btn col-6  mb-3  d-flex">
                     <button
                       className="btn-registro btn btn-ligth "
                       type="submit"
                     >
                       Regístrate
                     </button>
-                    <div>
-                      
-                      <button className="btn-login btn btn-ligth ">
-                        ingresar
-                      </button>
-                    </div>
+
+                    <Link className="btn-login" to={"/login"}>
+                      Login
+                    </Link>
                   </div>
                 </form>
               </div>

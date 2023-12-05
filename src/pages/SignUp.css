@@ -1,31 +1,30 @@
-.form-field:hover{
-    background-color: #f0f0f0;
+.form-field:hover {
+  background-color: #f0f0f0;
 }
-.row-form{
-    width: 80%;
-    ;
-}
-
-.signup-title{
-    padding-bottom: 3rem;
+.row-form {
+  width: 80%;
 }
 
-.btn-registro{
-    margin-right: 0.5rem;
-    margin-top: 1rem;
-    background-color: var(--orange);
-    color: white;
+.signup-title {
+  padding-bottom: 3rem;
 }
 
-.btn-login{
-    margin-top: 1rem;
-    color:var(--black)
-    
+.btn-registro {
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+  background-color: var(--orange);
+  color: white;
 }
-.div-form{
-    
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0px 2px 5px var(--darkcream)
+
+.btn-login {
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  color: var(--black);
+  text-decoration: none;
+}
+.div-form {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px var(--darkcream);
 }

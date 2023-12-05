@@ -27,30 +27,45 @@ function CulturalEvent() {
       <section className="cream py-section">
         <div className="container">
           <div className="row">
-            <div className="col-6 img" style={{backgroundImage: "url(/img/cafe.png)"}}>
-            </div>
+            <div
+              className="col-6 img"
+              style={{ backgroundImage: "url(/img/cafe.png)" }}
+            ></div>
             <div className="col-6 py-5 d-flex flex-column justify-content-center">
               <h2>Nosotros somos</h2>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
-                adipisci neque inventore itaque iusto laborum, sint porro
-                expedita quidem quis corporis? Rerum iure ex minima ratione
-                nostrum sequi in necessitatibus.
+                ¡Bienvenidos a Casa de Abajo, donde cada taza cuenta una
+                historia y cada detalle está cuidadosamente preparado para tu
+                deleite!
+              </p>
+              <p>
+                Comenzamos nuestra travesía con la simple idea de compartir la
+                pasión por el café de calidad y la buena compañía. Inspirados
+                por la rica tradición cafetera de Montevideo, decidimos abrir
+                nuestras puertas para crear un espacio donde los amantes del
+                café pudieran disfrutar de momentos especiales.
               </p>
             </div>
           </div>
           <div className="row">
             <div className="col-6 py-5 d-flex flex-column justify-content-center">
-              <h2>Lorem, ipsum dolor.</h2>
+              <h2>Nuestra misión.</h2>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
-                adipisci neque inventore itaque iusto laborum, sint porro
-                expedita quidem quis corporis? Rerum iure ex minima ratione
-                nostrum sequi in necessitatibus.
+                Con cada taza de Casa de Abajo, te invitamos a ser parte de
+                nuestra historia. Queremos ser el lugar donde encuentres tu
+                refugio diario, donde las conversaciones fluyan tan libremente
+                como el café. Nuestra misión es crear momentos memorables y ser
+                un punto de encuentro para la comunidad.
+              </p>
+              <p>
+                Gracias por ser parte de nuestra historia. ¡Esperamos verte
+                pronto en Casa de Abajo!
               </p>
             </div>
-            <div className="col-6 img" style={{backgroundImage: "url(/img/cafe.png)"}}>
-            </div>
+            <div
+              className="col-6 img"
+              style={{ backgroundImage: "url(/img/cafe.png)" }}
+            ></div>
           </div>
         </div>
       </section>
