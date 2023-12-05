@@ -1,4 +1,6 @@
-
+.form-field:hover{
+    background-color: #f0f0f0;
+}
 .row-form{
     width: 80%;
     ;
@@ -11,9 +13,19 @@
 .btn-registro{
     margin-right: 0.5rem;
     margin-top: 1rem;
+    background-color: var(--orange);
+    color: white;
 }
 
 .btn-login{
     margin-top: 1rem;
+    color:var(--black)
+    
 }
-
+.div-form{
+    
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px var(--darkcream)
+}
