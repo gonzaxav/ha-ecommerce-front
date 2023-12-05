@@ -5,18 +5,16 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
-import logo from "../img/logo_2.png"
+import logo from "../img/logo_2.png";
 
 function MyNavbar() {
   const [isTop, setIsTop] = useState(true);
   const [categories, setCategories] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:3000/category`)
-      .then((response) => {
-        setCategories(response.data.categories);
-      });
+    axios.get(`http://localhost:3000/category`).then((response) => {
+      setCategories(response.data.categories);
+    });
   }, []);
 
   useEffect(() => {
@@ -27,16 +25,19 @@ function MyNavbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [isTop]);
 
-
   return (
-    <Navbar data-bs-theme="dark" expand="lg" className={`mynavbar ${isTop ? 'my-navbar-bg' : 'my-navbar-bg'}`}>
+    <Navbar
+      data-bs-theme="dark"
+      expand="lg"
+      className={`mynavbar ${isTop ? "my-navbar-bg" : "my-navbar-bg"}`}
+    >
       <div className="container justify-content-end">
         <Navbar.Brand as={NavLink} to="/" className="mynavbarlogo p-0 m-0">
           <img
@@ -53,7 +54,17 @@ function MyNavbar() {
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto w-100 d-flex text-end justify-content-center gap-4">
-            
+            <div className="d-flex justify-content-end">
+              <Nav.Link as={NavLink} to="/registro">
+                Registro
+              </Nav.Link>
+            </div>
+            <div className="d-flex justify-content-end">
+              <Nav.Link as={NavLink} to="/login">
+                login
+              </Nav.Link>
+            </div>
+
             <div className="d-flex justify-content-end">
               <Nav.Link as={NavLink} to="/sobre-el-proyecto">
                 Acerca del proyecto
@@ -67,12 +78,18 @@ function MyNavbar() {
 
             <div className="d-flex justify-content-end">
               <NavDropdown title="Categoría" id="basic-nav-dropdown">
-                {categories && categories.map((category)=>
-                <NavDropdown.Item key={category._id} as={NavLink} to={`/categoria/${category.slug}`}>{category.name}</NavDropdown.Item>
-                )}
+                {categories &&
+                  categories.map((category) => (
+                    <NavDropdown.Item
+                      key={category._id}
+                      as={NavLink}
+                      to={`/categoria/${category.slug}`}
+                    >
+                      {category.name}
+                    </NavDropdown.Item>
+                  ))}
               </NavDropdown>
             </div>
-            
           </Nav>
         </Navbar.Collapse>
       </div>
