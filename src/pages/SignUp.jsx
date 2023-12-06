@@ -4,6 +4,8 @@ import MyNavbar from "../components/MyNavbar";
 import Footer from "../components/Footer";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { login } from "../redux/clientSlice";
 
 function SignUp() {
   const [newName, setNewName] = useState("");
@@ -13,12 +15,13 @@ function SignUp() {
   const [newEmail, setNewEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const createClient = async () => {
-      await axios({
+      const response = await axios({
         method: "POST",
         url: "http://localhost:3000/client",
         data: {
@@ -30,6 +33,7 @@ function SignUp() {
           phone: newPhone,
         },
       });
+      dispatch(login(response.data))
       navigate("/");
     };
     createClient();
