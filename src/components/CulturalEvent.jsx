@@ -29,7 +29,7 @@ function CulturalEvent() {
           <div className="row">
             <div
               className="col-6 img"
-              style={{ backgroundImage: "url(/img/cafe.png)" }}
+              style={{ backgroundImage: "url(/img/staff-removebg.png)" }}
             ></div>
             <div className="col-6 py-5 d-flex flex-column justify-content-center">
               <h2>Nosotros somos</h2>
@@ -64,7 +64,7 @@ function CulturalEvent() {
             </div>
             <div
               className="col-6 img"
-              style={{ backgroundImage: "url(/img/cafe.png)" }}
+              style={{ backgroundImage: "url(/img/cafeteria.jpg)" }}
             ></div>
           </div>
         </div>
