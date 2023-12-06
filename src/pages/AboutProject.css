@@ -1,0 +1,99 @@
+body{
+    background-color: var(--cream);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+.implementacion{
+    background-color:var(--black);
+    
+}
+
+.bienvenido{
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+}
+
+.objetivo{
+   position: relative;
+   top: 25%;
+}
+
+.container-about{
+    
+    background-color: var(--cream);
+    border-radius: 10px;
+    padding: 1rem;
+    height: 95%;
+    box-shadow: 0px 2px 5px var(--orange);
+}
+
+.diseño{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.diseño-titulo{
+    font-size: 3rem;
+    position: relative;
+    top: 25%;
+    
+}
+
+.tecnologias{
+    background-color: var(--black);
+    color: var(--cream);
+    
+}
+
+#backend{
+    padding: 2rem;
+}
+
+.back-titulo{
+    position: relative;
+    bottom: 7%;
+}
+
+.invitacion{
+    color: var(--orange);
+}
+
+.tecnologias-titulo{
+    color: var(--orange);
+}
+
+.container-interno{
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.img-logo{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    width: 4rem;
+    
+}
+
+.cont-persona{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media(max-width: 767px){
+    .diseño-titulo{
+        padding-bottom: 2rem;
+    }
+   
+}
+
+
+
+
+
+
