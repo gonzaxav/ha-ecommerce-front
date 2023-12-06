@@ -31,7 +31,7 @@ function CulturalEvent() {
               className="col-6 img"
               style={{ backgroundImage: "url(/img/staff-removebg.png)" }}
             ></div>
-            <div className="col-6 py-5 d-flex flex-column justify-content-center">
+            <div className="nosotrosSomos-text col-6 py-5 d-flex flex-column justify-content-center">
               <h2>Nosotros somos</h2>
               <p>
                 ¡Bienvenidos a Casa de Abajo, donde cada taza cuenta una
@@ -48,7 +48,7 @@ function CulturalEvent() {
             </div>
           </div>
           <div className="row">
-            <div className="col-6 py-5 d-flex flex-column justify-content-center">
+            <div className="mision col-6 py-5 d-flex flex-column justify-content-center">
               <h2>Nuestra misión.</h2>
               <p>
                 Con cada taza de Casa de Abajo, te invitamos a ser parte de

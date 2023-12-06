@@ -55,6 +55,11 @@ function MyNavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto w-100 d-flex text-end justify-content-center gap-4">
             <div className="d-flex justify-content-end">
+              <Nav.Link as={NavLink} to="/sobre-el-proyecto">
+                Acerca del proyecto
+              </Nav.Link>
+            </div>
+            <div className="d-flex justify-content-end">
               <Nav.Link as={NavLink} to="/registro">
                 Registro
               </Nav.Link>
@@ -65,11 +70,6 @@ function MyNavbar() {
               </Nav.Link>
             </div>
 
-            <div className="d-flex justify-content-end">
-              <Nav.Link as={NavLink} to="/sobre-el-proyecto">
-                Acerca del proyecto
-              </Nav.Link>
-            </div>
             <div className="d-flex justify-content-end">
               <Nav.Link as={NavLink} to="/carrito">
                 Carrito
