@@ -6,10 +6,13 @@ import { Navigation, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../redux/orderSlice";
 
 function Bestsellers() {
   const apiUrl = import.meta.env.VITE_BASE_URL_API;
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const [productsAmount, setProductsAmount] = useState(
     window.innerWidth < 768 ? 1 : 3
@@ -17,9 +20,11 @@ function Bestsellers() {
   const [products, setProducts] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/products?featured=true`).then((response) => {
-      setProducts(response.data.products);
-    });
+    axios
+      .get(`http://localhost:3000/products?featured=true`)
+      .then((response) => {
+        setProducts(response.data.products);
+      });
 
     window.addEventListener("resize", handleResize);
 
@@ -37,7 +42,19 @@ function Bestsellers() {
     navigate(`${page}/${route}`);
   };
 
-  const handleAddProduct = () => {};
+  const handleAddProduct = (product) => {
+    dispatch(
+      addProduct({
+        productId: product._id,
+        name: product.name,
+        photo: product.photo,
+        price: product.price,
+        slug: product.slug,
+        qty: 1,
+        stock: product.stock,
+      })
+    );
+  };
 
   return (
     products && (
@@ -79,7 +96,7 @@ function Bestsellers() {
                         <h5 className="text-center mt-3">$U {product.price}</h5>
                         <button
                           className="mx-auto btn btn-dark"
-                          onClick={() => handleAddProduct()}
+                          onClick={() => handleAddProduct(product)}
                         >
                           ADD TO CART
                         </button>

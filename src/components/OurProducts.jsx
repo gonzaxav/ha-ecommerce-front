@@ -41,7 +41,7 @@ function OurProducts() {
             <div className="row">
               {categories && categories.map((category)=>
                 <div key={category._id} onClick={()=> handleOnclick(category.slug)} className="col-6 col-md-4 col-xl-4 my-4">
-                <div className="overflow-hidden">
+                <div className="overflow-hidden p-4">
                   <img
                     className="w-100 ourProductsImg"
                     src={`${apiUrl}img/${category.photo}`}

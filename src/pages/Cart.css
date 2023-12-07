@@ -38,9 +38,10 @@ table.table{
   font-size: small;
 }
 
-.cantidad {
+/* .cantidad {
   display: flex;
-}
+  align-items: center;
+} */
 
 .select-container {
   margin-right: 10px;
@@ -52,19 +53,7 @@ table.table{
   font-size: small;
 }
 
-.form-select {
-  font-size: small;
-}
-
-#btn-borrar-2 {
-  font-size: small;
-}
-
-#btn-borrar-1 {
-  font-size: small;
-}
-
-#btn-borrar {
+.btn-borrar-2 {
   font-size: small;
 }
 
@@ -72,15 +61,7 @@ table.table{
   font-size: small;
 }
 
-#descripcion-1 {
-  padding-left: 2%;
-}
-
-#descripcion-2 {
-  padding-left: 2%;
-}
-
-#descripcion-3 {
+.descripcion-1 {
   padding-left: 2%;
 }
 
@@ -104,4 +85,8 @@ div.card{
   #btn-continuar {
     width: 33.3%;
   }
+}
+
+.empty-kart{
+  color: var(--orange)
 }
