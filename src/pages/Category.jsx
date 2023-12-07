@@ -4,12 +4,28 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Footer from "../components/Footer";
 import "./Category.css";
+import { useDispatch } from "react-redux";
+import {addProduct} from "../redux/orderSlice"
 
 function Category() {
   const apiUrl = import.meta.env.VITE_BASE_URL_API;
   const { slug } = useParams();
   const [products, setProducts] = useState(null);
   const [category, setCategory] = useState(null);
+  const dispatch = useDispatch();
+
+  const handleAddProduct = (product) => {
+    dispatch(addProduct({
+        productId: product._id,
+        name: product.name,
+        photo: product.photo,
+        price: product.price,
+        slug: product.slug,
+        qty: 1,
+        stock: product.stock,
+    }))
+  };
+
   useEffect(() => {
     axios
       .get(`http://localhost:3000/products?slug=${slug}`)
@@ -52,7 +68,7 @@ function Category() {
                     {product.shortDescription}
                   </h6>
                   <h4 className="precio-categoria">${product.price}</h4>
-                  <button className=" agregar btn btn-light add-cart-btn">
+                  <button onClick={()=> handleAddProduct(product)} className=" agregar btn btn-light add-cart-btn">
                     Agregar al carrito
                   </button>
                 </div>

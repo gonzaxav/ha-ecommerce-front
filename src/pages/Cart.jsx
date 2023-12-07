@@ -13,6 +13,10 @@ function Cart() {
     (acumulator, currentProduct) => acumulator + currentProduct.qty,
     0
   );
+  const totalPrice = order.reduce((acumulator, currentProduct) => {
+    const productPrice = currentProduct.price * currentProduct.qty;
+    return acumulator + productPrice;
+  }, 0);
 
   return (
     <>
@@ -24,7 +28,9 @@ function Cart() {
               <h1 className="h1-carrito">Carrito</h1>
             </div>
           </div>
-          <p className="empty-kart mt-2">{order.length < 1 && "(Tu carrito está vacío)"}&nbsp;</p>
+          <p className="empty-kart mt-2">
+            {order.length < 1 && "(Tu carrito está vacío)"}&nbsp;
+          </p>
           <div className="row tabla-carrito">
             <div className="col-lg-9">
               <table className="table table-hover align-middle">
@@ -58,8 +64,8 @@ function Cart() {
                     <h2 className="h2-carrito">Resumen</h2>
                   </Card.Title>
                   <div>
-                    <p className="p-carrito">Subtotal: 3 productos</p>
-                    <h3 className="h3-carrito">U$U 4800</h3>
+                    <p className="p-carrito">Subtotal ({totalProducts}): </p>
+                    <h3 className="h3-carrito">$U {totalPrice}</h3>
                     <hr />
                   </div>
                   <Button id="btn-continuar" variant="secondary">

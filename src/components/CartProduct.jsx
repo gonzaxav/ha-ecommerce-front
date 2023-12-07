@@ -31,6 +31,8 @@ function CartProduct({ product }) {
     itemAmount === 1 && dispatch(removeProduct(product.productId));
   };
 
+  const handleRemove = ()=> dispatch(removeProduct(product.productId));
+
   return (
     <tr>
       <td>
@@ -62,7 +64,7 @@ function CartProduct({ product }) {
           </button>
 
           <button
-            id=""
+            onClick={handleRemove}
             type="button"
             className="btn btn-secondary btn-borrar-2 ms-4"
           >

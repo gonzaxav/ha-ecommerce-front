@@ -89,3 +89,9 @@ nav .dropdown-menu .dropdown-item:hover {
   border: none;
   color: var(--black);
 }
+
+.notEmpty {
+  width: 1.5rem;
+  background-color: var(--orange);
+  border-radius: 50%;
+}

@@ -11,17 +11,19 @@ import "swiper/css";
 import "swiper/css/navigation";
 import gatitoProduct from "../img/gatito product.png";
 import gatitoFooter from "../img/gatito3.png";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../redux/orderSlice";
 
 function Product() {
   const navigate = useNavigate();
-  // const [slug, setSlug] = useState(useParams().slug);
-  const {slug} = useParams();
-  const [itemAmount, setItemAmount] = useState(0);
+  const dispatch = useDispatch();
+  const { slug } = useParams();
+  const [itemAmount, setItemAmount] = useState(1);
   const [products, setProducts] = useState(null);
   const [product, setProduct] = useState(null);
   const [productsAmount, setProductsAmount] = useState(
     window.innerWidth < 768 ? 1 : 3
-    );
+  );
   const apiUrl = import.meta.env.VITE_BASE_URL_API;
   const handleResize = () => {
     setProductsAmount(window.innerWidth < 768 ? 1 : 3);
@@ -29,7 +31,33 @@ function Product() {
   const handleRedirect = (page, route) => {
     navigate(`/${page}/${route}`);
   };
-  const handleAddProduct = () => {};
+  const handleAddProduct = () => {
+    dispatch(
+      addProduct({
+        productId: product._id,
+        name: product.name,
+        photo: product.photo,
+        price: product.price,
+        slug: product.slug,
+        qty: itemAmount,
+        stock: product.stock,
+      })
+    );
+  };
+
+  const carrouselAddProduct = (item) => {
+    dispatch(
+      addProduct({
+        productId: item._id,
+        name: item.name,
+        photo: item.photo,
+        price: item.price,
+        slug: item.slug,
+        qty: 1,
+        stock: item.stock,
+      })
+    );
+  };
 
   useEffect(() => {
     axios.get(`http://localhost:3000/products?featured`).then((response) => {
@@ -50,7 +78,10 @@ function Product() {
     });
   }, [slug]);
 
-  const plusItem = () => (itemAmount < 9 && itemAmount < product.stock) && setItemAmount(itemAmount + 1);
+  const plusItem = () =>
+    itemAmount < 9 &&
+    itemAmount < product.stock &&
+    setItemAmount(itemAmount + 1);
   const minusItem = () => itemAmount > 0 && setItemAmount(itemAmount - 1);
 
   return (
@@ -95,7 +126,10 @@ function Product() {
                         +
                       </button>
                     </div>
-                    <button className="btn btn-light add-cart-btn px-4 py-3 ">
+                    <button
+                      onClick={handleAddProduct}
+                      className="btn btn-light add-cart-btn px-4 py-3 "
+                    >
                       Agregar al carrito
                     </button>
                   </div>
@@ -123,30 +157,33 @@ function Product() {
                   navigation
                   loop
                 >
-                  {products && products.map((product, index) => (
-                    <SwiperSlide key={index}>
-                      <div className="d-flex flex-column myProductDiv">
-                        <img
-                          className="b-seller-img cursor-pointer"
-                          src={apiUrl + "img/" + product.photo[0]}
-                          onClick={() =>
-                            handleRedirect("producto", product.slug)
-                          }
-                        ></img>
-                        <h4 className="text-center mt-3">{product.name}</h4>
-                        <p className="text-center mt-3">
-                          {product.shortDescription}
-                        </p>
-                        <h5 className="text-center mt-2">$U {product.price}</h5>
-                        <button
-                          className="mx-auto btn btn-dark"
-                          onClick={() => handleAddProduct()}
-                        >
-                          Agregar al carrito
-                        </button>
-                      </div>
-                    </SwiperSlide>
-                  ))}
+                  {products &&
+                    products.map((product, index) => (
+                      <SwiperSlide key={index}>
+                        <div className="d-flex flex-column myProductDiv">
+                          <img
+                            className="b-seller-img cursor-pointer"
+                            src={apiUrl + "img/" + product.photo[0]}
+                            onClick={() =>
+                              handleRedirect("producto", product.slug)
+                            }
+                          ></img>
+                          <h4 className="text-center mt-3">{product.name}</h4>
+                          <p className="text-center mt-3">
+                            {product.shortDescription}
+                          </p>
+                          <h5 className="text-center mt-2">
+                            $U {product.price}
+                          </h5>
+                          <button
+                            className="mx-auto btn btn-dark"
+                            onClick={() => carrouselAddProduct(product)}
+                          >
+                            Agregar al carrito
+                          </button>
+                        </div>
+                      </SwiperSlide>
+                    ))}
                 </Swiper>
               </div>
             </div>

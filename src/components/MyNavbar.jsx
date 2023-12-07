@@ -6,10 +6,16 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import logo from "../img/logo_2.png";
+import { useSelector } from "react-redux";
 
 function MyNavbar() {
   const [isTop, setIsTop] = useState(true);
   const [categories, setCategories] = useState(null);
+  const order = useSelector((state) => state.order);
+  const totalProducts = order.reduce(
+    (acumulator, currentProduct) => acumulator + currentProduct.qty,
+    0
+  );
 
   useEffect(() => {
     axios.get(`http://localhost:3000/category`).then((response) => {
@@ -59,11 +65,7 @@ function MyNavbar() {
                 Acerca del proyecto
               </Nav.Link>
             </div>
-            <div className="d-flex justify-content-end">
-              <Nav.Link as={NavLink} to="/registro">
-                Registro
-              </Nav.Link>
-            </div>
+            
             <div className="d-flex justify-content-end">
               <Nav.Link as={NavLink} to="/login">
                 login
@@ -72,7 +74,7 @@ function MyNavbar() {
 
             <div className="d-flex justify-content-end">
               <Nav.Link as={NavLink} to="/carrito">
-                Carrito
+                Carrito {totalProducts > 0 && <span className="notEmpty d-inline-block text-center"> {totalProducts} </span>} 
               </Nav.Link>
             </div>
 

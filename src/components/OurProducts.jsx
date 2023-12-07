@@ -47,7 +47,7 @@ function OurProducts() {
                     src={`${apiUrl}img/${category.photo}`}
                   ></img>
                 </div>
-                <h5 className="text-center">{category.name}</h5>
+                <h4 className="text-center fw-bold">{category.name}</h4>
               </div>
               )}
             </div>
