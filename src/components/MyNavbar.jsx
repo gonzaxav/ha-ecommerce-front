@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import axios from "axios";
 import logo from "../img/logo_2.png";
 import { useSelector } from "react-redux";
+import MyNavbarIcons from "./MyNavbarIcons";
 
 function MyNavbar() {
   const [isTop, setIsTop] = useState(true);
@@ -44,8 +45,8 @@ function MyNavbar() {
       expand="lg"
       className={`mynavbar ${isTop ? "my-navbar-bg" : "my-navbar-bg"}`}
     >
-      <div className="container justify-content-end">
-        <Navbar.Brand as={NavLink} to="/" className="mynavbarlogo p-0 m-0">
+      <div className="container myNavbar justify-content-end">
+        <Navbar.Brand as={NavLink} to="/" className="mynavbarlogo">
           <img
             src={logo}
             height="50"
@@ -58,6 +59,9 @@ function MyNavbar() {
           aria-controls="basic-navbar-nav"
           className="hamburgerBtn"
         />
+
+        <MyNavbarIcons classes={"d-block d-lg-none"} totalProducts={totalProducts} />
+
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto w-100 d-flex text-end justify-content-center gap-4">
             <div className="d-flex justify-content-end">
@@ -83,24 +87,7 @@ function MyNavbar() {
           </Nav>
         </Navbar.Collapse>
 
-        <div className="navbar-icons-position ms-3 position-relative">
-          <div className="d-inline-block me-3">
-            <Nav.Link as={NavLink} to="/login">
-              <i className="fa-solid fa-user navbar-icons"></i>
-            </Nav.Link>
-          </div>
-
-          <div className="d-inline-block">
-            <Nav.Link as={NavLink} to="/carrito">
-              <i className="fa-sharp fa-solid fa-cart-shopping navbar-icons"></i>
-              {totalProducts > 0 && (
-                <span className="notEmpty d-inline-block text-center">
-                  {totalProducts}
-                </span>
-              )}
-            </Nav.Link>
-          </div>
-        </div>
+        <MyNavbarIcons classes={"d-none d-lg-block"} totalProducts={totalProducts} />
       </div>
     </Navbar>
   );
