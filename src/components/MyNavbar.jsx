@@ -65,18 +65,6 @@ function MyNavbar() {
                 Acerca del proyecto
               </Nav.Link>
             </div>
-            
-            <div className="d-flex justify-content-end">
-              <Nav.Link as={NavLink} to="/login">
-                login
-              </Nav.Link>
-            </div>
-
-            <div className="d-flex justify-content-end">
-              <Nav.Link as={NavLink} to="/carrito">
-                Carrito {totalProducts > 0 && <span className="notEmpty d-inline-block text-center"> {totalProducts} </span>} 
-              </Nav.Link>
-            </div>
 
             <div className="d-flex justify-content-end">
               <NavDropdown title="Categoría" id="basic-nav-dropdown">
@@ -94,6 +82,25 @@ function MyNavbar() {
             </div>
           </Nav>
         </Navbar.Collapse>
+
+        <div className="navbar-icons-position ms-3 position-relative">
+          <div className="d-inline-block me-3">
+            <Nav.Link as={NavLink} to="/login">
+              <i className="fa-solid fa-user navbar-icons"></i>
+            </Nav.Link>
+          </div>
+
+          <div className="d-inline-block">
+            <Nav.Link as={NavLink} to="/carrito">
+              <i className="fa-sharp fa-solid fa-cart-shopping navbar-icons"></i>
+              {totalProducts > 0 && (
+                <span className="notEmpty d-inline-block text-center">
+                  {totalProducts}
+                </span>
+              )}
+            </Nav.Link>
+          </div>
+        </div>
       </div>
     </Navbar>
   );

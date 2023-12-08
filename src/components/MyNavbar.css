@@ -94,4 +94,17 @@ nav .dropdown-menu .dropdown-item:hover {
   width: 1.5rem;
   background-color: var(--orange);
   border-radius: 50%;
+  position: absolute;
+  right: -15px;
+  top: -12px
+}
+
+.navbar-icons{
+  font-size: x-large;
+}
+
+.navbar-icons-position{
+  
+  margin-right: 5%;
+  
 }
