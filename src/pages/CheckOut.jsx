@@ -22,7 +22,7 @@ function CheckOut() {
               type="text"
               placeholder="Email"
               id="email"
-              value="email"
+             // value="email"
               name="email"
             />
             <label hidden htmlFor="firstname" className="form-label"></label>
@@ -31,7 +31,7 @@ function CheckOut() {
               type="text"
               placeholder="Nombre"
               id="firstname"
-              value="firsname"
+              //value="firsname"
               name="firstname"
             />
             <label hidden htmlFor="lastname" className="form-label"></label>
@@ -40,7 +40,7 @@ function CheckOut() {
               type="text"
               placeholder="Apellido"
               id="lastname"
-              value="lastname"
+              //value="lastname"
               name="lastname"
             />
             <label hidden htmlFor="telephone" className="form-label"></label>
@@ -49,7 +49,7 @@ function CheckOut() {
               type="text"
               placeholder="Teléfono"
               id="telephone"
-              value="telephone"
+              //value="telephone"
               name="telephone"
             />
             <label
@@ -62,7 +62,7 @@ function CheckOut() {
               type="text"
               placeholder="Dirección de envío"
               id="delivery address"
-              value="delivery address"
+              //value="delivery address"
               name="delivery address"
             />
             <label hidden htmlFor="Town" className="form-label"></label>
@@ -71,7 +71,7 @@ function CheckOut() {
               type="text"
               placeholder="Departamento"
               id="departamento"
-              value="departamento"
+              //value="departamento"
               name="departamento"
             />
             <label hidden htmlFor="Postcode" className="form-label"></label>
@@ -80,7 +80,7 @@ function CheckOut() {
               type="text"
               placeholder="Código postal"
               id="Postcode"
-              value="Postcode"
+              //value="Postcode"
               name="Postcode"
             />
             <label hidden htmlFor="Country" className="form-label"></label>
@@ -89,7 +89,7 @@ function CheckOut() {
               type="text"
               placeholder="País"
               id="Country"
-              value="Country"
+              //value="Country"
               name="Country"
             />
           </form>
@@ -103,7 +103,7 @@ function CheckOut() {
               type="text"
               placeholder="Tarjeta"
               id="Card"
-              value="Card"
+              //value="Card"
               name="Card"
             />
             <label hidden htmlFor="PayPal" className="form-label"></label>
@@ -112,7 +112,7 @@ function CheckOut() {
               type="text"
               placeholder="PayPal"
               id="PayPal"
-              value="PayPal"
+              //value="PayPal"
               name="PayPal"
             />
           </div>
