@@ -1,0 +1,21 @@
+.div-envio, .div-pago, .div-resumen{
+    border: solid black;
+}
+
+.div-general{
+    padding: 6rem;
+   
+}
+
+.titulo{
+    margin-bottom: 2rem;
+}
+
+.div-pago{
+    margin-bottom: 0.7rem;
+}
+
+.btn-pago{
+    margin-top: 0.7rem;
+}
+
