@@ -1,21 +1,79 @@
-.div-envio, .div-pago, .div-resumen{
-    border: solid black;
+.div-envio,
+.div-pago,
+.div-resumen {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px var(--darkcream);
 }
 
-.div-general{
-    padding: 6rem;
-   
+.container-general{
+    margin-bottom: 4rem;
 }
 
-.titulo{
-    margin-bottom: 2rem;
+.titulo {
+  margin-bottom: 2rem;
+  margin-top: 6rem;
 }
 
-.div-pago{
-    margin-bottom: 0.7rem;
+.div-pago {
+  margin-bottom: 0.7rem;
 }
 
-.btn-pago{
-    margin-top: 0.7rem;
+.btn-pago {
+  margin-top: 0.7rem;
 }
 
+.btn-pagar {
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+  background-color: var(--orange);
+  color: white;
+  border-radius: 10px;
+  width: 25%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+ 
+  
+  
+}
+
+.field-margin{
+    margin-top: 1rem;
+}
+
+.campo-obligatorio{
+    color: rgb(156, 156, 156);
+}
+
+.direccion-titulo, .metodo-titulo {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+}
+
+.resumen-titulo{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.p-subtotal{
+    font-size: 16px;
+}
+
+
+
+@media (max-width: 426px){
+    .btn-pagar{
+        
+    width: 50%;
+        
+    }
+}
+
+
+
+@media (max-width: 991px){
+    .div-envio{
+        margin-bottom: 1rem;
+    }
+}
