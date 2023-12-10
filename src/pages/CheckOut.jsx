@@ -3,13 +3,16 @@ import { Navigate, useLocation } from "react-router-dom";
 import "./CheckOut.css";
 import MyNavbar from "../components/MyNavbar";
 import Footer from "../components/Footer";
+import Card from "react-bootstrap/Card";
+import totalProducts from "../components/CartProduct";
+import totalPrice from "../components/CartProduct";
 
 function CheckOut() {
   const client = true; //useSelector((state) => state.client);
   const location = useLocation();
   return client ? (
     <>
-    <MyNavbar />
+      <MyNavbar />
       <div className="row div-general">
         <h1 className="titulo">Checkout</h1>
         <div className="col-6 div-envio">
@@ -22,7 +25,7 @@ function CheckOut() {
               type="text"
               placeholder="Email"
               id="email"
-             // value="email"
+              // value="email"
               name="email"
             />
             <label hidden htmlFor="firstname" className="form-label"></label>
@@ -97,6 +100,7 @@ function CheckOut() {
         <div className="col-6">
           <div className="div-pago">
             <h3>Método de pago</h3>
+
             <label hidden htmlFor="Card" className="form-label"></label>
             <input
               className="form-control form-field"
@@ -117,7 +121,18 @@ function CheckOut() {
             />
           </div>
           <div className="div-resumen">
-            <h3>Resumen de compra</h3>
+            
+            <Card className="card-resumen">
+              <Card.Body>
+                <Card.Title>
+                  <h2 className="h2-carrito">Resumen</h2>
+                </Card.Title>
+                <div>
+                  <p className="p-carrito">Subtotal ({totalProducts}): </p>
+                  <h3 className="h3-carrito">$U {totalPrice}</h3>
+                </div>
+              </Card.Body>
+            </Card>
           </div>
           <div className="btn-pago">
             <button>Pagar</button>
