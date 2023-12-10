@@ -9,9 +9,7 @@
 }
 
 .mynavbarlogo {
-  position: absolute;
-  left: 10%;
-  top: 6px;
+  margin-right: auto;
 }
 
 .hamburgerBtn {
@@ -103,8 +101,10 @@ nav .dropdown-menu .dropdown-item:hover {
   font-size: x-large;
 }
 
-.navbar-icons-position{
-  
-  margin-right: 5%;
-  
+.container.myNavbar {
+  --bs-gutter-x: 3.5rem;
+}
+
+.dropdown-menu[data-bs-popper] {
+  left: -10px;
 }
