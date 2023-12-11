@@ -63,7 +63,7 @@ function CulturalEvent() {
             </div>
             <div
               className="col-6 img"
-              style={{ backgroundImage: "url(/img/cafeteria.jpg)" }}
+              style={{ backgroundImage: "url(/img/equipo.jpg)" }}
             ></div>
           </div>
         </div>
