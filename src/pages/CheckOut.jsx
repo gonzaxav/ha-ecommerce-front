@@ -213,7 +213,7 @@ function CheckOut() {
             </div>
             <div>
               <div className="btn-pago">
-                <button className="btn-pagar">Pagar</button>
+                <button className="btn-pagar" type="submit">Pagar</button>
               </div>
             </div>
           </div>
