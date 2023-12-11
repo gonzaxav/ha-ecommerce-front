@@ -16,8 +16,7 @@ function CulturalEvent() {
           </div>
           <div className="col-6 col-sm-6 col-md-5">
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
-              possimus debitis fuga, officia incidunt voluptatum?
+            ¡Descubre cómo hacer de tu evento algo inolvidable! Haz clic en el siguiente botón y encuentra toda la información que necesitas para planificar y personalizar tu celebración.
             </p>
             <button className="btn btn-light">Quiero saber mas</button>
           </div>
