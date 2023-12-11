@@ -7,12 +7,13 @@ import Card from "react-bootstrap/Card";
 import totalProducts from "../components/CartProduct";
 import totalPrice from "../components/CartProduct";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import { useDispatch } from "react-redux";
 import axios from "axios";
 
 function CheckOut() {
-  const client = true; //useSelector((state) => state.client);
+  const client = useSelector((state) => state.client);
+  const order = useSelector((state)=> state.order);
   const location = useLocation();
 
   const [newEmail, setNewEmail] = useState("");
@@ -25,8 +26,19 @@ function CheckOut() {
   const [newCountry, setNewCountry] = useState("");
   const [newPayPal, setNewPayPal] = useState("");
 
-  const navigate = useNavigate();
+  
   const dispatch = useDispatch();
+
+  const totalPrice = order.reduce((acumulator, currentProduct) => {
+    const productPrice = currentProduct.price * currentProduct.qty;
+    return acumulator + productPrice;
+  }, 0);
+
+  const totalProducts = order.reduce(
+    (acumulator, currentProduct) => acumulator + currentProduct.qty,
+    0
+  );
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,17 +46,12 @@ function CheckOut() {
     const createClientPay = async () => {
       const response = await axios({
         method: "POST",
-        url: "http://localhost:3000/order",
+        url: "http://localhost:3000/orders",
         data: {
-          firstname: newFirstname,
-          lastname: newLastname,
-          email: newEmail,
-          telephone: newTelephone,
-          deliveryAddress: newDeliveryAddress,
-          town: newTown,
-          postcode: newPostcode,
-          country: newCountry,
-          payPal: newPayPal,
+          products: order,
+        },
+        headers: {
+          Authorization: `Bearer ${client}`,
         },
       });
       //dispatch(login(response.data))
