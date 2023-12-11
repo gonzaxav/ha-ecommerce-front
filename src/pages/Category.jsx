@@ -1,6 +1,6 @@
 import MyNavbar from "../components/MyNavbar";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Footer from "../components/Footer";
 import "./Category.css";
@@ -9,10 +9,13 @@ import {addProduct} from "../redux/orderSlice"
 
 function Category() {
   const apiUrl = import.meta.env.VITE_BASE_URL_API;
+  const navigate = useNavigate();
   const { slug } = useParams();
   const [products, setProducts] = useState(null);
   const [category, setCategory] = useState(null);
   const dispatch = useDispatch();
+
+const handleGoToProduct = (product)=> navigate(`/producto/${product.slug}`)
 
   const handleAddProduct = (product) => {
     dispatch(addProduct({
@@ -61,6 +64,7 @@ function Category() {
                   className="col-sm-12 col-md-6 col-lg-4"
                 >
                   <img
+                    onClick={ ()=>handleGoToProduct(product)}
                     className="img-categoria"
                     src={apiUrl + "img/" + product.photo}
                   ></img>
