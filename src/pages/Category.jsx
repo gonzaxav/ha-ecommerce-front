@@ -5,7 +5,7 @@ import axios from "axios";
 import Footer from "../components/Footer";
 import "./Category.css";
 import { useDispatch } from "react-redux";
-import {addProduct} from "../redux/orderSlice"
+import { addProduct } from "../redux/orderSlice";
 
 function Category() {
   const apiUrl = import.meta.env.VITE_BASE_URL_API;
@@ -15,10 +15,11 @@ function Category() {
   const [category, setCategory] = useState(null);
   const dispatch = useDispatch();
 
-const handleGoToProduct = (product)=> navigate(`/producto/${product.slug}`)
+  const handleGoToProduct = (product) => navigate(`/producto/${product.slug}`);
 
   const handleAddProduct = (product) => {
-    dispatch(addProduct({
+    dispatch(
+      addProduct({
         productId: product._id,
         name: product.name,
         photo: product.photo,
@@ -26,7 +27,8 @@ const handleGoToProduct = (product)=> navigate(`/producto/${product.slug}`)
         slug: product.slug,
         qty: 1,
         stock: product.stock,
-    }))
+      })
+    );
   };
 
   useEffect(() => {
@@ -39,11 +41,9 @@ const handleGoToProduct = (product)=> navigate(`/producto/${product.slug}`)
   }, [slug]);
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:3000/category/${slug}`)
-      .then((response) => {
-        setCategory(response.data.category);
-      });
+    axios.get(`http://localhost:3000/category/${slug}`).then((response) => {
+      setCategory(response.data.category);
+    });
   }, [slug]);
 
   return (
@@ -64,7 +64,7 @@ const handleGoToProduct = (product)=> navigate(`/producto/${product.slug}`)
                   className="col-sm-12 col-md-6 col-lg-4"
                 >
                   <img
-                    onClick={ ()=>handleGoToProduct(product)}
+                    onClick={() => handleGoToProduct(product)}
                     className="img-categoria"
                     src={apiUrl + "img/" + product.photo}
                   ></img>
@@ -72,7 +72,10 @@ const handleGoToProduct = (product)=> navigate(`/producto/${product.slug}`)
                     {product.shortDescription}
                   </h6>
                   <h4 className="precio-categoria">${product.price}</h4>
-                  <button onClick={()=> handleAddProduct(product)} className=" agregar btn btn-light add-cart-btn">
+                  <button
+                    onClick={() => handleAddProduct(product)}
+                    className=" agregar btn btn-light add-cart-btn"
+                  >
                     Agregar al carrito
                   </button>
                 </div>
