@@ -6,6 +6,7 @@
   width: 300px;
   transform: scale(1);
   transition: transform 0.5s ease-out;
+  height: 322px;
 }
 
 .img-categoria:hover {
