@@ -52,7 +52,7 @@ function Category() {
       <section className="pt-5 cream py-section">
         <div className="container pt-4">
           <div className="row">
-            <h1 className=" col-12 titulo-categoria fw-semibold mb-5 mt-3 ">
+            <h1 className=" col-12 titulo-categoria mb-5 mt-3 ">
               {category && category.name}
             </h1>
 

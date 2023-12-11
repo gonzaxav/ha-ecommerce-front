@@ -2,11 +2,13 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "../pages/Cart.css";
 import { addProduct, removeProduct, reduceQty } from "../redux/orderSlice";
+import { useNavigate } from "react-router-dom";
 
 function CartProduct({ product }) {
   const apiUrl = import.meta.env.VITE_BASE_URL_API;
   const [itemAmount, setItemAmount] = useState(product.qty);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const plusItem = () =>
     itemAmount < 9 &&
@@ -31,19 +33,24 @@ function CartProduct({ product }) {
     itemAmount === 1 && dispatch(removeProduct(product.productId));
   };
 
-  const handleRemove = ()=> dispatch(removeProduct(product.productId));
+  const handleRemove = () => dispatch(removeProduct(product.productId));
 
   return (
     <tr>
       <td>
         <span className="span-carrito">
           <img
+            onClick={() => navigate(`/producto/${product.slug}`)}
             className="img-carrito d-none d-lg-inline"
             src={apiUrl + "img/" + product.photo[0]}
             alt=""
           />
         </span>
-        <span id="" className="span-carrito descripcion-1 ms-2">
+        <span
+          id=""
+          className="span-carrito descripcion-1 ms-2"
+          onClick={() => navigate(`/producto/${product.slug}`)}
+        >
           {product.name}
         </span>
       </td>

@@ -8,7 +8,6 @@ import { useSelector, useDispatch } from "react-redux";
 import CartProduct from "../components/CartProduct";
 import { useNavigate } from "react-router-dom";
 
-
 function Cart() {
   const navigate = useNavigate();
   const order = useSelector((state) => state.order);
@@ -20,6 +19,8 @@ function Cart() {
     const productPrice = currentProduct.price * currentProduct.qty;
     return acumulator + productPrice;
   }, 0);
+
+  const goToCheckout = () => navigate("/checkout"); // agregar solo se pueda continuar con totalproducts > 0 con un toast
 
   return (
     <>
@@ -71,7 +72,11 @@ function Cart() {
                     <h3 className="h3-carrito">$U {totalPrice}</h3>
                     <hr />
                   </div>
-                  <Button id="btn-continuar" variant="secondary" onClick={()=>navigate("/checkout")}>
+                  <Button
+                    id="btn-continuar"
+                    variant="secondary"
+                    onClick={goToCheckout}
+                  >
                     Continuar
                   </Button>
                 </Card.Body>
