@@ -1,5 +1,6 @@
 import "./PhotoCarousel.css";
 import React, { useEffect, useState } from "react";
+import whiteLogo from "../img/logo_trasparente2.png"
 
 function PhotoCarousel() {
   const [images, setImages] = useState(null);
@@ -32,6 +33,7 @@ function PhotoCarousel() {
   return (
     images && (
       <section>
+        <img src={whiteLogo} alt="white-logo" className="white-logo"/>
         <div className="w-100 vh-100 overflow-hidden">
           {images.map((img, index) => (
             <div

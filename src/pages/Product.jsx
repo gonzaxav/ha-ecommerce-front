@@ -3,19 +3,15 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Footer from "../components/Footer";
-import { Navigation, A11y } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { useNavigate } from "react-router-dom";
 import "./Product.css";
-import "swiper/css";
-import "swiper/css/navigation";
 import gatitoProduct from "../img/gatito product.png";
 import gatitoFooter from "../img/gatito3.png";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../redux/orderSlice";
+import CarouselProducts from "../components/CarouselProducts";
 
 function Product() {
-  const navigate = useNavigate();
+  const apiUrl = import.meta.env.VITE_BASE_URL_API;
   const dispatch = useDispatch();
   const { slug } = useParams();
   const [itemAmount, setItemAmount] = useState(1);
@@ -24,13 +20,11 @@ function Product() {
   const [productsAmount, setProductsAmount] = useState(
     window.innerWidth < 768 ? 1 : 3
   );
-  const apiUrl = import.meta.env.VITE_BASE_URL_API;
+
   const handleResize = () => {
     setProductsAmount(window.innerWidth < 768 ? 1 : 3);
   };
-  const handleRedirect = (page, route) => {
-    navigate(`/${page}/${route}`);
-  };
+
   const handleAddProduct = () => {
     dispatch(
       addProduct({
@@ -41,20 +35,6 @@ function Product() {
         slug: product.slug,
         qty: itemAmount,
         stock: product.stock,
-      })
-    );
-  };
-
-  const carrouselAddProduct = (item) => {
-    dispatch(
-      addProduct({
-        productId: item._id,
-        name: item.name,
-        photo: item.photo,
-        price: item.price,
-        slug: item.slug,
-        qty: 1,
-        stock: item.stock,
       })
     );
   };
@@ -84,7 +64,7 @@ function Product() {
     setItemAmount(itemAmount + 1);
   const minusItem = () => itemAmount > 0 && setItemAmount(itemAmount - 1);
 
-  return (
+  return products && (
     <>
       <MyNavbar />
       <section className="pt-5 pb-5 light ">
@@ -149,43 +129,10 @@ function Product() {
               <h3 className="text-center mb-5 fw-semibold">
                 Otros productos relacionados
               </h3>
-              <div className="row justify-content-center">
-                <Swiper
-                  modules={[Navigation, A11y]}
-                  spaceBetween={0}
-                  slidesPerView={productsAmount}
-                  navigation
-                  loop
-                >
-                  {products &&
-                    products.map((product, index) => (
-                      <SwiperSlide key={index}>
-                        <div className="d-flex flex-column myProductDiv">
-                          <img
-                            className="b-seller-img cursor-pointer"
-                            src={apiUrl + "img/" + product.photo[0]}
-                            onClick={() =>
-                              handleRedirect("producto", product.slug)
-                            }
-                          ></img>
-                          <h4 className="text-center mt-3">{product.name}</h4>
-                          <p className="text-center mt-3">
-                            {product.shortDescription}
-                          </p>
-                          <h5 className="text-center mt-2">
-                            $U {product.price}
-                          </h5>
-                          <button
-                            className="mx-auto btn btn-dark"
-                            onClick={() => carrouselAddProduct(product)}
-                          >
-                            Agregar al carrito
-                          </button>
-                        </div>
-                      </SwiperSlide>
-                    ))}
-                </Swiper>
-              </div>
+              <CarouselProducts
+                products={products}
+                productsAmount={productsAmount}
+              />
             </div>
           </div>
         </div>
