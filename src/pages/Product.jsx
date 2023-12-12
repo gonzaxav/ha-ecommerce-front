@@ -11,7 +11,7 @@ import { addProduct } from "../redux/orderSlice";
 import CarouselProducts from "../components/CarouselProducts";
 
 function Product() {
-  const apiUrl = import.meta.env.VITE_BASE_URL_API;
+  const supabaseUrl = import.meta.env.VITE_BASE_URL_SUPABASE;
   const dispatch = useDispatch();
   const { slug } = useParams();
   const [itemAmount, setItemAmount] = useState(1);
@@ -74,7 +74,7 @@ function Product() {
               <div className="col-12 col-md-6 overflow-hidden d-flex justify-content-center pt-5 pe-4">
                 <img
                   className="productpage-img"
-                  src={apiUrl + "img/" + product.photo[0]}
+                  src={supabaseUrl + "img/" + product.photo[0]}
                 ></img>
               </div>
               <div className="col-12 col-md-6 py-3 px-4 d-flex flex-column justify-content-between">

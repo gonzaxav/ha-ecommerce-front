@@ -5,7 +5,7 @@ import axios from "axios";
 
 
 function OurProducts() {
-  const apiUrl = import.meta.env.VITE_BASE_URL_API;
+  const supabaseUrl = import.meta.env.VITE_BASE_URL_SUPABASE;
   const navigate = useNavigate();
   const [categories, setCategories] = useState(null);
   useEffect(() => {
@@ -44,7 +44,7 @@ function OurProducts() {
                 <div className="overflow-hidden p-4">
                   <img
                     className="w-100 ourProductsImg"
-                    src={`${apiUrl}img/${category.photo}`}
+                    src={`${supabaseUrl}img/${category.photo}`}
                   ></img>
                 </div>
                 <h4 className="text-center fw-bold">{category.name}</h4>
