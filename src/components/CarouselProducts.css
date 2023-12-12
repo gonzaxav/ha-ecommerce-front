@@ -23,3 +23,7 @@
 .swiper .swiper-rtl .swiper-button-prev {
   right: var(--swiper-navigation-sides-offset, 0px);
 }
+
+.carousel-body {
+  flex: 1 1;
+}
