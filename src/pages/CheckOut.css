@@ -39,16 +39,30 @@
 }
 
 .field-margin{
-    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .campo-obligatorio{
     color: rgb(156, 156, 156);
 }
 
-.direccion-titulo, .metodo-titulo {
+.direccion-titulo {
     margin-bottom: 3rem;
     font-size: 1.5rem;
+}
+.metodo-titulo{
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.check{
+  margin-top: 1rem;
+  
+}
+
+#PayPal{
+  
+  margin-bottom: 2rem;
 }
 
 .resumen-titulo{
@@ -59,6 +73,27 @@
 .p-subtotal{
     font-size: 16px;
 }
+.paypal-img {
+  width: 15%;
+  
+}
+
+.brou-logo{
+  width: 6%;
+  border-radius: 2px;
+  margin-left: 3px;
+}
+.santander-logo{
+  border-radius: 2px;
+}
+
+.bancos, .tarjetas, .paypal-logo{
+  position: relative;
+  bottom: 2rem;
+  left: 70%;
+}
+
+
 
 
 
@@ -76,4 +111,19 @@
     .div-envio{
         margin-bottom: 1rem;
     }
+}
+
+@media (max-width: 499px){
+  .bancos, .tarjetas, .paypal-logo{
+    position: relative;
+    bottom: 2rem;
+    left: 60%;
+  }
+}
+
+@media (max-width: 440px){
+  .bancos, .tarjetas, .paypal-logo{
+    position: static;
+    
+  }
 }
