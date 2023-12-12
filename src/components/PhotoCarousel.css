@@ -35,3 +35,13 @@ animation: photoCarouselActive 7s linear both;
     transform: scale(1.05);
   }
 }
+
+.white-logo{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -65px;
+  margin: auto;
+  z-index: 99;
+  scale: 0.4;
+}

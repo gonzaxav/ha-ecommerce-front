@@ -71,7 +71,7 @@ function MyNavbar() {
             </div>
 
             <div className="d-flex justify-content-end">
-              <NavDropdown title="Categoría" id="basic-nav-dropdown">
+              <NavDropdown title="Categorías" id="basic-nav-dropdown">
                 {categories &&
                   categories.map((category) => (
                     <NavDropdown.Item
