@@ -68,7 +68,7 @@ function Bestsellers() {
                   <span className="black h2">&nbsp;</span>
                 </h2>
                 <h5 className="text-center">
-                  Échale un vistazo a nuestros productos más vendidos!
+                  ¡Échale un vistazo a nuestros productos más vendidos!
                 </h5>
               </div>
               <div className="row justify-content-center">

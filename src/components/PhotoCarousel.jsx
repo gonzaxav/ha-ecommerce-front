@@ -1,5 +1,6 @@
 import "./PhotoCarousel.css";
 import React, { useEffect, useState } from "react";
+import whiteLogo from "../img/logo_1.png"
 
 function PhotoCarousel() {
   const [images, setImages] = useState(null);
