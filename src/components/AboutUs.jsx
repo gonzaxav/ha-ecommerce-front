@@ -14,7 +14,7 @@ function AboutUs() {
         <div className="container">
           <div className="row d-flex flex-column-reverse flex-xl-row">
             <div className="col-12 col-xl-6 d-flex justify-content-center justify-content-xl-end">
-              <img src={aboutUs1}></img>
+              <img src={aboutUs1} className="aboutUsImg"></img>
             </div>
             <div className="col-12 col-xl-6 d-flex flex-column justify-content-center align-items-center">
               <div>

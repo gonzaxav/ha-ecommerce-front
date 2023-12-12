@@ -42,11 +42,13 @@ function CarouselProducts({ products, productsAmount }) {
         {products.map((product, index) => (
           <SwiperSlide key={index}>
             <div className="d-flex flex-column myProductDiv h-100">
-              <img
-                className="b-seller-img cursor-pointer"
-                src={apiUrl + "img/" + product.photo[0]}
-                onClick={() => handleRedirect("producto", product.slug)}
-              ></img>
+              <div className="carouselImg">
+                <img
+                  className="b-seller-img cursor-pointer"
+                  src={apiUrl + "img/" + product.photo[0]}
+                  onClick={() => handleRedirect("producto", product.slug)}
+                ></img>
+              </div>
               <h4 className="text-center mt-3">{product.name}</h4>
               <div className="carousel-body">
                 <p className="text-center mt-3">{product.shortDescription}</p>

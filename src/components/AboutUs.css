@@ -2,7 +2,8 @@
   position: relative;
   margin: 0.5em auto;
   padding: 1em;
-  width: 30em;
+  width: 100%;
+  max-width: 30em;
   border-radius: 10px;
   transform: rotate(-4deg) rotateY(15deg);
   background: var(--orange);
@@ -33,4 +34,9 @@
   width: 0;
   height: 1em;
   transform: rotate(60deg) skewX(75deg);
+}
+
+.aboutUsImg{
+  width: 100%;
+  max-width: 500px;
 }

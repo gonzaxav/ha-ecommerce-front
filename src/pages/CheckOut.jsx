@@ -76,124 +76,117 @@ function CheckOut() {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-12 col-lg-6 div-envio">
-            <h3 className="direccion-titulo">Dirección de envío</h3>
-            <p className="campo-obligatorio">
-              Todos los campos son obligatorios
-            </p>
-            <form onSubmit={handleSubmit}>
-              <label htmlFor="Email" className="form-label">
-                Email
-              </label>
-              <input
-                className="form-control form-field field-margin"
-                type="text"
-                
-                id="email"
-                value={newEmail}
-                onChange={(e) => setNewEmail(e.target.value)}
-                required
-                name="email"
-              />
-              <label htmlFor="firstname" className="form-label">
-                Nombre
-              </label>
-              <input
-                className="form-control form-field field-margin"
-                type="text"
-                
-                id="firstname"
-                value={newFirstname}
-                onChange={(e) => setNewFirstname(e.target.value)}
-                required
-                name="firstname"
-              />
-              <label htmlFor="lastname" className="form-label">
-                Apellido
-              </label>
-              <input
-                className="form-control form-field field-margin"
-                type="text"
-                
-                id="lastname"
-                value={newLastname}
-                onChange={(e) => setNewLastname(e.target.value)}
-                required
-                name="lastname"
-              />
-              <label htmlFor="telephone" className="form-label">
-                Teléfono
-              </label>
-              <input
-                className="form-control form-field field-margin"
-                type="text"
-                
-                id="telephone"
-                value={newTelephone}
-                onChange={(e) => setNewTelephone(e.target.value)}
-                required
-                name="telephone"
-              />
-              <label htmlFor="deliveryAddress" className="form-label">
-                Dirección de envío
-              </label>
-              <input
-                className="form-control form-field field-margin"
-                type="text"
-                
-                id="deliveryAddress"
-                value={newDeliveryAddress}
-                onChange={(e) => setNewDeliveryAddress(e.target.value)}
-                required
-                name="deliveryAddress"
-              />
-              <label htmlFor="town" className="form-label">
-                Departamento
-              </label>
-              <input
-                className="form-control form-field field-margin"
-                type="text"
-                
-                id="town"
-                value={newTown}
-                onChange={(e) => setNewTown(e.target.value)}
-                required
-                name="town"
-              />
-              <label htmlFor="postcode" className="form-label">
-                Código postal
-              </label>
-              <input
-                className="form-control form-field field-margin"
-                type="text"
-                
-                id="postcode"
-                value={newPostcode}
-                onChange={(e) => setNewPostcode(e.target.value)}
-                required
-                name="postcode"
-              />
-              <label htmlFor="country" className="form-label label-checkout">
-                País
-              </label>
-              <input
-                className="form-control form-field field-margin"
-                type="text"
-                
-                id="country"
-                value={newCountry}
-                onChange={(e) => setNewCountry(e.target.value)}
-                required
-                name="country"
-              />
-            </form>
+          <div className="col-md-12 col-lg-6">
+            <div className="div-envio">
+              <h3 className="direccion-titulo">Dirección de envío</h3>
+              <p className="campo-obligatorio">
+                Todos los campos son obligatorios
+              </p>
+              <form onSubmit={handleSubmit}>
+                <label htmlFor="Email" className="form-label">
+                  Email
+                </label>
+                <input
+                  className="form-control form-field field-margin"
+                  type="text"
+                  id="email"
+                  value={newEmail}
+                  onChange={(e) => setNewEmail(e.target.value)}
+                  required
+                  name="email"
+                />
+                <label htmlFor="firstname" className="form-label">
+                  Nombre
+                </label>
+                <input
+                  className="form-control form-field field-margin"
+                  type="text"
+                  id="firstname"
+                  value={newFirstname}
+                  onChange={(e) => setNewFirstname(e.target.value)}
+                  required
+                  name="firstname"
+                />
+                <label htmlFor="lastname" className="form-label">
+                  Apellido
+                </label>
+                <input
+                  className="form-control form-field field-margin"
+                  type="text"
+                  id="lastname"
+                  value={newLastname}
+                  onChange={(e) => setNewLastname(e.target.value)}
+                  required
+                  name="lastname"
+                />
+                <label htmlFor="telephone" className="form-label">
+                  Teléfono
+                </label>
+                <input
+                  className="form-control form-field field-margin"
+                  type="text"
+                  id="telephone"
+                  value={newTelephone}
+                  onChange={(e) => setNewTelephone(e.target.value)}
+                  required
+                  name="telephone"
+                />
+                <label htmlFor="deliveryAddress" className="form-label">
+                  Dirección de envío
+                </label>
+                <input
+                  className="form-control form-field field-margin"
+                  type="text"
+                  id="deliveryAddress"
+                  value={newDeliveryAddress}
+                  onChange={(e) => setNewDeliveryAddress(e.target.value)}
+                  required
+                  name="deliveryAddress"
+                />
+                <label htmlFor="town" className="form-label">
+                  Departamento
+                </label>
+                <input
+                  className="form-control form-field field-margin"
+                  type="text"
+                  id="town"
+                  value={newTown}
+                  onChange={(e) => setNewTown(e.target.value)}
+                  required
+                  name="town"
+                />
+                <label htmlFor="postcode" className="form-label">
+                  Código postal
+                </label>
+                <input
+                  className="form-control form-field field-margin"
+                  type="text"
+                  id="postcode"
+                  value={newPostcode}
+                  onChange={(e) => setNewPostcode(e.target.value)}
+                  required
+                  name="postcode"
+                />
+                <label htmlFor="country" className="form-label label-checkout">
+                  País
+                </label>
+                <input
+                  className="form-control form-field field-margin"
+                  type="text"
+                  id="country"
+                  value={newCountry}
+                  onChange={(e) => setNewCountry(e.target.value)}
+                  required
+                  name="country"
+                />
+              </form>
+            </div>
           </div>
 
           <div className="col-md-12 col-lg-6">
             <div className="div-pago">
               <h3 className="metodo-titulo">Método de pago</h3>
-              <div >
-                
+              <div>
                 <input
                   className="check"
                   id="Transferencia"
@@ -202,13 +195,17 @@ function CheckOut() {
                   value={"t"}
                 />
                 <label htmlFor="Transferencia">Transferencia bancaria</label>
-                
+
                 <div className="bancos ">
-                  <img className="santander-logo" src={santander} alt="logo Santander" />
+                  <img
+                    className="santander-logo"
+                    src={santander}
+                    alt="logo Santander"
+                  />
                   <img className="brou-logo" src={Brou} alt="logo Brou" />
                 </div>
               </div>
-              <div >
+              <div>
                 <input
                   className="check"
                   id="Tarjeta-de-credito "
@@ -222,9 +219,9 @@ function CheckOut() {
                   <img src={Master} alt="Mster" />
                   <img src={Mastercard} alt="Mastercard" />
                   <img src={Amex} alt="Amex" />
-                </div>  
+                </div>
               </div>
-              <div >
+              <div>
                 <input
                   className="check"
                   id="PayPal"
@@ -234,7 +231,7 @@ function CheckOut() {
                 />
                 <label htmlFor="PayPal">PayPal</label>
                 <div className="paypal-logo">
-                <img className="paypal-img" src={paypal} alt="" />
+                  <img className="paypal-img" src={paypal} alt="" />
                 </div>
               </div>
 
@@ -244,7 +241,6 @@ function CheckOut() {
               <input
                 className="form-control form-field field-margin"
                 type="text"
-                
                 id="cardNumber"
                 //value={newCardNumber}
                 //onChange={(e) => setNewCountry(e.target.value)}
@@ -260,7 +256,6 @@ function CheckOut() {
               <input
                 className="form-control form-field field-margin"
                 type="text"
-                
                 id="nameOfOwner"
                 //value={newNameOfOwner}
                 //onChange={(e) => setNewCountry(e.target.value)}
@@ -276,7 +271,6 @@ function CheckOut() {
               <input
                 className="form-control form-field field-margin"
                 type="text"
-                
                 id="expirationDate"
                 //value={newExpirationDate}
                 //onChange={(e) => setNewCountry(e.target.value)}
