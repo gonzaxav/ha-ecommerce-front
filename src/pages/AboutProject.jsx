@@ -39,9 +39,9 @@ function AboutProject() {
           </div>
         </section>
       </div>
-      <div className="container-fluid px-0 ">
-        <section className="implementacion py-section ">
-          <div className=" container-interno row">
+      <section className="implementacion py-section ">
+        <div className="container px-0 ">
+          <div className="row">
             <div className="col-12 col-md-4">
               <div className="container-about">
                 <h4>Implementación</h4>
@@ -53,9 +53,9 @@ function AboutProject() {
                 </p>
               </div>
             </div>
-            <div className="col-12 col-sm-6 col-md-4">
-              <div id="backend" className="container-about">
-                <h4 className="back-titulo">Backend</h4>
+            <div className="col-12 col-md-4">
+              <div className="container-about">
+                <h4>Backend</h4>
                 <p>
                   Diseñamos un Modelo Entidad-Relación (MER) que sirve como la
                   columna vertebral de nuestro proyecto. Implementamos pruebas
@@ -63,7 +63,7 @@ function AboutProject() {
                 </p>
               </div>
             </div>
-            <div className="col-12 col-sm-6 col-md-4">
+            <div className="col-12 col-md-4">
               <div className="container-about">
                 <h4>Frontend</h4>
                 <p>
@@ -76,8 +76,8 @@ function AboutProject() {
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
       <div className="container">
         <section>
           <div className="diseño row">
@@ -101,83 +101,65 @@ function AboutProject() {
         </section>
       </div>
 
-      <div className="tecnologias row">
-        <div className="col-4 col-md-2">
-          <img className="img-logo" src={html} alt="html logo" />
-          <img
-            className="img-logo"
-            src={bootstrap}
-            alt="bootstrap logo"
-          />
-        </div>
-        <div className="col-4 col-md-2">
-          <img className="img-logo" src={css} alt="css logo" />
-          <img
-            className="img-logo"
-            src={node}
-            alt="node logo"
-          />
-        </div>
-        <div className="col-4 col-md-2">
-          <img
-            className="img-logo"
-            src={js}
-            alt="js logo"
-          />
-          <img
-            className="img-logo"
-            src={git}
-            alt="git logo"
-          />
-        </div>
-        <div className="col-4 col-md-2">
-          <img className="img-logo" src={react} alt="react logo" />
-          <img
-            className="img-logo"
-            src={github}
-            alt="github logo"
-          />
-        </div>
-        <div className="col-4 col-md-2">
-          <img className="img-logo" src={redux} alt="redux logo" />
-        </div>
-        <div className="col-4 col-md-2">
-          <img
-            className="img-logo"
-            src={mongo}
-            alt="mongo logo"
-          />
-        </div>
-      </div>
-      <div className="container">
-      <section>
-        <div className="row">
-          <div className="cont-persona col-6 col-md-3">
-            <img src="" alt="" />
-            <h5>Matias Nin</h5>
-            <h6>Full Stack Developer</h6>
-            <p><i className="bi bi-linkedin"></i> <i className="bi bi-github"></i></p>
-          </div>
-          <div className="cont-persona col-6 col-md-3">
-            <img src="" alt="" />
-            <h5>Gonzalo Xavier</h5>
-            <h6>Full Stack Developer</h6>
-            <p><i className="bi bi-linkedin"></i> <i className="bi bi-github"></i></p>
-          </div>
-          <div className="cont-persona col-6 col-md-3">
-            <img src="" alt="" />
-            <h5>Alejo Negreira</h5>
-            <h6>Full Stack Developer</h6>
-            <p><i className="bi bi-linkedin"></i> <i className="bi bi-github"></i></p>
-          </div>
-          <div className="cont-persona col-6 col-md-3">
-            <img src="" alt="" />
-            <h5>Melanie Rebour</h5>
-            <h6>Full Stack Developer</h6>
-            <p><i className="bi bi-linkedin"></i> <i className="bi bi-github"></i></p>
+      <section className="dark">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col d-flex gap-6 flex-wrap justify-content-center py-5">
+              <img className="img-logo" src={html} alt="html logo" />
+              <img className="img-logo" src={bootstrap} alt="bootstrap logo" />
+              <img className="img-logo" src={css} alt="css logo" />
+              <img className="img-logo" src={node} alt="node logo" />
+              <img className="img-logo" src={js} alt="js logo" />
+              <img className="img-logo" src={git} alt="git logo" />
+              <img className="img-logo" src={react} alt="react logo" />
+              <img className="img-logo" src={github} alt="github logo" />
+              <img className="img-logo" src={redux} alt="redux logo" />
+              <img className="img-logo" src={mongo} alt="mongo logo" />
+            </div>
           </div>
         </div>
       </section>
+      <div className="container">
+        <section>
+          <div className="row">
+            <div className="cont-persona col-6 col-md-3">
+              <img src="" alt="" />
+              <h5>Matias Nin</h5>
+              <h6>Full Stack Developer</h6>
+              <p>
+                <i className="bi bi-linkedin"></i>{" "}
+                <i className="bi bi-github"></i>
+              </p>
+            </div>
+            <div className="cont-persona col-6 col-md-3">
+              <img src="" alt="" />
+              <h5>Gonzalo Xavier</h5>
+              <h6>Full Stack Developer</h6>
+              <p>
+                <i className="bi bi-linkedin"></i>{" "}
+                <i className="bi bi-github"></i>
+              </p>
+            </div>
+            <div className="cont-persona col-6 col-md-3">
+              <img src="" alt="" />
+              <h5>Alejo Negreira</h5>
+              <h6>Full Stack Developer</h6>
+              <p>
+                <i className="bi bi-linkedin"></i>{" "}
+                <i className="bi bi-github"></i>
+              </p>
+            </div>
+            <div className="cont-persona col-6 col-md-3">
+              <img src="" alt="" />
+              <h5>Melanie Rebour</h5>
+              <h6>Full Stack Developer</h6>
+              <p>
+                <i className="bi bi-linkedin"></i>{" "}
+                <i className="bi bi-github"></i>
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
       <Footer />
     </>
