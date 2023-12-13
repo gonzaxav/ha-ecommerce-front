@@ -28,16 +28,16 @@ function ThanksModal(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton>
+      <Modal.Header className="gracias" closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           ¡Gracias por tu compra!
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body className="detalle-modal">
         <div className="row">
           <div className="col-9">
-            <strong>Detalles del pedido:</strong>
-            <ul>
+            <strong>Detalle del pedido:</strong>
+            <ul className="ul-modal">
               {order.map((product) => (
                 <li key={product.id}>
                   {product.name} - $
@@ -51,7 +51,7 @@ function ThanksModal(props) {
           </div>
         </div>
       </Modal.Body>
-      <Modal.Footer>
+      <Modal.Footer className="cerrar-modal">
         <Button className="btn-cerrar-modal" onClick={handleOnClick}>Cerrar</Button>
       </Modal.Footer>
     </Modal>
