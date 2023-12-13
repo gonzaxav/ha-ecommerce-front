@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 import { addProduct } from "../redux/orderSlice";
 
 function Category() {
-  const apiUrl = import.meta.env.VITE_BASE_URL_API;
+  const supabaseUrl = import.meta.env.VITE_BASE_URL_SUPABASE;
   const navigate = useNavigate();
   const { slug } = useParams();
   const [products, setProducts] = useState(null);
@@ -66,7 +66,7 @@ function Category() {
                   <img
                     onClick={() => handleGoToProduct(product)}
                     className="img-categoria"
-                    src={apiUrl + "img/" + product.photo}
+                    src={supabaseUrl + "img/" + product.photo}
                   ></img>
                   <h6 className="descripcion-categoria">
                     {product.shortDescription}

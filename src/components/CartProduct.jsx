@@ -5,7 +5,7 @@ import { addProduct, removeProduct, reduceQty } from "../redux/orderSlice";
 import { useNavigate } from "react-router-dom";
 
 function CartProduct({ product }) {
-  const apiUrl = import.meta.env.VITE_BASE_URL_API;
+  const supabaseUrl = import.meta.env.VITE_BASE_URL_SUPABASE;
   const [itemAmount, setItemAmount] = useState(product.qty);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -42,7 +42,7 @@ function CartProduct({ product }) {
           <img
             onClick={() => navigate(`/producto/${product.slug}`)}
             className="img-carrito d-none d-lg-inline"
-            src={apiUrl + "img/" + product.photo[0]}
+            src={supabaseUrl + "img/" + product.photo[0]}
             alt=""
           />
         </span>
