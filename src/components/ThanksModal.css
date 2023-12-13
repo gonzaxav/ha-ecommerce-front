@@ -1,0 +1,5 @@
+.btn-cerrar-modal {
+    border: var(--orange);
+    background-color: var(--orange);
+    box-shadow: 0px 2px 5px var(--darkcream);
+  }

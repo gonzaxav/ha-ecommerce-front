@@ -4,8 +4,6 @@ import "./CheckOut.css";
 import MyNavbar from "../components/MyNavbar";
 import Footer from "../components/Footer";
 import Card from "react-bootstrap/Card";
-//import totalProducts from "../components/CartProduct";
-//import totalPrice from "../components/CartProduct";
 import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import visa from "../img/logos/Visa-pequeño.svg";
@@ -18,8 +16,12 @@ import Brou from "../img/logos/brou-cuadrado.png";
 
 import { useDispatch } from "react-redux";
 import axios from "axios";
+import ThanksModal from "../components/ThanksModal";
+
+
 
 function CheckOut() {
+  
   const client = useSelector((state) => state.client);
   const order = useSelector((state) => state.order);
   const location = useLocation();
@@ -32,9 +34,8 @@ function CheckOut() {
   const [newTown, setNewTown] = useState("");
   const [newPostcode, setNewPostcode] = useState("");
   const [newCountry, setNewCountry] = useState("");
-  //const [newCardNumber, setNewCardNumber] = useState("");
-  //const [newNameOfOwner, setNewNameOfOwner] = useState("");
-  //const [newExpirationDate, setNewExpirationDate] = useState("");
+  const [modalShow, setModalShow] = useState(false);
+  
 
   const dispatch = useDispatch();
 
@@ -66,9 +67,16 @@ function CheckOut() {
     createClientPay();
   };
 
+   const handleOnClick = ()=>{
+    setModalShow(true);
+   
+   }
+
   return client ? (
     <>
       <MyNavbar />
+      <ThanksModal show={modalShow}
+        onHide={setModalShow}/>
       <div className="container-general container ">
         <div className="row div-general">
           <div className="col-12">
@@ -308,7 +316,7 @@ function CheckOut() {
               </Card>
             </div>
             <div className="btn-pago d-flex">
-              <button className="btn btn-orange-fill btn-pagar" type="submit">
+              <button className="btn btn-orange-fill btn-pagar" type="submit" onClick={handleOnClick}>
                 Pagar
               </button>
             </div>
