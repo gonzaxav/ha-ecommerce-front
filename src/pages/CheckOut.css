@@ -56,9 +56,10 @@
   
 }
 
-#PayPal{
-  
-  margin-bottom: 2rem;
+
+
+#numero-tarjeta{
+  margin-top: 2rem;
 }
 
 .resumen-titulo{
@@ -81,13 +82,15 @@
 }
 .santander-logo{
   border-radius: 2px;
+  width: 6%;
 }
 
-.bancos, .tarjetas, .paypal-logo{
+.bancos, .tarjetas, .paypal-logo {
   position: relative;
   bottom: 2rem;
   left: 70%;
 }
+
 
 
 

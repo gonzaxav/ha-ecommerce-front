@@ -9,12 +9,12 @@ import Card from "react-bootstrap/Card";
 import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import visa from "../img/logos/Visa-pequeño.svg";
-import santander from "../img/logos/santander-logo-15.png";
+import santander from "../img/logos/santander-cuadrado.png";
 import paypal from "../img/logos/paypal-logo-2-1.png";
 import Mastercard from "../img/logos/Mastercard-pequeño.svg";
 import Master from "../img/logos/Maestro-pequeño.svg";
 import Amex from "../img/logos/AmericanExpress.svg";
-import Brou from "../img/logos/brou.png";
+import Brou from "../img/logos/brou-cuadrado.png";
 
 import { useDispatch } from "react-redux";
 import axios from "axios";
@@ -194,7 +194,7 @@ function CheckOut() {
                   name="forma-de-pago"
                   value={"t"}
                 />
-                <label htmlFor="Transferencia">Transferencia bancaria</label>
+                <label htmlFor="Transferencia"style={{ marginLeft: '6px' }}>Transferencia bancaria</label>
 
                 <div className="bancos ">
                   <img
@@ -213,7 +213,7 @@ function CheckOut() {
                   name="forma-de-pago"
                   value={"t-c"}
                 />
-                <label htmlFor="Tarjeta-de-credito">Tarjeta de credito</label>
+                <label htmlFor="Tarjeta-de-credito"style={{ marginLeft: '6px' }}>Tarjeta de credito</label>
                 <div className="tarjetas">
                   <img className="visa-logo" src={visa} alt="Visa" />
                   <img src={Master} alt="Mster" />
@@ -229,13 +229,13 @@ function CheckOut() {
                   name="forma-de-pago"
                   value={"p"}
                 />
-                <label htmlFor="PayPal">PayPal</label>
+                <label htmlFor="PayPal"style={{ marginLeft: '6px' }}>PayPal</label>
                 <div className="paypal-logo">
                   <img className="paypal-img" src={paypal} alt="" />
                 </div>
               </div>
 
-              <label htmlFor="cardNumber" className="form-label label-checkout">
+              <label id="numero-tarjeta" htmlFor="cardNumber" className="form-label label-checkout">
                 Nº de tarjeta
               </label>
               <input
