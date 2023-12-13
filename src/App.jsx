@@ -8,7 +8,6 @@ import Category from "./pages/Category";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import CheckOut from "./pages/CheckOut";
-import Thanks from "./pages/Thanks";
 
 function App() {
   return (
@@ -22,7 +21,6 @@ function App() {
         <Route path="/registro" element= {<SignUp/>}/>
         <Route path="/login" element= {<Login/>}/>
         <Route path="/checkout" element={<CheckOut/>}/>
-        <Route path="/gracias" element={<Thanks/>}/>
       </Routes>
     </>
   );

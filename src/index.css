@@ -87,3 +87,7 @@ footer {
   --bs-btn-disabled-bg: #c15c38;
   --bs-btn-disabled-border-color: #c15c38;
 }
+
+html{
+  scroll-behavior: smooth;
+}

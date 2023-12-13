@@ -108,3 +108,20 @@ nav .dropdown-menu .dropdown-item:hover {
 .dropdown-menu[data-bs-popper] {
   left: -10px;
 }
+
+.about-us-icon{
+  background-color:  #ff4400;
+  position: fixed;
+  right: 0px;
+  bottom: 75px;
+  padding: 6px 5px 4px 4px;
+}
+
+.icon-text{
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.logout-icon{
+  cursor: pointer;
+}
