@@ -17,21 +17,14 @@
 }
 
 .div-pago {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .btn-pagar {
-  margin-right: 0.5rem;
-  margin-top: 1.2rem;
-  background-color: var(--orange);
-  color: white;
-  border-radius: 10px;
-  width: 25%;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
- 
-  
-  
+  margin-left: auto;
+  margin-top: 1rem;
+  width: 33%;
+  box-shadow: 0px 2px 5px var(--darkcream);
 }
 
 .field-margin{

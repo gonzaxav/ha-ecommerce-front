@@ -194,7 +194,9 @@ function CheckOut() {
                   name="forma-de-pago"
                   value={"t"}
                 />
-                <label htmlFor="Transferencia"style={{ marginLeft: '6px' }}>Transferencia bancaria</label>
+                <label htmlFor="Transferencia" style={{ marginLeft: "6px" }}>
+                  Transferencia bancaria
+                </label>
 
                 <div className="bancos ">
                   <img
@@ -213,7 +215,12 @@ function CheckOut() {
                   name="forma-de-pago"
                   value={"t-c"}
                 />
-                <label htmlFor="Tarjeta-de-credito"style={{ marginLeft: '6px' }}>Tarjeta de credito</label>
+                <label
+                  htmlFor="Tarjeta-de-credito"
+                  style={{ marginLeft: "6px" }}
+                >
+                  Tarjeta de credito
+                </label>
                 <div className="tarjetas">
                   <img className="visa-logo" src={visa} alt="Visa" />
                   <img src={Master} alt="Mster" />
@@ -229,13 +236,19 @@ function CheckOut() {
                   name="forma-de-pago"
                   value={"p"}
                 />
-                <label htmlFor="PayPal"style={{ marginLeft: '6px' }}>PayPal</label>
+                <label htmlFor="PayPal" style={{ marginLeft: "6px" }}>
+                  PayPal
+                </label>
                 <div className="paypal-logo">
                   <img className="paypal-img" src={paypal} alt="" />
                 </div>
               </div>
 
-              <label id="numero-tarjeta" htmlFor="cardNumber" className="form-label label-checkout">
+              <label
+                id="numero-tarjeta"
+                htmlFor="cardNumber"
+                className="form-label label-checkout"
+              >
                 Nº de tarjeta
               </label>
               <input
@@ -294,12 +307,10 @@ function CheckOut() {
                 </Card.Body>
               </Card>
             </div>
-            <div>
-              <div className="btn-pago">
-                <button className="btn-pagar" type="submit">
-                  Pagar
-                </button>
-              </div>
+            <div className="btn-pago d-flex">
+              <button className="btn btn-orange-fill btn-pagar" type="submit">
+                Pagar
+              </button>
             </div>
           </div>
         </div>
