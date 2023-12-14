@@ -3,7 +3,7 @@ import "./MyNavbar.css";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 import logo from "../img/logo_2.png";
 import { useSelector } from "react-redux";
@@ -13,6 +13,7 @@ function MyNavbar() {
   const [isTop, setIsTop] = useState(true);
   const [categories, setCategories] = useState(null);
   const order = useSelector((state) => state.order);
+  const navigate = useNavigate();
   const totalProducts = order.reduce(
     (acumulator, currentProduct) => acumulator + currentProduct.qty,
     0
@@ -88,6 +89,11 @@ function MyNavbar() {
         </Navbar.Collapse>
 
         <MyNavbarIcons classes={"d-none d-lg-block"} totalProducts={totalProducts} />
+      </div>
+      <div className="about-us-icon rounded-start" onClick={()=>navigate("/sobre-el-proyecto")}>
+        {/* <i className="fa-solid fa-users text-white fs-2 ms-1"></i> */}
+        <span className="text-white d-block icon-text">Este</span>
+        <span className="text-white d-block icon-text">proyecto</span>
       </div>
     </Navbar>
   );

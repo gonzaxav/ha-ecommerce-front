@@ -9,7 +9,6 @@ import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import CheckOut from "./pages/CheckOut";
 
-
 function App() {
   return (
     <>
