@@ -51,7 +51,7 @@ function ThanksModal(props) {
         </div>
       </Modal.Body>
       <Modal.Footer className="cerrar-modal">
-        <button className="btn-cerrar-modal " onClick={handleOnClick}>Cerrar</button>
+        <button className=" btn btn-orange-fill" onClick={handleOnClick}>Cerrar</button>
       </Modal.Footer>
     </Modal>
   );

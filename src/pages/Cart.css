@@ -49,9 +49,10 @@ table.table{
 }
 
 #btn-continuar {
-  background-color: #ff4500;
+  background-color:var(--orange);
   width: 100%;
   font-size: small;
+  border: var(--orange);
 }
 
 .btn-borrar-2 {
