@@ -19,6 +19,7 @@ import axios from "axios";
 import ThanksModal from "../components/ThanksModal";
 
 function CheckOut() {
+  const apiUrl = import.meta.env.VITE_BASE_URL_API;
   const client = useSelector((state) => state.client);
   const order = useSelector((state) => state.order);
   const location = useLocation();
@@ -51,7 +52,7 @@ function CheckOut() {
     const createClientPay = async () => {
       const response = await axios({
         method: "POST",
-        url: "http://localhost:3000/orders",
+        url: `${apiUrl}orders`,
         data: {
           products: order,
         },

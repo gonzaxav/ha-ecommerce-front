@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 import { addProduct } from "../redux/orderSlice";
 
 function Category() {
+  const apiUrl = import.meta.env.VITE_BASE_URL_API;
   const supabaseUrl = import.meta.env.VITE_BASE_URL_SUPABASE;
   const navigate = useNavigate();
   const { slug } = useParams();
@@ -33,7 +34,7 @@ function Category() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/products?slug=${slug}`)
+      .get(`${apiUrl}products?slug=${slug}`)
       .then((response) => {
         setProducts(response.data.products);
         window.scrollTo(0, 0);
@@ -41,7 +42,7 @@ function Category() {
   }, [slug]);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/category/${slug}`).then((response) => {
+    axios.get(`${apiUrl}category/${slug}`).then((response) => {
       setCategory(response.data.category);
     });
   }, [slug]);

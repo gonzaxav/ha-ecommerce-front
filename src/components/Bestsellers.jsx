@@ -3,7 +3,8 @@ import axios from "axios";
 import CarouselProducts from "./CarouselProducts";
 
 function Bestsellers() {
-
+   
+  const apiUrl = import.meta.env.VITE_BASE_URL_API;
   const [productsAmount, setProductsAmount] = useState(
     window.innerWidth < 768 ? 1 : 3
   );
@@ -11,7 +12,7 @@ function Bestsellers() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/products?featured=true`)
+      .get(`${apiUrl}products?featured=true`)
       .then((response) => {
         setProducts(response.data.products);
       });

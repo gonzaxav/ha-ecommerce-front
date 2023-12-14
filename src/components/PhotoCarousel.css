@@ -42,7 +42,7 @@ animation: photoCarouselActive 7s linear both;
   position: absolute;
   left: 0;
   right: 0;
-  top: -50%;
+  top: -40%;
   bottom: 0;
   margin: auto;
 }
@@ -55,7 +55,7 @@ animation: photoCarouselActive 7s linear both;
   position: absolute;
   left: 0;
   right: 0;
-  top: 680px;
+  top: 75%;
   bottom: 0;
   margin: auto;
 }
@@ -78,7 +78,7 @@ animation: photoCarouselActive 7s linear both;
   position: absolute;
   left: 0;
   right: 0;
-  top: 682px;
+  top: 75.3%;
   bottom: 0;
   margin: auto;
 }

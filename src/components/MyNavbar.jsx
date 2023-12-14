@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 import MyNavbarIcons from "./MyNavbarIcons";
 
 function MyNavbar() {
+  const apiUrl = import.meta.env.VITE_BASE_URL_API;
   const [isTop, setIsTop] = useState(true);
   const [categories, setCategories] = useState(null);
   const order = useSelector((state) => state.order);
@@ -20,7 +21,7 @@ function MyNavbar() {
   );
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/category`).then((response) => {
+    axios.get(`${apiUrl}category`).then((response) => {
       setCategories(response.data.categories);
     });
   }, []);
