@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 import { login } from "../redux/clientSlice";
 
 function SignUp() {
+  const apiUrl = import.meta.env.VITE_BASE_URL_API;
   const [newName, setNewName] = useState("");
   const [newLastName, setNewLastName] = useState("");
   const [newAddress, setNewAddress] = useState("");
@@ -23,7 +24,7 @@ function SignUp() {
     const createClient = async () => {
       const response = await axios({
         method: "POST",
-        url: "http://localhost:3000/client",
+        url: `${apiUrl}client`,
         data: {
           firstname: newName,
           lastname: newLastName,

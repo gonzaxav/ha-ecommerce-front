@@ -12,6 +12,7 @@ import CarouselProducts from "../components/CarouselProducts";
 
 function Product() {
   const supabaseUrl = import.meta.env.VITE_BASE_URL_SUPABASE;
+  const apiUrl = import.meta.env.VITE_BASE_URL_API;
   const dispatch = useDispatch();
   const { slug } = useParams();
   const [itemAmount, setItemAmount] = useState(1);
@@ -40,7 +41,7 @@ function Product() {
   };
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/products?featured`).then((response) => {
+    axios.get(`${apiUrl}products?featured`).then((response) => {
       setProducts(response.data.products);
     });
 
@@ -52,7 +53,7 @@ function Product() {
   }, []);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/products/${slug}`).then((response) => {
+    axios.get(`${apiUrl}products/${slug}`).then((response) => {
       setProduct(response.data.product);
       window.scrollTo(0, 0);
     });

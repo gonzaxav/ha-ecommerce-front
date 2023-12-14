@@ -6,11 +6,12 @@ import axios from "axios";
 
 function OurProducts() {
   const supabaseUrl = import.meta.env.VITE_BASE_URL_SUPABASE;
+  const apiUrl = import.meta.env.VITE_BASE_URL_API;
   const navigate = useNavigate();
   const [categories, setCategories] = useState(null);
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/category`)
+      .get(`${apiUrl}category`)
       .then((response) => {
         setCategories(response.data.categories);
       });

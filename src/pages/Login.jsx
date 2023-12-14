@@ -8,6 +8,7 @@ import { login } from "../redux/clientSlice";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 
 function Login() {
+  const apiUrl = import.meta.env.VITE_BASE_URL_API;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ function Login() {
     e.preventDefault();
     const response = await axios({
       method: "POST",
-      url: "http://localhost:3000/tokens",
+      url: `${apiUrl}tokens`,
       data: {
         email,
 
