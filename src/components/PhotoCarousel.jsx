@@ -1,6 +1,6 @@
 import "./PhotoCarousel.css";
 import React, { useEffect, useState } from "react";
-import whiteLogo from "../img/logo_trasparente2.png"
+import whiteLogo from "../img/logo_trasparente2.png";
 
 function PhotoCarousel() {
   const [images, setImages] = useState(null);
@@ -33,12 +33,28 @@ function PhotoCarousel() {
   return (
     images && (
       <section>
-        <img src={whiteLogo} alt="white-logo" className="white-logo"/>
+        <img src={whiteLogo} alt="white-logo" className="white-logo" />
+        <a href="#scroll-down-action">
+          <div className="home-scroll-down text-center">
+            <span className="scroll-down-text d-block">
+              ¡Vení a conocer nuestros productos
+            </span>
+            <span className="scroll-down-text d-block">más vendidos!</span>
+            <i class="fa-solid fa-angles-down scroll-down-icon"></i>
+          </div>
+        </a>
+        <div className="home-scroll-shadow text-center">
+          <span className="scroll-shadow-text d-block">
+            ¡Vení a conocer nuestros productos
+          </span>
+          <span className="scroll-shadow-text d-block">más vendidos!</span>
+          <i class="fa-solid fa-angles-down scroll-shadow-icon"></i>
+        </div>
         <div className="w-100 vh-100 overflow-hidden">
           {images.map((img, index) => (
             <div
               key={index}
-              style={{backgroundImage: `url(${img.link})`}}
+              style={{ backgroundImage: `url(${img.link})` }}
               className={`photoCarousel ${
                 img.active ? "photoCarouselActive" : ""
               }`}

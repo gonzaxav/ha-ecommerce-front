@@ -4,8 +4,6 @@ import "./CheckOut.css";
 import MyNavbar from "../components/MyNavbar";
 import Footer from "../components/Footer";
 import Card from "react-bootstrap/Card";
-//import totalProducts from "../components/CartProduct";
-//import totalPrice from "../components/CartProduct";
 import { useState } from "react";
 import Form from "react-bootstrap/Form";
 import visa from "../img/logos/Visa-pequeño.svg";
@@ -18,6 +16,7 @@ import Brou from "../img/logos/brou-cuadrado.png";
 
 import { useDispatch } from "react-redux";
 import axios from "axios";
+import ThanksModal from "../components/ThanksModal";
 
 function CheckOut() {
   const client = useSelector((state) => state.client);
@@ -32,9 +31,7 @@ function CheckOut() {
   const [newTown, setNewTown] = useState("");
   const [newPostcode, setNewPostcode] = useState("");
   const [newCountry, setNewCountry] = useState("");
-  //const [newCardNumber, setNewCardNumber] = useState("");
-  //const [newNameOfOwner, setNewNameOfOwner] = useState("");
-  //const [newExpirationDate, setNewExpirationDate] = useState("");
+  const [modalShow, setModalShow] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -66,9 +63,14 @@ function CheckOut() {
     createClientPay();
   };
 
+  const handleOnClick = () => {
+    setModalShow(true);
+  };
+
   return client ? (
     <>
       <MyNavbar />
+      <ThanksModal show={modalShow} onHide={setModalShow} />
       <div className="container-general container ">
         <div className="row div-general">
           <div className="col-12">
@@ -255,9 +257,6 @@ function CheckOut() {
                 className="form-control form-field field-margin"
                 type="text"
                 id="cardNumber"
-                //value={newCardNumber}
-                //onChange={(e) => setNewCountry(e.target.value)}
-                //required
                 name="cardNumeber"
               />
               <label
@@ -270,9 +269,6 @@ function CheckOut() {
                 className="form-control form-field field-margin"
                 type="text"
                 id="nameOfOwner"
-                //value={newNameOfOwner}
-                //onChange={(e) => setNewCountry(e.target.value)}
-                //required
                 name="nameOfOwner"
               />
               <label
@@ -285,9 +281,6 @@ function CheckOut() {
                 className="form-control form-field field-margin"
                 type="text"
                 id="expirationDate"
-                //value={newExpirationDate}
-                //onChange={(e) => setNewCountry(e.target.value)}
-                //required
                 name="expirationDate"
               />
             </div>
@@ -308,7 +301,11 @@ function CheckOut() {
               </Card>
             </div>
             <div className="btn-pago d-flex">
-              <button className="btn btn-orange-fill btn-pagar" type="submit">
+              <button
+                className="btn btn-orange-fill btn-pagar"
+                type="submit"
+                onClick={handleOnClick}
+              >
                 Pagar
               </button>
             </div>

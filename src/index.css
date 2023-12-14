@@ -50,7 +50,7 @@ h2,
 }
 
 .py-section {
-  padding-top: 6rem !important;
+  padding-top: 4.5rem !important;
   padding-bottom: 6rem !important;
 }
 
@@ -86,4 +86,8 @@ footer {
   --bs-btn-disabled-color: var(--cream);
   --bs-btn-disabled-bg: #c15c38;
   --bs-btn-disabled-border-color: #c15c38;
+}
+
+html{
+  scroll-behavior: smooth;
 }

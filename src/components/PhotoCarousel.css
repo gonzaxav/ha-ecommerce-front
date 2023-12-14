@@ -42,7 +42,54 @@ animation: photoCarouselActive 7s linear both;
   position: absolute;
   left: 0;
   right: 0;
-  top: -50%;
+  top: -40%;
   bottom: 0;
   margin: auto;
+}
+
+.home-scroll-down{
+  cursor: pointer;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  z-index: 99;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 75%;
+  bottom: 0;
+  margin: auto;
+}
+
+.scroll-down-icon{
+  display: block;
+  color: var(--orange);
+  font-size: xx-large;  
+}
+
+.scroll-down-text{
+  color: var(--lightcream);
+  font-size: large;
+}
+
+.home-scroll-shadow{
+  padding-left: 2rem;
+  padding-right: 2rem;
+  z-index: 98;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 75.3%;
+  bottom: 0;
+  margin: auto;
+}
+
+.scroll-shadow-icon{
+  display: block;
+  color: var(--lightcream);
+  font-size: xx-large;  
+}
+
+.scroll-shadow-text{
+  color: var(--black);
+  font-size: large;
 }

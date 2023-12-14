@@ -30,7 +30,7 @@ function Bestsellers() {
 
   return (
     products && (
-      <section className="cream py-section">
+      <section className="cream py-section" id="scroll-down-action">
         <div className="container">
           <div className="row">
             <div className="col-12">
