@@ -18,10 +18,7 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 import ThanksModal from "../components/ThanksModal";
 
-
-
 function CheckOut() {
-  
   const client = useSelector((state) => state.client);
   const order = useSelector((state) => state.order);
   const location = useLocation();
@@ -35,7 +32,6 @@ function CheckOut() {
   const [newPostcode, setNewPostcode] = useState("");
   const [newCountry, setNewCountry] = useState("");
   const [modalShow, setModalShow] = useState(false);
-  
 
   const dispatch = useDispatch();
 
@@ -67,16 +63,14 @@ function CheckOut() {
     createClientPay();
   };
 
-   const handleOnClick = ()=>{
+  const handleOnClick = () => {
     setModalShow(true);
-   
-   }
+  };
 
   return client ? (
     <>
       <MyNavbar />
-      <ThanksModal show={modalShow}
-        onHide={setModalShow}/>
+      <ThanksModal show={modalShow} onHide={setModalShow} />
       <div className="container-general container ">
         <div className="row div-general">
           <div className="col-12">
@@ -263,9 +257,6 @@ function CheckOut() {
                 className="form-control form-field field-margin"
                 type="text"
                 id="cardNumber"
-                //value={newCardNumber}
-                //onChange={(e) => setNewCountry(e.target.value)}
-                //required
                 name="cardNumeber"
               />
               <label
@@ -278,9 +269,6 @@ function CheckOut() {
                 className="form-control form-field field-margin"
                 type="text"
                 id="nameOfOwner"
-                //value={newNameOfOwner}
-                //onChange={(e) => setNewCountry(e.target.value)}
-                //required
                 name="nameOfOwner"
               />
               <label
@@ -293,9 +281,6 @@ function CheckOut() {
                 className="form-control form-field field-margin"
                 type="text"
                 id="expirationDate"
-                //value={newExpirationDate}
-                //onChange={(e) => setNewCountry(e.target.value)}
-                //required
                 name="expirationDate"
               />
             </div>
@@ -316,7 +301,11 @@ function CheckOut() {
               </Card>
             </div>
             <div className="btn-pago d-flex">
-              <button className="btn btn-orange-fill btn-pagar" type="submit" onClick={handleOnClick}>
+              <button
+                className="btn btn-orange-fill btn-pagar"
+                type="submit"
+                onClick={handleOnClick}
+              >
                 Pagar
               </button>
             </div>

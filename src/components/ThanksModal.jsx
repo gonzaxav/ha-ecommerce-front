@@ -1,4 +1,3 @@
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteAll } from "../redux/orderSlice";
@@ -52,7 +51,7 @@ function ThanksModal(props) {
         </div>
       </Modal.Body>
       <Modal.Footer className="cerrar-modal">
-        <Button className="btn-cerrar-modal" onClick={handleOnClick}>Cerrar</Button>
+        <button className="btn-cerrar-modal " onClick={handleOnClick}>Cerrar</button>
       </Modal.Footer>
     </Modal>
   );
