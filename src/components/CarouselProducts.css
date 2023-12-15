@@ -13,6 +13,9 @@
 .myProductDiv {
   padding: 0px 10%;
 }
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+  top: var(--swiper-navigation-top-offset, 40%);
+}
 
 .swiper .swiper-button-prev,
 .swiper .swiper-rtl .swiper-button-next {

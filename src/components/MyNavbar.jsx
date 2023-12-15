@@ -47,7 +47,7 @@ function MyNavbar() {
       expand="lg"
       className={`mynavbar ${isTop ? "my-navbar-bg" : "my-navbar-bg"}`}
     >
-      <div className="container myNavbar justify-content-end">
+      <div className="container g-0 myNavbar justify-content-end">
         <Navbar.Brand as={NavLink} to="/" className="mynavbarlogo">
           <img
             src={logo}

@@ -7,13 +7,14 @@ function Footer() {
     <footer className="bg-dark text-white pt-3">
       <div id="footer-container" className="container">
         <div className="row">
-          <div className="logo-footer col-md-6 col-lg-3 mt-2">
+          <div className="logo-footer col-md-6 col-lg-3 g-sm-0">
             <img className="foto-footer" src={logoFooter} alt="Logo footer" />
           </div>
-          <div className="col-footer col-md-6 col-lg-3">
+          <div className="col-footer col-md-6 col-lg-4">
             <p>Cocina y café de especialidad</p>
             <p>Martes a Viernes 9 a 19 hs</p>
             <p>Sábados 10 a 19 hs</p>
+            <p>Los esperamos!</p>
           </div>
 
           <div className="col-md-6 col-lg-3">
@@ -38,9 +39,9 @@ function Footer() {
               </a>
             </p>
           </div>
-          <div className="col-md-6 col-lg-3">
+          <div className="col-md-6 col-lg-2 d-flex">
             <img
-              className="gatito-footer"
+              className="gatito-footer ms-auto"
               src={gatito}
               alt="img-gatito"
             />

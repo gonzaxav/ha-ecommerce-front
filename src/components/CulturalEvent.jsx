@@ -5,20 +5,26 @@ function CulturalEvent() {
     <>
       <section className="dark py-section bg-img-event d-flex flex-row align-items-center">
         <div className="container">
-          <div className="col-12">
-            <h2 className="mb-0">
-              <span className="black h2">&nbsp;</span>Tienes
-              <span className="black h2">&nbsp;</span>un
-            </h2>
-            <h2>
-              evento?<span className="black h2">&nbsp;</span>
-            </h2>
-          </div>
-          <div className="col-6 col-sm-6 col-md-5">
-            <p>
-            ¡Descubre cómo hacer de tu evento algo inolvidable! Haz clic en el siguiente botón y encuentra toda la información que necesitas para planificar y personalizar tu celebración.
-            </p>
-            <button className="btn btn-light">Quiero saber mas</button>
+          <div className="row">
+            <div className="col-12 g-sm-0">
+              <h2 className="mb-0">
+                <span className="black h2">&nbsp;</span>Tienes
+                <span className="black h2">&nbsp;</span>un
+                <span className="black h2">&nbsp;</span>
+              </h2>
+              <h2>
+                <span className="black h2">&nbsp;</span>evento?
+                <span className="black h2">&nbsp;</span>
+              </h2>
+            </div>
+            <div className="col-6 col-sm-6 col-md-5 g-sm-0">
+              <p>
+                ¡Descubre cómo hacer de tu evento algo inolvidable! Haz clic en
+                el siguiente botón y encuentra toda la información que necesitas
+                para planificar y personalizar tu celebración.
+              </p>
+              <button className="btn btn-light">Quiero saber mas</button>
+            </div>
           </div>
         </div>
       </section>
@@ -30,8 +36,12 @@ function CulturalEvent() {
               className="col-12 col-md-6 img"
               style={{ backgroundImage: "url(/img/staff-removebg.png)" }}
             ></div>
-            <div className="nosotrosSomos-text col-12 col-md-6 py-5 d-flex flex-column justify-content-center">
-              <h2>Nosotros somos</h2>
+            <div className="nosotrosSomos-text col-12 col-md-6 py-5 d-flex flex-column justify-content-center g-sm-0">
+              <h2>
+                <span className="black h2">&nbsp;</span>Nosotros
+                <span className="black h2">&nbsp;</span>somos
+                <span className="black h2">&nbsp;</span>
+              </h2>
               <p>
                 ¡Bienvenidos a Casa de Abajo, donde cada taza cuenta una
                 historia y cada detalle está cuidadosamente preparado para tu
@@ -47,8 +57,12 @@ function CulturalEvent() {
             </div>
           </div>
           <div className="row">
-            <div className="mision col-12 col-md-6 py-5 d-flex flex-column justify-content-center">
-              <h2>Nuestra misión.</h2>
+            <div className="mision col-12 col-md-6 py-5 d-flex flex-column justify-content-center g-sm-0">
+              <h2>
+                <span className="black h2">&nbsp;</span>Nuestra
+                <span className="black h2">&nbsp;</span>misión.
+                <span className="black h2">&nbsp;</span>
+              </h2>
               <p>
                 Con cada taza de Casa de Abajo, te invitamos a ser parte de
                 nuestra historia. Queremos ser el lugar donde encuentres tu

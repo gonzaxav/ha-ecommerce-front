@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Footer from "../components/Footer";
 import "./Product.css";
-import gatitoProduct from "../img/gatito2.gif";
+import gatitoProduct from "../img/gatito product.png";
 import gatitoFooter from "../img/gatito3.gif";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../redux/orderSlice";

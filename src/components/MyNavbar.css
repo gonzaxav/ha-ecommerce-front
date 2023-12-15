@@ -101,8 +101,10 @@ nav .dropdown-menu .dropdown-item:hover {
   font-size: x-large;
 }
 
-.container.myNavbar {
-  --bs-gutter-x: 3.5rem;
+@media (max-width: 575px) {
+  .container.myNavbar {
+    --bs-gutter-x: 3.5rem;
+  }
 }
 
 .dropdown-menu[data-bs-popper] {

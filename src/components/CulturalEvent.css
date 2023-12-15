@@ -15,12 +15,19 @@ div.img {
   background-position: center;
 }
 
-.nosotrosSomos-text{
- padding-left: 2rem;
- padding-right: 2rem;
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .nosotrosSomos-text{
+    padding-left: 0rem;
+   }
+}
+@media (min-width: 768px) {
+  .nosotrosSomos-text{
+    padding-left: 2rem;
+   }
 }
 
+
 .mision{
-  padding-left: 2rem;
  padding-right: 2rem;
 }
