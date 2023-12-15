@@ -73,7 +73,7 @@ function CartProduct({ product }) {
           <button
             onClick={handleRemove}
             type="button"
-            className="btn btn-secondary btn-borrar-2 ms-4"
+            className="d-none d-md-inline btn btn-secondary btn-borrar-2 ms-4"
           >
             Borrar
           </button>
