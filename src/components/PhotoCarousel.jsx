@@ -40,16 +40,10 @@ function PhotoCarousel() {
               ¡Vení a conocer nuestros productos
             </span>
             <span className="scroll-down-text d-block">más vendidos!</span>
-            <i class="fa-solid fa-angles-down scroll-down-icon"></i>
+            <i class="fa-solid fa-angles-down mt-2 scroll-down-icon slide-bottom-top
+slide-bottom-top"></i>
           </div>
         </a>
-        <div className="home-scroll-shadow text-center">
-          <span className="scroll-shadow-text d-block">
-            ¡Vení a conocer nuestros productos
-          </span>
-          <span className="scroll-shadow-text d-block">más vendidos!</span>
-          <i class="fa-solid fa-angles-down scroll-shadow-icon"></i>
-        </div>
         <div className="w-100 vh-100 overflow-hidden">
           {images.map((img, index) => (
             <div

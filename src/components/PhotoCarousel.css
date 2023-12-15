@@ -63,33 +63,46 @@ animation: photoCarouselActive 7s linear both;
 .scroll-down-icon{
   display: block;
   color: var(--orange);
-  font-size: xx-large;  
+  font-size: xx-large;
+  text-shadow: 0px 4px 1px var(--white);
 }
 
 .scroll-down-text{
   color: var(--lightcream);
   font-size: large;
+  text-shadow: 2px 2px 1px var(--black);
 }
 
-.home-scroll-shadow{
-  padding-left: 2rem;
-  padding-right: 2rem;
-  z-index: 98;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 75.3%;
-  bottom: 0;
-  margin: auto;
+.slide-bottom-top {
+	-webkit-animation: slide-bottom-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+	        animation: slide-bottom-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
 }
 
-.scroll-shadow-icon{
-  display: block;
-  color: var(--lightcream);
-  font-size: xx-large;  
+ @-webkit-keyframes slide-bottom-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
-
-.scroll-shadow-text{
-  color: var(--black);
-  font-size: large;
+@keyframes slide-bottom-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
