@@ -14,6 +14,7 @@ function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
+  const [wrongCredentials, setWrongCredentials] = useState(null) ;
   
 
   const handleLogin = async (e) => {
@@ -27,8 +28,13 @@ function Login() {
         password,
       },
     });
+    if (response.data.token){
     dispatch(login(response.data));
-    (response.data.token && location.state) ? navigate(location.state.prevUrl) : navigate("/");
+    setWrongCredentials(null);
+    (response.data.token && location.state) ? navigate(location.state.prevUrl) : navigate("/")
+  }else{
+    setWrongCredentials(response.data.msg)
+  };
   };
 
   return (
@@ -41,7 +47,7 @@ function Login() {
               <h1 className="login-title">Login</h1>
               <div className="div-form">
                 <form onSubmit={handleLogin}>
-                  <div className="mb-3">
+                  <div className="mb-4">
                     <label
                       hidden
                       htmlFor="email"
@@ -71,6 +77,9 @@ function Login() {
                       placeholder="Contraseña"
                       id="password"
                     />
+                  </div>
+                  <div className="mb-3">
+                    <p className="text-danger">&nbsp; {wrongCredentials && wrongCredentials}</p>
                   </div>
                   <div className="div-btn col-6  mb-3  d-flex">
                     <button
