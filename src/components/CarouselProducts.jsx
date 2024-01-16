@@ -41,25 +41,27 @@ function CarouselProducts({ products, productsAmount }) {
       >
         {products.map((product, index) => (
           <SwiperSlide key={index}>
-            <div className="d-flex flex-column myProductDiv h-100">
-              <div className="carouselImg">
-                <img
-                  className="b-seller-img cursor-pointer"
-                  src={supabaseUrl + "img/" + product.photo[0]}
-                  onClick={() => handleRedirect("producto", product.slug)}
-                ></img>
+            <div className="myProductDiv h-100">
+              <div className="d-flex flex-column carouselDiv">
+                <div className="carouselImg">
+                  <img
+                    className="b-seller-img cursor-pointer"
+                    src={supabaseUrl + "img/" + product.photo[0]}
+                    onClick={() => handleRedirect("producto", product.slug)}
+                  ></img>
+                </div>
+                <h4 className="product-name text-center mt-3">{product.name}</h4>
+                <div className="carousel-body">
+                  <p className="text-center mt-3">{product.shortDescription}</p>
+                </div>
+                <h5 className="product-price text-center my-3">$U {product.price}</h5>
+                <button
+                  className="mx-auto btn btn-orange-light add-cart-btn mb-4"
+                  onClick={() => handleAddProduct(product)}
+                >
+                  Agregar al carrito
+                </button>
               </div>
-              <h4 className="text-center mt-3">{product.name}</h4>
-              <div className="carousel-body">
-                <p className="text-center mt-3">{product.shortDescription}</p>
-              </div>
-              <h5 className="text-center mt-3">$U {product.price}</h5>
-              <button
-                className="mx-auto btn btn-dark"
-                onClick={() => handleAddProduct(product)}
-              >
-                ADD TO CART
-              </button>
             </div>
           </SwiperSlide>
         ))}

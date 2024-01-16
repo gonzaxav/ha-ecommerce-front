@@ -33,12 +33,10 @@ function Category() {
   };
 
   useEffect(() => {
-    axios
-      .get(`${apiUrl}products?slug=${slug}`)
-      .then((response) => {
-        setProducts(response.data.products);
-        window.scrollTo(0, 0);
-      });
+    axios.get(`${apiUrl}products?slug=${slug}`).then((response) => {
+      setProducts(response.data.products);
+      window.scrollTo(0, 0);
+    });
   }, [slug]);
 
   useEffect(() => {
@@ -51,34 +49,34 @@ function Category() {
     <>
       <MyNavbar />
       <section className="pt-5 cream py-section">
+        <h1 className="titulo-categoria py-3 mt-3 mb-5">{category && category.name}</h1>
+
         <div className="container pt-4">
           <div className="row">
-            <h1 className=" col-12 titulo-categoria mb-5 mt-3 ">
-              {category && category.name}
-            </h1>
-
             {products &&
               products.map((product) => (
                 <div
-                  id="category-producto"
                   key={product._id}
-                  className="col-sm-12 col-md-6 col-lg-4"
+                  className="category-producto col-sm-12 col-md-6 col-lg-4 mb-5"
                 >
-                  <img
-                    onClick={() => handleGoToProduct(product)}
-                    className="img-categoria"
-                    src={supabaseUrl + "img/" + product.photo}
-                  ></img>
-                  <h6 className="descripcion-categoria">
-                    {product.shortDescription}
-                  </h6>
-                  <h4 className="precio-categoria">${product.price}</h4>
-                  <button
-                    onClick={() => handleAddProduct(product)}
-                    className=" agregar btn btn-light add-cart-btn"
-                  >
-                    Agregar al carrito
-                  </button>
+                  <div className="div-category">
+                    <div className="div-img-categoria mx-auto">
+                      <img
+                        onClick={() => handleGoToProduct(product)}
+                        className="img-categoria cursor-pointer"
+                        src={supabaseUrl + "img/" + product.photo}
+                      ></img>
+                    </div>
+                    <h4 className="nombre-categoria mt-3">{product.name}</h4>
+                    <p className="mt-3">{product.shortDescription}</p>
+                    <h5 className="precio-categoria mb-3">$U {product.price}</h5>
+                    <button
+                      onClick={() => handleAddProduct(product)}
+                      className="btn btn-orange-light add-cart-btn mb-4"
+                    >
+                      Agregar al carrito
+                    </button>
+                  </div>
                 </div>
               ))}
           </div>

@@ -1,9 +1,8 @@
 .add-cart-btn {
-  background-color: var(--orange);
-  color: white;
-  border-radius: 10PX;
-  border:none;
+  font-weight: 600;
+  text-transform: uppercase;
 }
+
 .plus-item {
   width: 1.5rem;
   height: 1.5rem;
@@ -18,14 +17,14 @@
   width: 430px;
   height: 430px;
 }
-.cat-product{
+.cat-product {
   position: absolute;
   right: -50px;
   bottom: -43px;
   scale: 0.6;
   opacity: 95%;
 }
-.product-footer-cat{
+.product-footer-cat {
   position: absolute;
   left: 10px;
   bottom: -61px;

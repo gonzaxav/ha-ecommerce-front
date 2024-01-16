@@ -109,7 +109,7 @@ function Product() {
                     </div>
                     <button
                       onClick={handleAddProduct}
-                      className="btn btn-light add-cart-btn px-4 py-3 "
+                      className="btn btn-orange-light add-cart-btn px-4 py-3 "
                     >
                       Agregar al carrito
                     </button>

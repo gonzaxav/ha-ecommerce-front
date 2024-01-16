@@ -4,7 +4,7 @@ import gatito from "../img/gatito9-footer.png"
 
 function Footer() {
   return (
-    <footer className="bg-dark text-white pt-3">
+    <footer className="dark text-white pt-3">
       <div id="footer-container" className="container">
         <div className="row">
           <div className="logo-footer col-md-6 col-lg-3 g-sm-0">

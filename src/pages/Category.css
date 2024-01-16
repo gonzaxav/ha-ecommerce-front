@@ -1,5 +1,16 @@
-#category-producto {
+.category-producto{
   text-align: center;
+}
+
+.div-category{
+  max-width: 300px;
+  margin: 0px auto;
+  background-color: var(--lightcreamtransparent);
+  border-radius: 10px;
+}
+
+.div-img-categoria{
+  overflow: hidden;
 }
 
 .img-categoria {
@@ -15,16 +26,25 @@
 }
 
 .titulo-categoria {
-  margin: 30px;
-  padding-left: 8%;
+  background-color: var(--black);
+  text-align: center;
+  color: var(--lightcream);
+  font-weight: bold;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+
+.nombre-categoria{
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.precio-categoria{
+  font-weight: 600;
 }
 
 .descripcion-categoria {
   margin: 15px;
-}
-
-.agregar {
-  margin-bottom: 50px;
 }
 
 
