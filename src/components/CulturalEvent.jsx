@@ -37,11 +37,25 @@ function CulturalEvent() {
               style={{ backgroundImage: "url(/img/staff-removebg.png)" }}
             ></div>
             <div className="nosotrosSomos-text col-12 col-md-6 py-5 d-flex flex-column justify-content-center g-sm-0">
-              <h2>
-                <span className="black h2">&nbsp;</span>Nosotros
-                <span className="black h2">&nbsp;</span>somos
-                <span className="black h2">&nbsp;</span>
-              </h2>
+              <div className="d-none d-lg-block">
+                <h2>
+                  <span className="black h2">&nbsp;</span>Nosotros
+                  <span className="black h2">&nbsp;</span>somos
+                  <span className="black h2">&nbsp;</span>
+                </h2>
+              </div>
+
+              <div className="d-block d-lg-none">
+                <h2 className="mb-0">
+                  <span className="black h2">&nbsp;</span>Nosotros
+                  <span className="black h2">&nbsp;</span>
+                </h2>
+                <h2 className="mb-4">
+                  <span className="black h2">&nbsp;</span>somos
+                  <span className="black h2">&nbsp;</span>
+                </h2>
+              </div>
+
               <p>
                 ¡Bienvenidos a Casa de Abajo, donde cada taza cuenta una
                 historia y cada detalle está cuidadosamente preparado para tu
@@ -58,11 +72,23 @@ function CulturalEvent() {
           </div>
           <div className="row">
             <div className="mision col-12 col-md-6 py-5 d-flex flex-column justify-content-center g-sm-0">
-              <h2>
-                <span className="black h2">&nbsp;</span>Nuestra
-                <span className="black h2">&nbsp;</span>misión.
-                <span className="black h2">&nbsp;</span>
-              </h2>
+              <div className="d-none d-lg-block">
+                <h2>
+                  <span className="black h2">&nbsp;</span>Nuestra
+                  <span className="black h2">&nbsp;</span>misión.
+                  <span className="black h2">&nbsp;</span>
+                </h2>
+              </div>
+              <div className="d-block d-lg-none">
+                <h2 className="mb-0">
+                  <span className="black h2">&nbsp;</span>Nuestra
+                  <span className="black h2">&nbsp;</span>
+                </h2>
+                <h2 className="mb-4">
+                  <span className="black h2">&nbsp;</span>misión.
+                  <span className="black h2">&nbsp;</span>
+                </h2>
+              </div>
               <p>
                 Con cada taza de Casa de Abajo, te invitamos a ser parte de
                 nuestra historia. Queremos ser el lugar donde encuentres tu

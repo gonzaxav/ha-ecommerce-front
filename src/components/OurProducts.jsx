@@ -22,6 +22,7 @@ function OurProducts() {
       <div className="container">
         <div className="row">
           <div className="col">
+            
             <div className="d-none d-md-block">
               <h2 className="text-center mb-5">
                 <span className="black h2">&nbsp;</span>Nuestros
@@ -29,6 +30,7 @@ function OurProducts() {
                 <span className="black h2">&nbsp;</span>
               </h2>
             </div>
+
             <div className="d-block d-md-none">
               <h2 className="text-center mb-0">
                 <span className="black h2">&nbsp;</span>Nuestros
@@ -39,6 +41,7 @@ function OurProducts() {
                 <span className="black h2">&nbsp;</span>
               </h2>
             </div>
+
             <div className="row">
               {categories && categories.map((category)=>
                 <div key={category._id} onClick={()=> handleOnclick(category.slug)} className="col-6 col-md-4 col-xl-4 my-4">
