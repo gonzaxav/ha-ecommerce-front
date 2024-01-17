@@ -36,10 +36,10 @@ function PhotoCarousel() {
         <img src={whiteLogo} alt="white-logo" className="white-logo" />
         <a href="#scroll-down-action">
           <div className="home-scroll-down text-center">
-            <span className="scroll-down-text d-block">
+            <span className="scroll-down-text d-block fw-semibold">
               ¡Vení a conocer nuestros productos
             </span>
-            <span className="scroll-down-text d-block">más vendidos!</span>
+            <span className="scroll-down-text d-block fw-semibold">más vendidos!</span>
             <i class="fa-solid fa-angles-down mt-2 scroll-down-icon slide-bottom-top
 slide-bottom-top"></i>
           </div>

@@ -21,7 +21,7 @@ function Cart() {
   }, 0);
 
   const goToCheckout = () => navigate("/checkout"); // agregar solo se pueda continuar con totalproducts > 0 con un toast
-
+  const shopLink = ()=> navigate("/")
   return (
     <>
       <MyNavbar />
@@ -32,9 +32,6 @@ function Cart() {
               <h1 className="h1-carrito">Carrito</h1>
             </div>
           </div>
-          <p className="empty-kart mt-2">
-            {order.length < 1 && "(Tu carrito está vacío)"}&nbsp;
-          </p>
           <div className="row tabla-carrito">
             <div className="col-lg-9">
               <table className="table table-hover align-middle">
@@ -55,9 +52,9 @@ function Cart() {
                   </tr>
                 </thead>
                 <tbody>
-                  {order.map((product) => (
+                  {totalProducts > 0 ? order.map((product) => (
                     <CartProduct key={product.productId} product={product} />
-                  ))}
+                  )) : <><h5 className="mt-3">Tu carrito esta vacío </h5> <a className="shop-link cursor-pointer" onClick={shopLink}>Seguir comprando<i className="fa-solid fa-arrow-right shop-link"></i></a></>}
                 </tbody>
               </table>
             </div>
@@ -72,13 +69,14 @@ function Cart() {
                     <h3 className="h3-carrito">$U {totalPrice}</h3>
                     <hr />
                   </div>
-                  <Button
-                    id="btn-continuar"
-                    variant="secondary"
-                    onClick={goToCheckout}
-                  >
-                    Continuar
-                  </Button>
+                    <Button
+                      className="btn btn-orange-fill btn-continuar"
+                      onClick={goToCheckout}
+                      disabled = {totalProducts < 1}
+                    >
+                      CONTINUAR
+                    </Button>
+                  
                 </Card.Body>
               </Card>
             </div>

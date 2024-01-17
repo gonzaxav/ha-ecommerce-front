@@ -46,11 +46,9 @@ table.table{
   margin-right: 10px;
 }
 
-#btn-continuar {
-  background-color:var(--orange);
+.btn-continuar {
   width: 100%;
   font-size: small;
-  border: var(--orange);
 }
 
 .btn-borrar-2 {
@@ -83,11 +81,12 @@ div.card{
 }
 
 @media (max-width: 991px) {
-  #btn-continuar {
+  .btn-continuar {
     width: 33.3%;
   }
 }
 
-.empty-kart{
-  color: var(--orange)
+.shop-link, i.shop-link{
+  color: var(--orange);
 }
+
