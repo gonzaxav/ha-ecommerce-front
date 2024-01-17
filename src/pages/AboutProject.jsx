@@ -12,33 +12,91 @@ import react from "../img/logos/react-2.svg";
 import github from "../img/logos/github-icon-2.svg";
 import redux from "../img/logos/redux.svg";
 import mongo from "../img/logos/mongodb-icon-1.svg";
+import cafeenmesa from "../img/cafe_en_mesa.png";
 
 function AboutProject() {
   return (
     <>
       <MyNavbar />
-      <div className="div-cafeteria "></div>
-      <div className="container">
-        <section>
-          <div className=" bienvenido row">
-            <div className="bienvenida col-12 col-md-6">
-              <h2>¡Bienvenido!</h2>
-              <h3 className="invitacion">
-                Te invitamos a conocer más sobre el proyecto.
-              </h3>
-            </div>
-            <div className="col-12 col-md-6">
-              <p className="objetivo">
-                Este es el resultado del trabajo y aprendizaje de estudiantes
-                del Coding Bootcamp de Hack Academy realizado de setiembre a
-                diciembre de 2023. Dedicamos 3 semanas para dar vida a este
-                e-commerce que se crea como el escaparate virtual de una
-                cafetería en Montevideo.
-              </p>
+      <section className="dark2">
+        <div className="cafeenmesa">
+          <div className="container">
+            <div className="row bienvenido">
+              <div className="bienvenida col-12 col-sm-6 g-sm-0">
+                <h3 className="mb-4 invitacion">
+                  Te invitamos a conocer más sobre el proyecto.
+                </h3>
+                <p className="">
+                  Este es el resultado del trabajo y aprendizaje de estudiantes
+                  del{" "}
+                  <span className="fw-bold">
+                    Coding Bootcamp de Hack Academy
+                  </span>{" "}
+                  el cual tiene una duración de{" "}
+                  <span className="fw-bold">3 meses</span>, con una carga
+                  horaria de <span className="fw-bold">más de 600 horas</span>{" "}
+                  prácticas, de las cuales dedicamos{" "}
+                  <span className="fw-bold">150</span> a dar vida a este
+                  e-commerce, para crear el espacio virtual de una cafetería en
+                  Montevideo.
+                </p>
+              </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+      <section className="dark">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col d-flex gap-6 flex-wrap justify-content-center py-5">
+              <div className="d-flex flex-column align-items-center justify-content-center">
+                <img className="img-logo mb-2" src={html} alt="html logo" />
+                <p className="text-center fw-bold m-0">HTML</p>
+              </div>
+              <div className="d-flex flex-column align-items-center justify-content-center">
+                <img className="img-logo mb-2" src={css} alt="css logo" />
+                <p className="text-center fw-bold m-0">CSS</p>
+              </div>
+              <div className="d-flex flex-column align-items-center justify-content-center">
+                <img className="img-logo mb-2" src={bootstrap} alt="bootstrap logo" />
+                <p className="text-center fw-bold m-0">Bootstrap</p>
+              </div>
+              <div className="d-flex flex-column align-items-center justify-content-center">
+                <img className="img-logo mb-2" src={js} alt="js logo" />
+                <p className="text-center fw-bold m-0">JavaScript</p>
+              </div>
+              <div className="d-flex flex-column align-items-center justify-content-center">
+                <img className="img-logo mb-2" src={mongo} alt="mongo logo" />
+                <p className="text-center fw-bold m-0">MongoDB</p>
+              </div>
+              <div className="d-flex flex-column align-items-center justify-content-center">
+                <img className="img-logo mb-2" src={node} alt="node logo" />
+                <p className="text-center fw-bold m-0">Node.js</p>
+              </div>
+              <div className="d-flex flex-column align-items-center justify-content-center">
+                <img className="img-logo mb-2" src={react} alt="react logo" />
+                <p className="text-center fw-bold m-0">React.js</p>
+              </div>
+              <div className="d-flex flex-column align-items-center justify-content-center">
+                <img className="img-logo mb-2" src={redux} alt="redux logo" />
+                <p className="text-center fw-bold m-0">Redux</p>
+              </div>
+              <div className="d-flex flex-column align-items-center justify-content-center">
+                <img className="img-logo mb-2" src={mongo} alt="insomnia logo" />
+                <p className="text-center fw-bold m-0">Insomnia</p>
+              </div>
+              <div className="d-flex flex-column align-items-center justify-content-center">
+                <img className="img-logo mb-2" src={git} alt="git logo" />
+                <p className="text-center fw-bold m-0">Git</p>
+              </div>
+              <div className="d-flex flex-column align-items-center justify-content-center">
+                <img className="img-logo mb-2" src={github} alt="github logo" />
+                <p className="text-center fw-bold m-0">Github</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="implementacion py-section ">
         <div className="container px-0 ">
           <div className="row">
@@ -101,24 +159,6 @@ function AboutProject() {
         </section>
       </div>
 
-      <section className="dark">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col d-flex gap-6 flex-wrap justify-content-center py-5">
-              <img className="img-logo" src={html} alt="html logo" />
-              <img className="img-logo" src={bootstrap} alt="bootstrap logo" />
-              <img className="img-logo" src={css} alt="css logo" />
-              <img className="img-logo" src={node} alt="node logo" />
-              <img className="img-logo" src={js} alt="js logo" />
-              <img className="img-logo" src={git} alt="git logo" />
-              <img className="img-logo" src={react} alt="react logo" />
-              <img className="img-logo" src={github} alt="github logo" />
-              <img className="img-logo" src={redux} alt="redux logo" />
-              <img className="img-logo" src={mongo} alt="mongo logo" />
-            </div>
-          </div>
-        </div>
-      </section>
       <div className="container">
         <section>
           <div className="row">
