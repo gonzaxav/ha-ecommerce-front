@@ -21,10 +21,6 @@ body {
   }
 }
 
-.implementacion {
-  background-color: var(--black);
-}
-
 .bienvenido {
   padding-top: 8rem;
   padding-bottom: 3rem;
@@ -75,4 +71,13 @@ body {
   .diseño-titulo {
     padding-bottom: 2rem;
   }
+}
+
+p {
+  font-size: 1.15rem;
+}
+
+.diagrama{
+  width: 100%;
+  max-width: 900px;
 }

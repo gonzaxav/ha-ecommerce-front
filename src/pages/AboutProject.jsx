@@ -13,7 +13,7 @@ import github from "../img/logos/github-icon-2.svg";
 import redux from "../img/logos/redux.svg";
 import mongo from "../img/logos/mongodb-icon-1.svg";
 import insomnia from "../img/logos/insomnia-logo.svg";
-import cafeenmesa from "../img/cafe_en_mesa.png";
+import diagrama from "../img/diagrama.png";
 
 function AboutProject() {
   return (
@@ -47,9 +47,29 @@ function AboutProject() {
         </div>
       </section>
       <section className="dark">
-        <div className="container-fluid">
+        <div className="container">
           <div className="row">
-            <div className="col d-flex gap-6 flex-wrap justify-content-center py-5">
+            <div className="col-12 g-sm-0 mt-5">
+              <p className="mb-4">
+                A lo largo del bootcamp, profundizamos en una amplia gama de{" "}
+                <span className="fw-bold">tecnologías</span> que abarcan el
+                desarrollo tanto de <span className="fw-bold">backend</span>{" "}
+                como de <span className="fw-bold">frontend</span>. También
+                adquirimos experiencia práctica con <span className="fw-bold">bases de datos</span> y
+                aprovechamos herramientas prácticas para optimizar nuestro flujo
+                de trabajo.
+              </p>
+              <p className="mb-4">
+                Utilizamos <span className="fw-bold">Github</span> como nuestra principal plataforma de
+                colaboración y control de versiones. <span className="fw-bold">Discord</span> jugó un papel
+                crucial para facilitar una comunicación fluida.
+              </p>
+              <p className="mb-4">
+                Para este proyecto, seleccionamos cuidadosamente el siguiente
+                conjunto de herramientas para aumentar nuestra productividad:
+              </p>
+            </div>
+            <div className="col-12 g-sm-0 d-flex gap-6 flex-wrap justify-content-center py-5">
               <div className="d-flex flex-column align-items-center justify-content-center">
                 <img className="img-logo mb-2" src={html} alt="html logo" />
                 <p className="text-center fw-bold m-0">HTML</p>
@@ -59,7 +79,11 @@ function AboutProject() {
                 <p className="text-center fw-bold m-0">CSS</p>
               </div>
               <div className="d-flex flex-column align-items-center justify-content-center">
-                <img className="img-logo mb-2" src={bootstrap} alt="bootstrap logo" />
+                <img
+                  className="img-logo mb-2"
+                  src={bootstrap}
+                  alt="bootstrap logo"
+                />
                 <p className="text-center fw-bold m-0">Bootstrap</p>
               </div>
               <div className="d-flex flex-column align-items-center justify-content-center">
@@ -83,7 +107,11 @@ function AboutProject() {
                 <p className="text-center fw-bold m-0">Redux</p>
               </div>
               <div className="d-flex flex-column align-items-center justify-content-center">
-                <img className="img-logo mb-2" src={insomnia} alt="insomnia logo" />
+                <img
+                  className="img-logo mb-2"
+                  src={insomnia}
+                  alt="insomnia logo"
+                />
                 <p className="text-center fw-bold m-0">Insomnia</p>
               </div>
               <div className="d-flex flex-column align-items-center justify-content-center">
@@ -98,7 +126,10 @@ function AboutProject() {
           </div>
         </div>
       </section>
-      <section className="implementacion py-section ">
+      <section className="light d-flex">
+        <img className="diagrama mx-auto mb-2" src={diagrama} />
+      </section>
+      <section className="light py-section">
         <div className="container px-0 ">
           <div className="row">
             <div className="col-12 col-md-4">
