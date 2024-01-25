@@ -18,7 +18,7 @@ function MyNavbarIcons({ classes, totalProducts }) {
           </Nav.Link>
         </div>
         <div className={client ? "d-inline-block me-3 logout-icon" : "d-none"}>
-          <i onClick={handleLogout} class="fa-solid fa-arrow-right-from-bracket text-white fs-3"></i>
+          <i onClick={handleLogout} className="fa-solid fa-arrow-right-from-bracket text-white fs-3"></i>
         </div>
         <div className="d-inline-block">
           <Nav.Link as={NavLink} to="/carrito">

@@ -13,7 +13,7 @@ function CarouselProducts({ products, productsAmount }) {
   const dispatch = useDispatch();
 
   const handleRedirect = (page, route) => {
-    navigate(`${page}/${route}`);
+    navigate(`/${page}/${route}`);
   };
 
   const handleAddProduct = (product) => {
