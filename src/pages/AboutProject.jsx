@@ -12,6 +12,7 @@ import react from "../img/logos/react-2.svg";
 import github from "../img/logos/github-icon-2.svg";
 import redux from "../img/logos/redux.svg";
 import mongo from "../img/logos/mongodb-icon-1.svg";
+import insomnia from "../img/logos/insomnia-logo.svg";
 import cafeenmesa from "../img/cafe_en_mesa.png";
 
 function AboutProject() {
@@ -82,7 +83,7 @@ function AboutProject() {
                 <p className="text-center fw-bold m-0">Redux</p>
               </div>
               <div className="d-flex flex-column align-items-center justify-content-center">
-                <img className="img-logo mb-2" src={mongo} alt="insomnia logo" />
+                <img className="img-logo mb-2" src={insomnia} alt="insomnia logo" />
                 <p className="text-center fw-bold m-0">Insomnia</p>
               </div>
               <div className="d-flex flex-column align-items-center justify-content-center">
