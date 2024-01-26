@@ -14,7 +14,7 @@ import redux from "../img/logos/redux.svg";
 import mongo from "../img/logos/mongodb-icon-1.svg";
 import insomnia from "../img/logos/insomnia-logo.svg";
 import diagrama from "../img/diagrama.png";
-import mer from "../img/mer.png";
+import mer from "../img/MER.png";
 
 function AboutProject() {
   return (
