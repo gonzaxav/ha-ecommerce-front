@@ -14,6 +14,7 @@ import redux from "../img/logos/redux.svg";
 import mongo from "../img/logos/mongodb-icon-1.svg";
 import insomnia from "../img/logos/insomnia-logo.svg";
 import diagrama from "../img/diagrama.png";
+import mer from "../img/mer.png";
 
 function AboutProject() {
   return (
@@ -38,8 +39,8 @@ function AboutProject() {
                   horaria de <span className="fw-bold">más de 600 horas</span>{" "}
                   prácticas, de las cuales dedicamos{" "}
                   <span className="fw-bold">150</span> a dar vida a este
-                  e-commerce, para crear el espacio virtual de una cafetería en
-                  Montevideo.
+                  e-commerce, para crear el espacio virtual de una cafetería
+                  real de Montevideo.
                 </p>
               </div>
             </div>
@@ -55,14 +56,15 @@ function AboutProject() {
                 <span className="fw-bold">tecnologías</span> que abarcan el
                 desarrollo tanto de <span className="fw-bold">backend</span>{" "}
                 como de <span className="fw-bold">frontend</span>. También
-                adquirimos experiencia práctica con <span className="fw-bold">bases de datos</span> y
-                aprovechamos herramientas prácticas para optimizar nuestro flujo
-                de trabajo.
+                adquirimos experiencia práctica con{" "}
+                <span className="fw-bold">bases de datos</span> y aprovechamos
+                herramientas prácticas para optimizar nuestro flujo de trabajo.
               </p>
               <p className="mb-4">
-                Utilizamos <span className="fw-bold">Github</span> como nuestra principal plataforma de
-                colaboración y control de versiones. <span className="fw-bold">Discord</span> jugó un papel
-                crucial para facilitar una comunicación fluida.
+                Utilizamos <span className="fw-bold">Github</span> como nuestra
+                principal plataforma de colaboración y control de versiones.{" "}
+                <span className="fw-bold">Discord</span> jugó un papel crucial
+                para facilitar una comunicación fluida.
               </p>
               <p className="mb-4">
                 Para este proyecto, seleccionamos cuidadosamente el siguiente
@@ -126,47 +128,11 @@ function AboutProject() {
           </div>
         </div>
       </section>
-      <section className="light d-flex">
-        <img className="diagrama mx-auto mb-2" src={diagrama} />
-      </section>
-      <section className="light py-section">
-        <div className="container px-0 ">
-          <div className="row">
-            <div className="col-12 col-md-4">
-              <div className="container-about">
-                <h4>Implementación</h4>
-                <p>
-                  Desarrollamos tres repositorios fundamentales: uno para el
-                  Frontend público, otro para el Frontend del administrador, y
-                  el tercero que contiene el Backend junto con la Base de Datos.
-                  Utilizamos JavaScript, HTML y CSS como pilares fundamentales.
-                </p>
-              </div>
-            </div>
-            <div className="col-12 col-md-4">
-              <div className="container-about">
-                <h4>Backend</h4>
-                <p>
-                  Diseñamos un Modelo Entidad-Relación (MER) que sirve como la
-                  columna vertebral de nuestro proyecto. Implementamos pruebas
-                  de llamadas a las API con Insomnia.
-                </p>
-              </div>
-            </div>
-            <div className="col-12 col-md-4">
-              <div className="container-about">
-                <h4>Frontend</h4>
-                <p>
-                  El Frontend público permite a los clientes interactuar con
-                  productos y categorías, mientras que el Dashboard proporciona
-                  un control total a los administradores. Utilizamos la
-                  modalidad Mobile para garantizar un buen rendimiento tanto en
-                  ordenadores como en dispositivos móviles.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <section className="light d-flex flex-column">
+        <h5 className="text-center fw-bold mt-5">Flujo de datos</h5>
+        <img className="diagrama mx-auto mt-3 mb-5" src={diagrama} />
+        <h5 className="text-center fw-bold mt-5">Modelo Entidad Relación</h5>
+        <img className="mer mx-auto mt-3 mb-2" src={mer} />
       </section>
       <div className="container">
         <section>

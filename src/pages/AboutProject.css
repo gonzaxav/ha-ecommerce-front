@@ -79,5 +79,10 @@ p {
 
 .diagrama{
   width: 100%;
-  max-width: 900px;
+  max-width: 600px;
+}
+
+.mer{
+  width: 100%;
+  max-width: 800px;
 }
