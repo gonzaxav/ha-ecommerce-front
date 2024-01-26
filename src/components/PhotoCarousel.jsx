@@ -40,7 +40,7 @@ function PhotoCarousel() {
               ¡Vení a conocer nuestros productos
             </span>
             <span className="scroll-down-text d-block fw-semibold">más vendidos!</span>
-            <i class="fa-solid fa-angles-down mt-2 scroll-down-icon slide-bottom-top
+            <i className="fa-solid fa-angles-down mt-2 scroll-down-icon slide-bottom-top
 slide-bottom-top"></i>
           </div>
         </a>
