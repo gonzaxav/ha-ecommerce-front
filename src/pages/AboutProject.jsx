@@ -15,6 +15,11 @@ import mongo from "../img/logos/mongodb-icon-1.svg";
 import insomnia from "../img/logos/insomnia-logo.svg";
 import diagrama from "../img/diagrama.png";
 import mer from "../img/MER.png";
+import dashboard from "../img/dashboard.png";
+import paletacolores from "../img/paleta-colores.jpg";
+import logo from "../img/logo.jpg";
+import fuentes from "../img/fuentes.jpg";
+import illustraciones from "../img/illustraciones.jpg";
 
 function AboutProject() {
   return (
@@ -132,73 +137,168 @@ function AboutProject() {
         <h5 className="text-center fw-bold mt-5">Flujo de datos</h5>
         <img className="diagrama mx-auto mt-3 mb-5" src={diagrama} />
         <h5 className="text-center fw-bold mt-5">Modelo Entidad Relación</h5>
-        <img className="mer mx-auto mt-3 mb-2" src={mer} />
+        <img className="mer mx-auto mt-3 mb-5" src={mer} />
       </section>
-      <div className="container">
-        <section>
-          <div className="diseño row">
-            <div className="col-12 col-md-6">
-              <h3 className="diseño-titulo">Diseño</h3>
+      <section className="light">
+        <h3 className="titulo-categoria py-3 mb-5">Admin</h3>
+        <div className="container">
+          <div className="row">
+            <div className="col my-4">
+              <img src={dashboard}></img>
             </div>
-            <div className="col-12 col-md-6">
+          </div>
+        </div>
+      </section>
+      <section className="light">
+        <h3 className="titulo-categoria py-3 mb-5">Diseño</h3>
+        <div className="container">
+          <div className="row">
+            <div className="col-12 mb-5 d-flex flex-column">
               <p>
                 Hemos creado un concepto de tienda de café y artículos
                 relacionados, que permite a los usuarios explorar sin
                 inconvenientes diversas secciones, descubrir una amplia gama de
                 opciones y categorías de productos, y añadir fácilmente sus
-                elecciones al carrito para su compra. Además, nuestra plataforma
-                incluye dos secciones informativas adicionales para enriquecer
-                la experiencia. Una sección está dedicada a proporcionar
-                información sobre la cafetería y la otra te guiará sobre cómo
-                llevar a cabo eventos culturales en la misma
+                elecciones al carrito para su compra.
               </p>
+              <p>
+                Trabajamos con una cafetería real cuya identidad ya estaba
+                definida, por lo que respetamos la tipografía, paleta de
+                colores, ilustraciones y logo. Todo esto fue realizado por la
+                diseñadora gráfica Florencia Labanca.
+              </p>
+              <div className="row">
+                <div className="col-12 col-lg-6">
+                  <img
+                    className="mx-auto paleta-colores mt-4"
+                    src={paletacolores}
+                  ></img>
+                </div>
+                <div className="col-12 col-lg-6">
+                  <img
+                    className="mx-auto paleta-colores mt-4"
+                    src={fuentes}
+                  ></img>
+                </div>
+                <div className="col-12 col-lg-6">
+                  <img className="mx-auto paleta-colores mt-4" src={logo}></img>
+                </div>
+                <div className="col-12 col-lg-6">
+                  <img
+                    className="mx-auto paleta-colores mt-4"
+                    src={illustraciones}
+                  ></img>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div className="container">
-        <section>
+      <section>
+        <h1 className="titulo-categoria py-3 mb-5">Nuestro equipo</h1>
+        <div className="container">
           <div className="row">
             <div className="cont-persona col-6 col-md-3">
-              <img src="" alt="" />
-              <h5>Matias Nin</h5>
+              <img
+                className="pfp"
+                src="https://cdn.discordapp.com/attachments/1176988128926498929/1202308766272606228/perfil.png?ex=65ccfc4b&is=65ba874b&hm=43e9f4a8646bacf0be268c4bf589bf60ff74ee370528a1de58e6961b1d2dadd6&"
+              ></img>
+              <h4>Matias Nin</h4>
               <h6>Full Stack Developer</h6>
               <p>
-                <i className="bi bi-linkedin"></i>{" "}
-                <i className="bi bi-github"></i>
+                <a
+                  target="_blank"
+                  className="text-dark"
+                  href="https://www.linkedin.com/in/matias-nin-713130257/"
+                >
+                  <i className="bi bi-linkedin fs-2"></i>{" "}
+                </a>
+                <a
+                  target="_blank"
+                  className="text-dark"
+                  href="https://github.com/MATIASNIN"
+                >
+                  <i className="bi bi-github fs-2"></i>
+                </a>
               </p>
             </div>
             <div className="cont-persona col-6 col-md-3">
-              <img src="" alt="" />
-              <h5>Gonzalo Xavier</h5>
+              <img
+                className="pfp"
+                src="https://cdn.discordapp.com/attachments/1176988128926498929/1202308766272606228/perfil.png?ex=65ccfc4b&is=65ba874b&hm=43e9f4a8646bacf0be268c4bf589bf60ff74ee370528a1de58e6961b1d2dadd6&"
+              ></img>
+              <h4>Gonzalo Xavier</h4>
               <h6>Full Stack Developer</h6>
               <p>
-                <i className="bi bi-linkedin"></i>{" "}
-                <i className="bi bi-github"></i>
+                <a
+                  target="_blank"
+                  className="text-dark"
+                  href="https://www.linkedin.com/in/gonzalo-xavier-gutierrez/"
+                >
+                  <i className="bi bi-linkedin fs-2"></i>{" "}
+                </a>
+                <a
+                  target="_blank"
+                  className="text-dark"
+                  href="https://github.com/gonzaxav"
+                >
+                  <i className="bi bi-github fs-2"></i>
+                </a>
               </p>
             </div>
             <div className="cont-persona col-6 col-md-3">
-              <img src="" alt="" />
-              <h5>Alejo Negreira</h5>
+              <img
+                className="pfp"
+                src="https://cdn.discordapp.com/attachments/1176988128926498929/1202308766272606228/perfil.png?ex=65ccfc4b&is=65ba874b&hm=43e9f4a8646bacf0be268c4bf589bf60ff74ee370528a1de58e6961b1d2dadd6&"
+              ></img>
+              <h4>Alejo Negreira</h4>
               <h6>Full Stack Developer</h6>
               <p>
-                <i className="bi bi-linkedin"></i>{" "}
-                <i className="bi bi-github"></i>
+                <a
+                  target="_blank"
+                  className="text-dark"
+                  href="https://www.linkedin.com/in/alejo-negreira-1ba9b3297/"
+                >
+                  <i className="bi bi-linkedin fs-2"></i>{" "}
+                </a>
+                <a
+                  target="_blank"
+                  className="text-dark"
+                  href="https://github.com/AlitoZzz"
+                >
+                  <i className="bi bi-github fs-2"></i>
+                </a>
               </p>
             </div>
             <div className="cont-persona col-6 col-md-3">
-              <img src="" alt="" />
-              <h5>Melanie Rebour</h5>
+              <img
+                className="pfp"
+                src="https://cdn.discordapp.com/attachments/1176988128926498929/1202308766272606228/perfil.png?ex=65ccfc4b&is=65ba874b&hm=43e9f4a8646bacf0be268c4bf589bf60ff74ee370528a1de58e6961b1d2dadd6&"
+              ></img>
+
+              <h4>Melanie Rebour</h4>
               <h6>Full Stack Developer</h6>
               <p>
-                <i className="bi bi-linkedin"></i>{" "}
-                <i className="bi bi-github"></i>
+                <a
+                  target="_blank"
+                  className="text-dark"
+                  href="https://www.linkedin.com/in/melanie-rebour/"
+                >
+                  <i className="bi bi-linkedin fs-2"></i>{" "}
+                </a>
+                <a
+                  target="_blank"
+                  className="text-dark"
+                  href="https://github.com/melirebour"
+                >
+                  <i className="bi bi-github fs-2"></i>
+                </a>
               </p>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
       <Footer />
     </>
   );
