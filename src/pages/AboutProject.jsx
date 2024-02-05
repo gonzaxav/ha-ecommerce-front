@@ -143,6 +143,13 @@ function AboutProject() {
         <h3 className="titulo-categoria py-3 mb-5">Admin</h3>
         <div className="container">
           <div className="row">
+            <div className="row">
+              <div className="col-12 mb-5 d-flex flex-column">
+              <p>
+              Ofrecemos un panel de control administrativo que permite llevar a cabo diversas operaciones. Desde esta interfaz, se pueden realizar ajustes en la información de productos, categorías, órdenes, clientes y administradores ya sea habilitando y deshabilitando, actualizando, eliminando o creando nuevos elementos.
+              </p>
+              </div>
+            </div>
             <div className="col my-4">
               <img src={dashboard}></img>
             </div>
