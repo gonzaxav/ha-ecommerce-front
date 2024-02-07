@@ -1,23 +1,24 @@
-.category-producto{
+.category-producto {
   text-align: center;
 }
 
-.div-category{
-  max-width: 300px;
+.div-category {
+  height: 100%;
+  max-width: 320px;
+  padding: 0px 10px;
   margin: 0px auto;
   background-color: var(--lightcreamtransparent);
   border-radius: 10px;
 }
 
-.div-img-categoria{
+.div-img-categoria {
   overflow: hidden;
 }
 
 .img-categoria {
-  width: 300px;
+  width: 100%;
   transform: scale(1);
   transition: transform 0.5s ease-out;
-  height: 322px;
 }
 
 .img-categoria:hover {
@@ -34,17 +35,15 @@
   text-transform: uppercase;
 }
 
-.nombre-categoria{
+.nombre-categoria {
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.precio-categoria{
+.precio-categoria {
   font-weight: 600;
 }
 
 .descripcion-categoria {
   margin: 15px;
 }
-
-

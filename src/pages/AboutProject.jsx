@@ -20,6 +20,10 @@ import paletacolores from "../img/paleta-colores.jpg";
 import logo from "../img/logo.jpg";
 import fuentes from "../img/fuentes.jpg";
 import illustraciones from "../img/illustraciones.jpg";
+import mati from "../img/mati.png";
+import mel from "../img/mel.png";
+import gonza from "../img/gonza.png";
+import ale from "../img/ale.png";
 
 function AboutProject() {
   return (
@@ -145,9 +149,14 @@ function AboutProject() {
           <div className="row">
             <div className="row">
               <div className="col-12 mb-5 d-flex flex-column">
-              <p>
-              Ofrecemos un panel de control administrativo que permite llevar a cabo diversas operaciones. Desde esta interfaz, se pueden realizar ajustes en la información de productos, categorías, órdenes, clientes y administradores ya sea habilitando y deshabilitando, actualizando, eliminando o creando nuevos elementos.
-              </p>
+                <p>
+                  Ofrecemos un panel de control administrativo que permite
+                  llevar a cabo diversas operaciones. Desde esta interfaz, se
+                  pueden realizar ajustes en la información de productos,
+                  categorías, órdenes, clientes y administradores ya sea
+                  habilitando y deshabilitando, actualizando, eliminando o
+                  creando nuevos elementos.
+                </p>
               </div>
             </div>
             <div className="col my-4">
@@ -203,15 +212,12 @@ function AboutProject() {
       </section>
 
       <section>
-        <h1 className="titulo-categoria py-3 mb-5">Nuestro equipo</h1>
+        <h3 className="titulo-categoria py-3 mb-5">Nuestro equipo</h3>
         <div className="container">
           <div className="row">
             <div className="cont-persona col-6 col-md-3">
-              <img
-                className="pfp"
-                src="https://cdn.discordapp.com/attachments/1176988128926498929/1202308766272606228/perfil.png?ex=65ccfc4b&is=65ba874b&hm=43e9f4a8646bacf0be268c4bf589bf60ff74ee370528a1de58e6961b1d2dadd6&"
-              ></img>
-              <h4>Matias Nin</h4>
+              <img className="pfp" src={mati}></img>
+              <h4 className="mt-4">Matias Nin</h4>
               <h6>Full Stack Developer</h6>
               <p>
                 <a
@@ -231,11 +237,8 @@ function AboutProject() {
               </p>
             </div>
             <div className="cont-persona col-6 col-md-3">
-              <img
-                className="pfp"
-                src="https://cdn.discordapp.com/attachments/1176988128926498929/1202308766272606228/perfil.png?ex=65ccfc4b&is=65ba874b&hm=43e9f4a8646bacf0be268c4bf589bf60ff74ee370528a1de58e6961b1d2dadd6&"
-              ></img>
-              <h4>Gonzalo Xavier</h4>
+              <img className="pfp" src={gonza}></img>
+              <h4 className="mt-4">Gonzalo Xavier</h4>
               <h6>Full Stack Developer</h6>
               <p>
                 <a
@@ -255,11 +258,8 @@ function AboutProject() {
               </p>
             </div>
             <div className="cont-persona col-6 col-md-3">
-              <img
-                className="pfp"
-                src="https://cdn.discordapp.com/attachments/1176988128926498929/1202308766272606228/perfil.png?ex=65ccfc4b&is=65ba874b&hm=43e9f4a8646bacf0be268c4bf589bf60ff74ee370528a1de58e6961b1d2dadd6&"
-              ></img>
-              <h4>Alejo Negreira</h4>
+              <img className="pfp" src={ale}></img>
+              <h4 className="mt-4">Alejo Negreira</h4>
               <h6>Full Stack Developer</h6>
               <p>
                 <a
@@ -279,12 +279,9 @@ function AboutProject() {
               </p>
             </div>
             <div className="cont-persona col-6 col-md-3">
-              <img
-                className="pfp"
-                src="https://cdn.discordapp.com/attachments/1176988128926498929/1202308766272606228/perfil.png?ex=65ccfc4b&is=65ba874b&hm=43e9f4a8646bacf0be268c4bf589bf60ff74ee370528a1de58e6961b1d2dadd6&"
-              ></img>
+              <img className="pfp" src={mel}></img>
 
-              <h4>Melanie Rebour</h4>
+              <h4 className="mt-4">Melanie Rebour</h4>
               <h6>Full Stack Developer</h6>
               <p>
                 <a
