@@ -49,7 +49,9 @@ function Category() {
     <>
       <MyNavbar />
       <section className="pt-5 cream py-section">
-        <h1 className="titulo-categoria py-3 mt-3 mb-5">{category && category.name}</h1>
+        <h1 className="titulo-categoria py-3 mt-3 mb-5">
+          {category && category.name}
+        </h1>
 
         <div className="container pt-4">
           <div className="row">
@@ -59,7 +61,10 @@ function Category() {
                   key={product._id}
                   className="category-producto col-sm-12 col-md-6 col-lg-4 mb-5"
                 >
-                  <div className="div-category">
+                  <div
+                    className="div-category d-flex flex-column"
+                    key={product._id}
+                  >
                     <div className="div-img-categoria mx-auto">
                       <img
                         onClick={() => handleGoToProduct(product)}
@@ -68,14 +73,19 @@ function Category() {
                       ></img>
                     </div>
                     <h4 className="nombre-categoria mt-3">{product.name}</h4>
+
                     <p className="mt-3">{product.shortDescription}</p>
-                    <h5 className="precio-categoria mb-3">$U {product.price}</h5>
-                    <button
-                      onClick={() => handleAddProduct(product)}
-                      className="btn btn-orange-light add-cart-btn mb-4"
-                    >
-                      Agregar al carrito
-                    </button>
+                    <h5 className="precio-categoria mb-3 mt-auto">
+                      $U {product.price}
+                    </h5>
+                    <div>
+                      <button
+                        onClick={() => handleAddProduct(product)}
+                        className="btn btn-orange-light add-cart-btn mb-4"
+                      >
+                        Agregar al carrito
+                      </button>
+                    </div>
                   </div>
                 </div>
               ))}

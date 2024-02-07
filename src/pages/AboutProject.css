@@ -34,17 +34,6 @@ body {
   box-shadow: 0px 2px 5px var(--orange);
 }
 
-.diseño {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.diseño-titulo {
-  font-size: 3rem;
-  position: relative;
-  top: 25%;
-}
-
 .invitacion {
     color: var(--orange);
 }
@@ -85,4 +74,13 @@ p {
 .mer{
   width: 100%;
   max-width: 800px;
+}
+
+.pfp{
+  width: 100%;
+  max-width: 200px;
+}
+
+.paleta-colores{
+  width: 100%;
 }
