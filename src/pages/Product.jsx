@@ -9,6 +9,7 @@ import gatitoFooter from "../img/gatito3.gif";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../redux/orderSlice";
 import CarouselProducts from "../components/CarouselProducts";
+import { Toaster, toast } from 'sonner';
 
 function Product() {
   const supabaseUrl = import.meta.env.VITE_BASE_URL_SUPABASE;
@@ -36,6 +37,10 @@ function Product() {
         slug: product.slug,
         qty: itemAmount,
         stock: product.stock,
+      }),
+      toast.success("El producto se agrego al carrito correctamente",{
+        position: "top-right",
+        duration: 5000,
       })
     );
   };
@@ -68,6 +73,7 @@ function Product() {
   return products && (
     <>
       <MyNavbar />
+      <Toaster richColors/>
       <section className="pt-5 pb-5 light ">
         <div className="container pt-3">
           {product && (

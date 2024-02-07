@@ -40,3 +40,7 @@
   height: 300px;
   }
 }
+
+li[data-sonner-toast][data-y-position=top] {
+  top: 50px;
+}

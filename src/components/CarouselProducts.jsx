@@ -6,6 +6,8 @@ import "swiper/css/navigation";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addProduct } from "../redux/orderSlice";
+import { Toaster, toast } from 'sonner';
+
 
 function CarouselProducts({ products, productsAmount }) {
   const supabaseUrl = import.meta.env.VITE_BASE_URL_SUPABASE;
@@ -28,10 +30,15 @@ function CarouselProducts({ products, productsAmount }) {
         stock: product.stock,
       })
     );
+    toast.success("El producto se agrego al carrito correctamente",{
+      position: "top-right",
+      duration: 5000,
+    })  
   };
 
   return (
     <div className="row justify-content-center">
+      <Toaster richColors/> 
       <Swiper
         modules={[Navigation, A11y]}
         spaceBetween={0}

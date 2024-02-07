@@ -26,7 +26,7 @@ function AboutProject() {
             <div className="row bienvenido">
               <div className="bienvenida col-12 col-sm-6 g-sm-0">
                 <h3 className="mb-4 invitacion">
-                  Te invitamos a conocer más sobre el proyecto.
+                  Te invitamos a conocer más sobre este proyecto.
                 </h3>
                 <p className="">
                   Este es el resultado del trabajo y aprendizaje de estudiantes

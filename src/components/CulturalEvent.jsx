@@ -1,8 +1,17 @@
 import "./CulturalEvent.css";
+import { Toaster, toast } from 'sonner';
 
 function CulturalEvent() {
+
+  const handleOnclick = ()=>{
+    toast.error("Lo sentimos, esta funcionalidad queó por fuera del alcance del proyecto",{
+      position: "top-right",
+      duration: 5000,
+    })
+  }
   return (
     <>
+    <Toaster richColors/>
       <section className="dark py-section bg-img-event d-flex flex-row align-items-center">
         <div className="container">
           <div className="row">
@@ -23,7 +32,7 @@ function CulturalEvent() {
                 el siguiente botón y encuentra toda la información que necesitas
                 para planificar y personalizar tu celebración.
               </p>
-              <button className="btn btn-light">Quiero saber mas</button>
+              <button onClick={handleOnclick} className="btn btn-light">Quiero saber mas</button>
             </div>
           </div>
         </div>
