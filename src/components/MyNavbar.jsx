@@ -53,7 +53,7 @@ function MyNavbar() {
             src={logo}
             height="50"
             className="d-inline-block align-top"
-            alt="La casa de abajo logo"
+            alt="El apartamento de arriba logo"
           />
         </Navbar.Brand>
 
@@ -62,7 +62,10 @@ function MyNavbar() {
           className="hamburgerBtn"
         />
 
-        <MyNavbarIcons classes={"d-block d-lg-none"} totalProducts={totalProducts} />
+        <MyNavbarIcons
+          classes={"d-block d-lg-none"}
+          totalProducts={totalProducts}
+        />
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto w-100 d-flex text-end justify-content-center gap-4">
@@ -89,9 +92,15 @@ function MyNavbar() {
           </Nav>
         </Navbar.Collapse>
 
-        <MyNavbarIcons classes={"d-none d-lg-block"} totalProducts={totalProducts} />
+        <MyNavbarIcons
+          classes={"d-none d-lg-block"}
+          totalProducts={totalProducts}
+        />
       </div>
-      <div className="about-us-icon rounded-start" onClick={()=>navigate("/sobre-el-proyecto")}>
+      <div
+        className="about-us-icon rounded-start"
+        onClick={() => navigate("/sobre-el-proyecto")}
+      >
         {/* <i className="fa-solid fa-users text-white fs-2 ms-1"></i> */}
         <span className="text-white d-block icon-text">Este</span>
         <span className="text-white d-block icon-text">proyecto</span>

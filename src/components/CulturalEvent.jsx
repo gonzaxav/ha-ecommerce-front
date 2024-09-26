@@ -66,7 +66,7 @@ function CulturalEvent() {
               </div>
 
               <p>
-                ¡Bienvenidos a Casa de Abajo, donde cada taza cuenta una
+                ¡Bienvenidos a Apartamento de arriba, donde cada taza cuenta una
                 historia y cada detalle está cuidadosamente preparado para tu
                 deleite!
               </p>
@@ -99,7 +99,7 @@ function CulturalEvent() {
                 </h2>
               </div>
               <p>
-                Con cada taza de Casa de Abajo, te invitamos a ser parte de
+                Con cada taza de Apartamento de arriba, te invitamos a ser parte de
                 nuestra historia. Queremos ser el lugar donde encuentres tu
                 refugio diario, donde las conversaciones fluyan tan libremente
                 como el café. Nuestra misión es crear momentos memorables y ser
@@ -107,7 +107,7 @@ function CulturalEvent() {
               </p>
               <p>
                 Gracias por ser parte de nuestra historia. ¡Esperamos verte
-                pronto en Casa de Abajo!
+                pronto en Apartamento de arriba!
               </p>
             </div>
             <div

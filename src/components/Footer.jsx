@@ -26,7 +26,7 @@ function Footer() {
             <p>
               <i className="bi bi-geo-alt-fill"></i>{" "}
               <a className="ubicacion text-decoration-none"
-                href="https://www.google.com/maps/place/Casa+de+Abajo/@-34.909374,-56.179087,7z/data=!4m6!3m5!1s0x959f81ec89bc3959:0x4c6d06b2a2d3b894!8m2!3d-34.909374!4d-56.1790867!16s%2Fg%2F11ss_36b_h?hl=es&entry=ttu"
+                href=""
                 target="blank"
               >
                 Encina 1663, Palermo, Montevideo
@@ -34,8 +34,8 @@ function Footer() {
             </p>
             <p>
               <i className="bi bi-instagram"></i>{" "}
-              <a className="instagram text-decoration-none" href="https://www.instagram.com/casa_de_abajo/" target="blank">
-                @casa_de_abajo
+              <a className="instagram text-decoration-none" href="" target="blank">
+                @apartamento_de_arriba
               </a>
             </p>
           </div>
